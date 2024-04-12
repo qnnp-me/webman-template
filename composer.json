@@ -42,7 +42,8 @@
     "webman/admin": "^0.6.24",
     "w7corp/easywechat": "^6.15",
     "guzzlehttp/guzzle": "^7.8",
-    "workerman/crontab": "^1.0"
+    "workerman/crontab": "^1.0",
+    "sebastian/diff": "^6.0"
   },
   "suggest": {
     "ext-event": "For better performance. "
