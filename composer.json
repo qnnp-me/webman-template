@@ -25,6 +25,8 @@
   },
   "require": {
     "php": ">=8.2",
+    "ext-pcntl": "*",
+    "ext-posix": "*",
     "workerman/webman-framework": "^1.5.0",
     "monolog/monolog": "^2.0",
     "illuminate/database": "^11.0",
@@ -43,7 +45,8 @@
     "w7corp/easywechat": "^6.15",
     "guzzlehttp/guzzle": "^7.8",
     "workerman/crontab": "^1.0",
-    "sebastian/diff": "^6.0"
+    "sebastian/diff": "^6.0",
+    "php-parallel-lint/php-console-color": "^1.0"
   },
   "suggest": {
     "ext-event": "For better performance. "
