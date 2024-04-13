@@ -108,12 +108,12 @@ class WebmanAdminUpdate extends Command
       $this->notice("没有新增任何文件.");
     }
 
-    foreach ($old_file_list as $file_path) {
+    foreach ($new_file_list as $file_path) {
       $new_file_path = $this->new_path . $file_path;
-      if (!file_exists($new_file_path)) {
+      $old_file_path = $this->old_path . $file_path;
+      if (!file_exists($old_file_path)) {
         continue;
       }
-      $old_file_path = $this->old_path . $file_path;
       $old_file = file_get_contents($old_file_path);
       $new_file = file_get_contents($new_file_path);
       $diff = $differ->diff($old_file, $new_file);
@@ -143,7 +143,8 @@ class WebmanAdminUpdate extends Command
         );
         $this->info($diff);
         if ($this->confirm("是否更新 $file_path ?", true)) {
-          file_put_contents($old_file_path, $new_file);
+          unlink($old_file_path);
+          $this->addNewFile($file_path);
           $this->success("更新: $file_path -> ok");
         } else {
           $this->notice("更新: $file_path -> skipped");
