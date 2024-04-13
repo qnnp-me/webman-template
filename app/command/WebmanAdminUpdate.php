@@ -3,7 +3,7 @@
 namespace app\command;
 
 use SebastianBergmann\Diff\Differ;
-use SebastianBergmann\Diff\Output\UnifiedDiffOutputBuilder;
+use SebastianBergmann\Diff\Output\StrictUnifiedDiffOutputBuilder;
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -40,19 +40,15 @@ class WebmanAdminUpdate extends Command
     $this->old_path = $old_path;
     $this->new_path = $new_path;
 
-//    $builder = new StrictUnifiedDiffOutputBuilder([
-//      'collapseRanges'      => true,
-//      'commonLineThreshold' => 6,
-//      'contextLines'        => 3,
-//      'fromFile'            => '',
-//      'fromFileDate'        => null,
-//      'toFile'              => '',
-//      'toFileDate'          => null,
-//    ]);
-    $builder = new UnifiedDiffOutputBuilder(
-      "", // custom header
-      true                      // do not add line numbers to the diff
-    );
+    $builder = new StrictUnifiedDiffOutputBuilder([
+      'collapseRanges'      => true,
+      'commonLineThreshold' => 6,
+      'contextLines'        => 3,
+      'fromFile'            => '',
+      'fromFileDate'        => null,
+      'toFile'              => '',
+      'toFileDate'          => null,
+    ]);
     $differ = new Differ($builder);
 
     $this->alert('即将开始为 webman/admin 执行文件升级操作! 请小心处理! ');
