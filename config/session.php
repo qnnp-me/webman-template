@@ -30,7 +30,7 @@ return [
       'auth'     => env('REDIS_PASSWORD'),
       'timeout'  => 2,
       'database' => 0,
-      'prefix'   => env('SERVER_NAME', 'Webman') . '_redis_session_',
+      'prefix'   => env('APP_NAME', 'Webman') . '_redis_session_',
     ],
     'redis_cluster' => [
       'host'    => ['127.0.0.1:7000', '127.0.0.1:7001', '127.0.0.1:7001'],

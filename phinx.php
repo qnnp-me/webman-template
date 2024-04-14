@@ -2,8 +2,6 @@
 
 use Dotenv\Dotenv;
 
-include __DIR__ . '/vendor/autoload.php';
-
 if (class_exists('Dotenv\Dotenv') && file_exists(base_path(false) . '/.env')) {
   if (method_exists('Dotenv\Dotenv', 'createUnsafeMutable')) {
     Dotenv::createUnsafeMutable(base_path(false))->load();
@@ -11,16 +9,18 @@ if (class_exists('Dotenv\Dotenv') && file_exists(base_path(false) . '/.env')) {
     Dotenv::createMutable(base_path(false))->load();
   }
 }
+
+var_dump(__FILE__ . ':' . __LINE__ . ':' . __FUNCTION__, base_path("database/migrations"));
+
 return [
   "paths"        => [
-    "migrations" => "database/migrations",
-    "seeds"      => "database/seeds"
+    "migrations" => is_phar() ? runtime_path('phinx/database/migrations') : base_path("database/migrations"),
+    "seeds"      => is_phar() ? runtime_path('phinx/database/seeds') : base_path("database/seeds")
   ],
   "environments" => [
     "default_migration_table" => "phinxlog",
-    "default_database"        => "dev",
-    "default_environment"     => "dev",
-    "dev"                     => [
+    "default_environment"     => "default",
+    "default"                 => [
       "adapter"   => "mysql",
       "host"      => env("MYSQL_HOST"),
       "name"      => env("MYSQL_DBNAME"),

@@ -1,5 +1,5 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="build:phar" type="ShConfigurationType">
+  <configuration default="false" name="build:phar" type="ShConfigurationType" activateToolWindowBeforeRun="false">
     <option name="SCRIPT_TEXT" value="php -d phar.readonly=0 ./webman build:phar" />
     <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
     <option name="SCRIPT_PATH" value="" />

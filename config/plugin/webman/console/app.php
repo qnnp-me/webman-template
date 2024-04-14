@@ -12,10 +12,10 @@ return [
 
     'private_key_file'  => '', // The file path for certificate or OpenSSL private key file.
 
-    'exclude_pattern'   => '#^(?!.*(composer.json|/.github/|/.idea/|/.git/|/.setting/|/runtime/|/vendor-bin/|/build/|/vendor/webman/admin/|/public/|/plugin/.+/public/|/database/(migrations|seeds)/))(.*)$#',
+    'exclude_pattern'   => '#^(?!.*(composer.json|/.github/|/.idea/|/.git/|/.setting/|/runtime/|/vendor-bin/|/build/|/vendor/webman/admin/|/plugin/admin/public/upload/))(.*)$#',
 
     'exclude_files'     => [
-        '.env', 'LICENSE', 'composer.json', 'composer.lock', 'start.php', 'webman.phar', 'webman.bin', 'server.phar', 'server.bin', '.env.example', '.gitignore', '.gitkeep', 'phinx.php'
+        '.env', 'LICENSE', 'composer.json', 'composer.lock', 'start.php', 'webman.phar', 'webman.bin', 'server.phar', 'server.bin', '.env.example', '.gitignore', '.gitkeep'
     ],
 
     'custom_ini' => '

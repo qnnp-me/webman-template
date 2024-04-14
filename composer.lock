@@ -16,7 +16,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/brick/math/zipball/f510c0a40911935b77b86859eb5223d58d660df1",
+                "url": "https://mirrors.huaweicloud.com/repository/php/brick/math/0.12.1/brick-math-0.12.1.zip",
                 "reference": "f510c0a40911935b77b86859eb5223d58d660df1",
                 "shasum": ""
             },
@@ -34,7 +34,6 @@
                     "Brick\\Math\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -54,10 +53,6 @@
                 "mathematics",
                 "rational"
             ],
-            "support": {
-                "issues": "https://github.com/brick/math/issues",
-                "source": "https://github.com/brick/math/tree/0.12.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/BenMorel",
@@ -76,7 +71,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/chronos/zipball/9cb035acd10152a6b74df936986f15c4e6015bd3",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/chronos/3.0.4/cakephp-chronos-3.0.4.zip",
                 "reference": "9cb035acd10152a6b74df936986f15c4e6015bd3",
                 "shasum": ""
             },
@@ -93,7 +88,6 @@
                     "Cake\\Chronos\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -115,10 +109,6 @@
                 "datetime",
                 "time"
             ],
-            "support": {
-                "issues": "https://github.com/cakephp/chronos/issues",
-                "source": "https://github.com/cakephp/chronos"
-            },
             "time": "2023-10-17T07:41:48+00:00"
         },
         {
@@ -131,7 +121,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/core/zipball/163ba348b96870de24b7cf34abdcd8d0c3794ed7",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/core/5.0.7/cakephp-core-5.0.7.zip",
                 "reference": "163ba348b96870de24b7cf34abdcd8d0c3794ed7",
                 "shasum": ""
             },
@@ -158,7 +148,6 @@
                     "Cake\\Core\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -175,12 +164,6 @@
                 "core",
                 "framework"
             ],
-            "support": {
-                "forum": "https://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/cakephp/issues",
-                "source": "https://github.com/cakephp/core"
-            },
             "time": "2024-03-13T17:13:27+00:00"
         },
         {
@@ -193,7 +176,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/database/zipball/218f60271f65d1808272f785ce64a15491796648",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/database/5.0.7/cakephp-database-5.0.7.zip",
                 "reference": "218f60271f65d1808272f785ce64a15491796648",
                 "shasum": ""
             },
@@ -219,7 +202,6 @@
                     "Cake\\Database\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -238,12 +220,6 @@
                 "database abstraction",
                 "pdo"
             ],
-            "support": {
-                "forum": "https://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/cakephp/issues",
-                "source": "https://github.com/cakephp/database"
-            },
             "time": "2024-03-04T21:01:09+00:00"
         },
         {
@@ -256,7 +232,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/datasource/zipball/3b3a70d0d8ae0daf55535f45b99ef109639ed1ec",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/datasource/5.0.7/cakephp-datasource-5.0.7.zip",
                 "reference": "3b3a70d0d8ae0daf55535f45b99ef109639ed1ec",
                 "shasum": ""
             },
@@ -282,7 +258,6 @@
                     "Cake\\Datasource\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -301,12 +276,6 @@
                 "entity",
                 "query"
             ],
-            "support": {
-                "forum": "https://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/cakephp/issues",
-                "source": "https://github.com/cakephp/datasource"
-            },
             "time": "2024-03-11T18:07:04+00:00"
         },
         {
@@ -319,7 +288,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/utility/zipball/6d624cefc3e005ebf9bd2e7d8a1d35f5f4601ff8",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/utility/5.0.7/cakephp-utility-5.0.7.zip",
                 "reference": "6d624cefc3e005ebf9bd2e7d8a1d35f5f4601ff8",
                 "shasum": ""
             },
@@ -340,7 +309,6 @@
                     "Cake\\Utility\\": "."
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -360,12 +328,6 @@
                 "string",
                 "utility"
             ],
-            "support": {
-                "forum": "https://stackoverflow.com/tags/cakephp",
-                "irc": "irc://irc.freenode.org/cakephp",
-                "issues": "https://github.com/cakephp/cakephp/issues",
-                "source": "https://github.com/cakephp/utility"
-            },
             "time": "2024-02-24T04:42:47+00:00"
         },
         {
@@ -378,7 +340,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/18ba5ddfec8976260ead6e866180bd5d2f71aa1d",
+                "url": "https://mirrors.huaweicloud.com/repository/php/carbonphp/carbon-doctrine-types/3.2.0/carbonphp-carbon-doctrine-types-3.2.0.zip",
                 "reference": "18ba5ddfec8976260ead6e866180bd5d2f71aa1d",
                 "shasum": ""
             },
@@ -399,7 +361,6 @@
                     "Carbon\\Doctrine\\": "src/Carbon/Doctrine/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -417,10 +378,6 @@
                 "doctrine",
                 "time"
             ],
-            "support": {
-                "issues": "https://github.com/CarbonPHP/carbon-doctrine-types/issues",
-                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/3.2.0"
-            },
             "funding": [
                 {
                     "url": "https://github.com/kylekatarnls",
@@ -447,7 +404,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/5817d0659c5b50c9b950feb9af7b9668e2c436bc",
+                "url": "https://mirrors.huaweicloud.com/repository/php/doctrine/inflector/2.0.10/doctrine-inflector-2.0.10.zip",
                 "reference": "5817d0659c5b50c9b950feb9af7b9668e2c436bc",
                 "shasum": ""
             },
@@ -468,7 +425,6 @@
                     "Doctrine\\Inflector\\": "lib/Doctrine/Inflector"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -508,10 +464,6 @@
                 "uppercase",
                 "words"
             ],
-            "support": {
-                "issues": "https://github.com/doctrine/inflector/issues",
-                "source": "https://github.com/doctrine/inflector/tree/2.0.10"
-            },
             "funding": [
                 {
                     "url": "https://www.doctrine-project.org/sponsorship.html",
@@ -538,7 +490,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/GrahamCampbell/Result-Type/zipball/fbd48bce38f73f8a4ec8583362e732e4095e5862",
+                "url": "https://mirrors.huaweicloud.com/repository/php/graham-campbell/result-type/v1.1.2/graham-campbell-result-type-v1.1.2.zip",
                 "reference": "fbd48bce38f73f8a4ec8583362e732e4095e5862",
                 "shasum": ""
             },
@@ -555,7 +507,6 @@
                     "GrahamCampbell\\ResultType\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -574,10 +525,6 @@
                 "Result-Type",
                 "result"
             ],
-            "support": {
-                "issues": "https://github.com/GrahamCampbell/Result-Type/issues",
-                "source": "https://github.com/GrahamCampbell/Result-Type/tree/v1.1.2"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -600,7 +547,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/41042bc7ab002487b876a0683fc8dce04ddce104",
+                "url": "https://mirrors.huaweicloud.com/repository/php/guzzlehttp/guzzle/7.8.1/guzzlehttp-guzzle-7.8.1.zip",
                 "reference": "41042bc7ab002487b876a0683fc8dce04ddce104",
                 "shasum": ""
             },
@@ -643,7 +590,6 @@
                     "GuzzleHttp\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -696,10 +642,6 @@
                 "rest",
                 "web service"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/guzzle/issues",
-                "source": "https://github.com/guzzle/guzzle/tree/7.8.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -726,7 +668,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/promises/zipball/bbff78d96034045e58e13dedd6ad91b5d1253223",
+                "url": "https://mirrors.huaweicloud.com/repository/php/guzzlehttp/promises/2.0.2/guzzlehttp-promises-2.0.2.zip",
                 "reference": "bbff78d96034045e58e13dedd6ad91b5d1253223",
                 "shasum": ""
             },
@@ -749,7 +691,6 @@
                     "GuzzleHttp\\Promise\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -779,10 +720,6 @@
             "keywords": [
                 "promise"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/promises/issues",
-                "source": "https://github.com/guzzle/promises/tree/2.0.2"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -809,7 +746,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/psr7/zipball/45b30f99ac27b5ca93cb4831afe16285f57b8221",
+                "url": "https://mirrors.huaweicloud.com/repository/php/guzzlehttp/psr7/2.6.2/guzzlehttp-psr7-2.6.2.zip",
                 "reference": "45b30f99ac27b5ca93cb4831afe16285f57b8221",
                 "shasum": ""
             },
@@ -843,7 +780,6 @@
                     "GuzzleHttp\\Psr7\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -895,10 +831,6 @@
                 "uri",
                 "url"
             ],
-            "support": {
-                "issues": "https://github.com/guzzle/psr7/issues",
-                "source": "https://github.com/guzzle/psr7/tree/2.6.2"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -925,7 +857,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/bus/zipball/4a09ead20ca08a24848b2f13c413fd18b31554a0",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/bus/v11.3.1/illuminate-bus-v11.3.1.zip",
                 "reference": "4a09ead20ca08a24848b2f13c413fd18b31554a0",
                 "shasum": ""
             },
@@ -950,7 +882,6 @@
                     "Illuminate\\Bus\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -962,10 +893,6 @@
             ],
             "description": "The Illuminate Bus package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-07T17:36:46+00:00"
         },
         {
@@ -978,7 +905,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/collections/zipball/aee944e8220588756e21aa4c30eebd5f6481e453",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/collections/v11.3.1/illuminate-collections-v11.3.1.zip",
                 "reference": "aee944e8220588756e21aa4c30eebd5f6481e453",
                 "shasum": ""
             },
@@ -1005,7 +932,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1017,10 +943,6 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1033,7 +955,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/conditionable/zipball/8a558fec063b6a63da1c3af1d219c0f998edffeb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/conditionable/v11.3.1/illuminate-conditionable-v11.3.1.zip",
                 "reference": "8a558fec063b6a63da1c3af1d219c0f998edffeb",
                 "shasum": ""
             },
@@ -1051,7 +973,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1063,10 +984,6 @@
             ],
             "description": "The Illuminate Conditionable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1079,7 +996,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/container/zipball/af979ecfd6dfa6583eae5dfe2e9a8840358f4ca7",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/container/v11.3.1/illuminate-container-v11.3.1.zip",
                 "reference": "af979ecfd6dfa6583eae5dfe2e9a8840358f4ca7",
                 "shasum": ""
             },
@@ -1102,7 +1019,6 @@
                     "Illuminate\\Container\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1114,10 +1030,6 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1130,7 +1042,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/contracts/zipball/28bc6fb6fe3debb27a19b12a59288ed2d1bd4008",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/contracts/v11.3.1/illuminate-contracts-v11.3.1.zip",
                 "reference": "28bc6fb6fe3debb27a19b12a59288ed2d1bd4008",
                 "shasum": ""
             },
@@ -1150,7 +1062,6 @@
                     "Illuminate\\Contracts\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1162,10 +1073,6 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1178,7 +1085,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/database/zipball/ad964b5e8e95417fbad28ecaf5ab77a5b3210b4b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/database/v11.3.1/illuminate-database-v11.3.1.zip",
                 "reference": "ad964b5e8e95417fbad28ecaf5ab77a5b3210b4b",
                 "shasum": ""
             },
@@ -1212,7 +1119,6 @@
                     "Illuminate\\Database\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1230,10 +1136,6 @@
                 "orm",
                 "sql"
             ],
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-10T14:52:18+00:00"
         },
         {
@@ -1246,7 +1148,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/events/zipball/18cf9c17f4656778355e5e49bb193b3cf585a668",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/events/v11.3.1/illuminate-events-v11.3.1.zip",
                 "reference": "18cf9c17f4656778355e5e49bb193b3cf585a668",
                 "shasum": ""
             },
@@ -1273,7 +1175,6 @@
                     "Illuminate\\Events\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1285,10 +1186,6 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1301,7 +1198,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/macroable/zipball/e1be58f9b2af73f242dc6a9add1f376b3ec89eef",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/macroable/v11.3.1/illuminate-macroable-v11.3.1.zip",
                 "reference": "e1be58f9b2af73f242dc6a9add1f376b3ec89eef",
                 "shasum": ""
             },
@@ -1319,7 +1216,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1331,10 +1227,6 @@
             ],
             "description": "The Illuminate Macroable package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2023-06-08T14:08:27+00:00"
         },
         {
@@ -1347,7 +1239,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/pagination/zipball/ab541626a692597278bae9dabaf7ae3c3657e035",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pagination/v11.3.1/illuminate-pagination-v11.3.1.zip",
                 "reference": "ab541626a692597278bae9dabaf7ae3c3657e035",
                 "shasum": ""
             },
@@ -1369,7 +1261,6 @@
                     "Illuminate\\Pagination\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1381,10 +1272,6 @@
             ],
             "description": "The Illuminate Pagination package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-02T13:11:56+00:00"
         },
         {
@@ -1397,7 +1284,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/pipeline/zipball/f9fc10f5af04035339f4e8ecbc6bcfaa1e7d74a6",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pipeline/v11.3.1/illuminate-pipeline-v11.3.1.zip",
                 "reference": "f9fc10f5af04035339f4e8ecbc6bcfaa1e7d74a6",
                 "shasum": ""
             },
@@ -1417,7 +1304,6 @@
                     "Illuminate\\Pipeline\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1429,10 +1315,6 @@
             ],
             "description": "The Illuminate Pipeline package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1445,7 +1327,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/redis/zipball/d9800a66080c6ece50f2ea4cdc3d39600baae789",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/redis/v11.3.1/illuminate-redis-v11.3.1.zip",
                 "reference": "d9800a66080c6ece50f2ea4cdc3d39600baae789",
                 "shasum": ""
             },
@@ -1471,7 +1353,6 @@
                     "Illuminate\\Redis\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1483,10 +1364,6 @@
             ],
             "description": "The Illuminate Redis package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-04T17:36:49+00:00"
         },
         {
@@ -1499,7 +1376,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/0794cd2077e57cabe9dead2b081e7e20f71e4ffe",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/support/v11.3.1/illuminate-support-v11.3.1.zip",
                 "reference": "0794cd2077e57cabe9dead2b081e7e20f71e4ffe",
                 "shasum": ""
             },
@@ -1545,7 +1422,6 @@
                     "Illuminate\\Support\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1557,10 +1433,6 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "support": {
-                "issues": "https://github.com/laravel/framework/issues",
-                "source": "https://github.com/laravel/framework"
-            },
             "time": "2024-04-09T14:13:50+00:00"
         },
         {
@@ -1573,7 +1445,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Intervention/image/zipball/04be355f8d6734c826045d02a1079ad658322dad",
+                "url": "https://mirrors.huaweicloud.com/repository/php/intervention/image/2.7.2/intervention-image-2.7.2.zip",
                 "reference": "04be355f8d6734c826045d02a1079ad658322dad",
                 "shasum": ""
             },
@@ -1610,7 +1482,6 @@
                     "Intervention\\Image\\": "src/Intervention/Image"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1631,10 +1502,6 @@
                 "thumbnail",
                 "watermark"
             ],
-            "support": {
-                "issues": "https://github.com/Intervention/image/issues",
-                "source": "https://github.com/Intervention/image/tree/2.7.2"
-            },
             "funding": [
                 {
                     "url": "https://paypal.me/interventionio",
@@ -1657,7 +1524,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/container/zipball/ff346319ca1ff0e78277dc2311a42107cc1aab88",
+                "url": "https://mirrors.huaweicloud.com/repository/php/league/container/4.2.2/league-container-4.2.2.zip",
                 "reference": "ff346319ca1ff0e78277dc2311a42107cc1aab88",
                 "shasum": ""
             },
@@ -1695,7 +1562,6 @@
                     "League\\Container\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1717,10 +1583,6 @@
                 "provider",
                 "service"
             ],
-            "support": {
-                "issues": "https://github.com/thephpleague/container/issues",
-                "source": "https://github.com/thephpleague/container/tree/4.2.2"
-            },
             "funding": [
                 {
                     "url": "https://github.com/philipobenito",
@@ -1739,7 +1601,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a30bfe2e142720dfa990d0a7e573997f5d884215",
+                "url": "https://mirrors.huaweicloud.com/repository/php/monolog/monolog/2.9.3/monolog-monolog-2.9.3.zip",
                 "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215",
                 "shasum": ""
             },
@@ -1797,7 +1659,6 @@
                     "Monolog\\": "src/Monolog"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1815,10 +1676,6 @@
                 "logging",
                 "psr-3"
             ],
-            "support": {
-                "issues": "https://github.com/Seldaek/monolog/issues",
-                "source": "https://github.com/Seldaek/monolog/tree/2.9.3"
-            },
             "funding": [
                 {
                     "url": "https://github.com/Seldaek",
@@ -1841,7 +1698,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/82c28278c1c8f7b82dcdab25692237f052ffc8d8",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nesbot/carbon/3.2.4/nesbot-carbon-3.2.4.zip",
                 "reference": "82c28278c1c8f7b82dcdab25692237f052ffc8d8",
                 "shasum": ""
             },
@@ -1894,7 +1751,6 @@
                     "Carbon\\": "src/Carbon/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -1916,11 +1772,6 @@
                 "datetime",
                 "time"
             ],
-            "support": {
-                "docs": "https://carbon.nesbot.com/docs",
-                "issues": "https://github.com/briannesbitt/Carbon/issues",
-                "source": "https://github.com/briannesbitt/Carbon"
-            },
             "funding": [
                 {
                     "url": "https://github.com/sponsors/kylekatarnls",
@@ -1947,7 +1798,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/FastRoute/zipball/181d480e08d9476e61381e04a71b34dc0432e812",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nikic/fast-route/v1.3.0/nikic-fast-route-v1.3.0.zip",
                 "reference": "181d480e08d9476e61381e04a71b34dc0432e812",
                 "shasum": ""
             },
@@ -1966,7 +1817,6 @@
                     "FastRoute\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -1981,10 +1831,6 @@
                 "router",
                 "routing"
             ],
-            "support": {
-                "issues": "https://github.com/nikic/FastRoute/issues",
-                "source": "https://github.com/nikic/FastRoute/tree/master"
-            },
             "time": "2018-02-13T20:26:39+00:00"
         },
         {
@@ -1997,7 +1843,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7/zipball/aa5fc277a4f5508013d571341ade0c3886d4d00e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nyholm/psr7/1.8.1/nyholm-psr7-1.8.1.zip",
                 "reference": "aa5fc277a4f5508013d571341ade0c3886d4d00e",
                 "shasum": ""
             },
@@ -2029,7 +1875,6 @@
                     "Nyholm\\Psr7\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2049,10 +1894,6 @@
                 "psr-17",
                 "psr-7"
             ],
-            "support": {
-                "issues": "https://github.com/Nyholm/psr7/issues",
-                "source": "https://github.com/Nyholm/psr7/tree/1.8.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/Zegnat",
@@ -2075,7 +1916,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Nyholm/psr7-server/zipball/4335801d851f554ca43fa6e7d2602141538854dc",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nyholm/psr7-server/1.1.0/nyholm-psr7-server-1.1.0.zip",
                 "reference": "4335801d851f554ca43fa6e7d2602141538854dc",
                 "shasum": ""
             },
@@ -2095,7 +1936,6 @@
                     "Nyholm\\Psr7Server\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2115,10 +1955,6 @@
                 "psr-17",
                 "psr-7"
             ],
-            "support": {
-                "issues": "https://github.com/Nyholm/psr7-server/issues",
-                "source": "https://github.com/Nyholm/psr7-server/tree/1.1.0"
-            },
             "funding": [
                 {
                     "url": "https://github.com/Zegnat",
@@ -2141,7 +1977,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/overtrue/socialite/zipball/457b48f31414dc00d3fb445d6ab9355595067afe",
+                "url": "https://mirrors.huaweicloud.com/repository/php/overtrue/socialite/4.10.1/overtrue-socialite-4.10.1.zip",
                 "reference": "457b48f31414dc00d3fb445d6ab9355595067afe",
                 "shasum": ""
             },
@@ -2170,7 +2006,6 @@
                     "Overtrue\\Socialite\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2191,10 +2026,6 @@
                 "wechat",
                 "weibo"
             ],
-            "support": {
-                "issues": "https://github.com/overtrue/socialite/issues",
-                "source": "https://github.com/overtrue/socialite/tree/4.10.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/overtrue",
@@ -2213,7 +2044,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-parallel-lint/PHP-Console-Color/zipball/7adfefd530aa2d7570ba87100a99e2483a543b88",
+                "url": "https://mirrors.huaweicloud.com/repository/php/php-parallel-lint/php-console-color/v1.0.1/php-parallel-lint-php-console-color-v1.0.1.zip",
                 "reference": "7adfefd530aa2d7570ba87100a99e2483a543b88",
                 "shasum": ""
             },
@@ -2235,7 +2066,6 @@
                     "PHP_Parallel_Lint\\PhpConsoleColor\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-2-Clause"
             ],
@@ -2246,10 +2076,6 @@
                 }
             ],
             "description": "Simple library for creating colored console ouput.",
-            "support": {
-                "issues": "https://github.com/php-parallel-lint/PHP-Console-Color/issues",
-                "source": "https://github.com/php-parallel-lint/PHP-Console-Color/tree/v1.0.1"
-            },
             "time": "2021-12-25T06:49:29+00:00"
         },
         {
@@ -2262,7 +2088,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/php-option/zipball/80735db690fe4fc5c76dfa7f9b770634285fa820",
+                "url": "https://mirrors.huaweicloud.com/repository/php/phpoption/phpoption/1.9.2/phpoption-phpoption-1.9.2.zip",
                 "reference": "80735db690fe4fc5c76dfa7f9b770634285fa820",
                 "shasum": ""
             },
@@ -2288,7 +2114,6 @@
                     "PhpOption\\": "src/PhpOption/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -2311,10 +2136,6 @@
                 "php",
                 "type"
             ],
-            "support": {
-                "issues": "https://github.com/schmittjoh/php-option/issues",
-                "source": "https://github.com/schmittjoh/php-option/tree/1.9.2"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -2337,7 +2158,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/cache/zipball/aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/cache/3.0.0/psr-cache-3.0.0.zip",
                 "reference": "aa5030cfa5405eccfdcb1083ce040c2cb8d253bf",
                 "shasum": ""
             },
@@ -2355,7 +2176,6 @@
                     "Psr\\Cache\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2371,9 +2191,6 @@
                 "psr",
                 "psr-6"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/cache/tree/3.0.0"
-            },
             "time": "2021-02-03T23:26:27+00:00"
         },
         {
@@ -2386,7 +2203,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/clock/zipball/e41a24703d4560fd0acb709162f73b8adfc3aa0d",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/clock/1.0.0/psr-clock-1.0.0.zip",
                 "reference": "e41a24703d4560fd0acb709162f73b8adfc3aa0d",
                 "shasum": ""
             },
@@ -2399,7 +2216,6 @@
                     "Psr\\Clock\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2418,10 +2234,6 @@
                 "psr-20",
                 "time"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/clock/issues",
-                "source": "https://github.com/php-fig/clock/tree/1.0.0"
-            },
             "time": "2022-11-25T14:36:26+00:00"
         },
         {
@@ -2434,7 +2246,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/container/zipball/c71ecc56dfe541dbd90c5360474fbc405f8d5963",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/container/2.0.2/psr-container-2.0.2.zip",
                 "reference": "c71ecc56dfe541dbd90c5360474fbc405f8d5963",
                 "shasum": ""
             },
@@ -2452,7 +2264,6 @@
                     "Psr\\Container\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2471,10 +2282,6 @@
                 "container-interop",
                 "psr"
             ],
-            "support": {
-                "issues": "https://github.com/php-fig/container/issues",
-                "source": "https://github.com/php-fig/container/tree/2.0.2"
-            },
             "time": "2021-11-05T16:47:00+00:00"
         },
         {
@@ -2487,7 +2294,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-client/zipball/bb5906edc1c324c9a05aa0873d40117941e5fa90",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/http-client/1.0.3/psr-http-client-1.0.3.zip",
                 "reference": "bb5906edc1c324c9a05aa0873d40117941e5fa90",
                 "shasum": ""
             },
@@ -2506,7 +2313,6 @@
                     "Psr\\Http\\Client\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2524,9 +2330,6 @@
                 "psr",
                 "psr-18"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-client"
-            },
             "time": "2023-09-23T14:17:50+00:00"
         },
         {
@@ -2539,7 +2342,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-factory/zipball/e616d01114759c4c489f93b099585439f795fe35",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/http-factory/1.0.2/psr-http-factory-1.0.2.zip",
                 "reference": "e616d01114759c4c489f93b099585439f795fe35",
                 "shasum": ""
             },
@@ -2558,7 +2361,6 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2579,9 +2381,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-factory/tree/1.0.2"
-            },
             "time": "2023-04-10T20:10:41+00:00"
         },
         {
@@ -2594,7 +2393,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/http-message/zipball/402d35bcb92c70c026d1a6a9883f06b2ead23d71",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/http-message/2.0/psr-http-message-2.0.zip",
                 "reference": "402d35bcb92c70c026d1a6a9883f06b2ead23d71",
                 "shasum": ""
             },
@@ -2612,7 +2411,6 @@
                     "Psr\\Http\\Message\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2632,9 +2430,6 @@
                 "request",
                 "response"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/http-message/tree/2.0"
-            },
             "time": "2023-04-04T09:54:51+00:00"
         },
         {
@@ -2647,7 +2442,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/log/zipball/fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/log/3.0.0/psr-log-3.0.0.zip",
                 "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
                 "shasum": ""
             },
@@ -2665,7 +2460,6 @@
                     "Psr\\Log\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2682,9 +2476,6 @@
                 "psr",
                 "psr-3"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/log/tree/3.0.0"
-            },
             "time": "2021-07-14T16:46:02+00:00"
         },
         {
@@ -2697,7 +2488,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/764e0b3939f5ca87cb904f570ef9be2d78a07865",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/simple-cache/3.0.0/psr-simple-cache-3.0.0.zip",
                 "reference": "764e0b3939f5ca87cb904f570ef9be2d78a07865",
                 "shasum": ""
             },
@@ -2715,7 +2506,6 @@
                     "Psr\\SimpleCache\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2733,9 +2523,6 @@
                 "psr-16",
                 "simple-cache"
             ],
-            "support": {
-                "source": "https://github.com/php-fig/simple-cache/tree/3.0.0"
-            },
             "time": "2021-10-29T13:26:27+00:00"
         },
         {
@@ -2748,7 +2535,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ralouphie/getallheaders/zipball/120b605dfeb996808c31b6477290a714d356e822",
+                "url": "https://mirrors.huaweicloud.com/repository/php/ralouphie/getallheaders/3.0.3/ralouphie-getallheaders-3.0.3.zip",
                 "reference": "120b605dfeb996808c31b6477290a714d356e822",
                 "shasum": ""
             },
@@ -2765,7 +2552,6 @@
                     "src/getallheaders.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2776,10 +2562,6 @@
                 }
             ],
             "description": "A polyfill for getallheaders.",
-            "support": {
-                "issues": "https://github.com/ralouphie/getallheaders/issues",
-                "source": "https://github.com/ralouphie/getallheaders/tree/develop"
-            },
             "time": "2019-03-08T08:55:37+00:00"
         },
         {
@@ -2792,7 +2574,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cakephp/phinx/zipball/e039a723e9fe33e406102ac1c3dc0a54c031152f",
+                "url": "https://mirrors.huaweicloud.com/repository/php/robmorgan/phinx/0.16.0/robmorgan-phinx-0.16.0.zip",
                 "reference": "e039a723e9fe33e406102ac1c3dc0a54c031152f",
                 "shasum": ""
             },
@@ -2825,7 +2607,6 @@
                     "Phinx\\": "src/Phinx/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2862,10 +2643,6 @@
                 "migrations",
                 "phinx"
             ],
-            "support": {
-                "issues": "https://github.com/cakephp/phinx/issues",
-                "source": "https://github.com/cakephp/phinx/tree/0.16.0"
-            },
             "time": "2024-01-24T05:06:44+00:00"
         },
         {
@@ -2878,7 +2655,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/ab83243ecc233de5655b76f577711de9f842e712",
+                "url": "https://mirrors.huaweicloud.com/repository/php/sebastian/diff/6.0.1/sebastian-diff-6.0.1.zip",
                 "reference": "ab83243ecc233de5655b76f577711de9f842e712",
                 "shasum": ""
             },
@@ -2900,7 +2677,6 @@
                     "src/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -2922,11 +2698,6 @@
                 "unidiff",
                 "unified diff"
             ],
-            "support": {
-                "issues": "https://github.com/sebastianbergmann/diff/issues",
-                "security": "https://github.com/sebastianbergmann/diff/security/policy",
-                "source": "https://github.com/sebastianbergmann/diff/tree/6.0.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/sebastianbergmann",
@@ -2945,7 +2716,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache/zipball/2d0d3f92c74c445410d05374908b03e0a1131e2b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/cache/v7.0.6/symfony-cache-v7.0.6.zip",
                 "reference": "2d0d3f92c74c445410d05374908b03e0a1131e2b",
                 "shasum": ""
             },
@@ -2992,7 +2763,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3012,9 +2782,6 @@
                 "caching",
                 "psr6"
             ],
-            "support": {
-                "source": "https://github.com/symfony/cache/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3041,7 +2808,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/2c9db6509a1b21dad229606897639d3284f54b2a",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/cache-contracts/v3.4.2/symfony-cache-contracts-v3.4.2.zip",
                 "reference": "2c9db6509a1b21dad229606897639d3284f54b2a",
                 "shasum": ""
             },
@@ -3064,7 +2831,6 @@
                     "Symfony\\Contracts\\Cache\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3088,9 +2854,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/cache-contracts/tree/v3.4.2"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3117,7 +2880,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/clock/zipball/8b9d08887353d627d5f6c3bf3373b398b49051c2",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/clock/v7.0.5/symfony-clock-v7.0.5.zip",
                 "reference": "8b9d08887353d627d5f6c3bf3373b398b49051c2",
                 "shasum": ""
             },
@@ -3141,7 +2904,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3162,9 +2924,6 @@
                 "psr20",
                 "time"
             ],
-            "support": {
-                "source": "https://github.com/symfony/clock/tree/v7.0.5"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3191,7 +2950,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/config/zipball/7fc7e18a73ec8125fd95928c0340470d64760deb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/config/v7.0.6/symfony-config-v7.0.6.zip",
                 "reference": "7fc7e18a73ec8125fd95928c0340470d64760deb",
                 "shasum": ""
             },
@@ -3221,7 +2980,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3237,9 +2995,6 @@
             ],
             "description": "Helps you find, load, combine, autofill and validate configuration values of any kind",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/config/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3266,7 +3021,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/fde915cd8e7eb99b3d531d3d5c09531429c3f9e5",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/console/v7.0.6/symfony-console-v7.0.6.zip",
                 "reference": "fde915cd8e7eb99b3d531d3d5c09531429c3f9e5",
                 "shasum": ""
             },
@@ -3308,7 +3063,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3330,9 +3084,6 @@
                 "console",
                 "terminal"
             ],
-            "support": {
-                "source": "https://github.com/symfony/console/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3359,7 +3110,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/7c3aff79d10325257a001fcf92d991f24fc967cf",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/deprecation-contracts/v3.4.0/symfony-deprecation-contracts-v3.4.0.zip",
                 "reference": "7c3aff79d10325257a001fcf92d991f24fc967cf",
                 "shasum": ""
             },
@@ -3381,7 +3132,6 @@
                     "function.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3397,9 +3147,6 @@
             ],
             "description": "A generic function and convention to trigger deprecation notices",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/deprecation-contracts/tree/v3.4.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3426,7 +3173,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/filesystem/zipball/408105dff4c104454100730bdfd1a9cdd993f04d",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/filesystem/v7.0.6/symfony-filesystem-v7.0.6.zip",
                 "reference": "408105dff4c104454100730bdfd1a9cdd993f04d",
                 "shasum": ""
             },
@@ -3444,7 +3191,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3460,9 +3206,6 @@
             ],
             "description": "Provides basic utilities for the filesystem",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/filesystem/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3489,7 +3232,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/6e70473909f46fe5dd3b994a0f1b20ecb6b2f858",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-client/v7.0.6/symfony-http-client-v7.0.6.zip",
                 "reference": "6e70473909f46fe5dd3b994a0f1b20ecb6b2f858",
                 "shasum": ""
             },
@@ -3533,7 +3276,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3552,9 +3294,6 @@
             "keywords": [
                 "http"
             ],
-            "support": {
-                "source": "https://github.com/symfony/http-client/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3581,7 +3320,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client-contracts/zipball/b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-client-contracts/v3.4.2/symfony-http-client-contracts-v3.4.2.zip",
                 "reference": "b6b5c876b3a4ed74460e2c5ac53bbce2f12e2a7e",
                 "shasum": ""
             },
@@ -3606,7 +3345,6 @@
                     "/Test/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3630,9 +3368,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/http-client-contracts/tree/v3.4.2"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3659,7 +3394,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/8789625dcf36e5fbf753014678a1e090f1bc759c",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-foundation/v7.0.6/symfony-http-foundation-v7.0.6.zip",
                 "reference": "8789625dcf36e5fbf753014678a1e090f1bc759c",
                 "shasum": ""
             },
@@ -3691,7 +3426,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3707,9 +3441,6 @@
             ],
             "description": "Defines an object-oriented layer for the HTTP specification",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/http-foundation/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3736,7 +3467,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/mime/zipball/99362408c9abdf8c7cadcf0529b6fc8b16f5ace2",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/mime/v7.0.6/symfony-mime-v7.0.6.zip",
                 "reference": "99362408c9abdf8c7cadcf0529b6fc8b16f5ace2",
                 "shasum": ""
             },
@@ -3771,7 +3502,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3791,9 +3521,6 @@
                 "mime",
                 "mime-type"
             ],
-            "support": {
-                "source": "https://github.com/symfony/mime/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3820,7 +3547,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/ef4d7e442ca910c4764bce785146269b30cb5fc4",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-ctype/v1.29.0/symfony-polyfill-ctype-v1.29.0.zip",
                 "reference": "ef4d7e442ca910c4764bce785146269b30cb5fc4",
                 "shasum": ""
             },
@@ -3848,7 +3575,6 @@
                     "Symfony\\Polyfill\\Ctype\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3870,9 +3596,6 @@
                 "polyfill",
                 "portable"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3899,7 +3622,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-grapheme/zipball/32a9da87d7b3245e09ac426c83d334ae9f06f80f",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-grapheme/v1.29.0/symfony-polyfill-intl-grapheme-v1.29.0.zip",
                 "reference": "32a9da87d7b3245e09ac426c83d334ae9f06f80f",
                 "shasum": ""
             },
@@ -3924,7 +3647,6 @@
                     "Symfony\\Polyfill\\Intl\\Grapheme\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -3948,9 +3670,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-grapheme/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -3977,7 +3696,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-idn/zipball/a287ed7475f85bf6f61890146edbc932c0fff919",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-idn/v1.29.0/symfony-polyfill-intl-idn-v1.29.0.zip",
                 "reference": "a287ed7475f85bf6f61890146edbc932c0fff919",
                 "shasum": ""
             },
@@ -4004,7 +3723,6 @@
                     "Symfony\\Polyfill\\Intl\\Idn\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4032,9 +3750,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-idn/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4061,7 +3776,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-normalizer/zipball/bc45c394692b948b4d383a08d7753968bed9a83d",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-normalizer/v1.29.0/symfony-polyfill-intl-normalizer-v1.29.0.zip",
                 "reference": "bc45c394692b948b4d383a08d7753968bed9a83d",
                 "shasum": ""
             },
@@ -4089,7 +3804,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4113,9 +3827,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-intl-normalizer/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4142,7 +3853,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-mbstring/v1.29.0/symfony-polyfill-mbstring-v1.29.0.zip",
                 "reference": "9773676c8a1bb1f8d4340a62efe641cf76eda7ec",
                 "shasum": ""
             },
@@ -4170,7 +3881,6 @@
                     "Symfony\\Polyfill\\Mbstring\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4193,9 +3903,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-mbstring/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4222,7 +3929,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php72/zipball/861391a8da9a04cbad2d232ddd9e4893220d6e25",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php72/v1.29.0/symfony-polyfill-php72-v1.29.0.zip",
                 "reference": "861391a8da9a04cbad2d232ddd9e4893220d6e25",
                 "shasum": ""
             },
@@ -4244,7 +3951,6 @@
                     "Symfony\\Polyfill\\Php72\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4266,9 +3972,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php72/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4295,7 +3998,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php80/zipball/87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php80/v1.29.0/symfony-polyfill-php80-v1.29.0.zip",
                 "reference": "87b68208d5c1188808dd7839ee1e6c8ec3b02f1b",
                 "shasum": ""
             },
@@ -4320,7 +4023,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4346,9 +4048,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php80/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4375,7 +4074,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php81/zipball/c565ad1e63f30e7477fc40738343c62b40bc672d",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php81/v1.29.0/symfony-polyfill-php81-v1.29.0.zip",
                 "reference": "c565ad1e63f30e7477fc40738343c62b40bc672d",
                 "shasum": ""
             },
@@ -4400,7 +4099,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4422,9 +4120,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4451,7 +4146,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/86fcae159633351e5fd145d1c47de6c528f8caff",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php83/v1.29.0/symfony-polyfill-php83-v1.29.0.zip",
                 "reference": "86fcae159633351e5fd145d1c47de6c528f8caff",
                 "shasum": ""
             },
@@ -4477,7 +4172,6 @@
                     "Resources/stubs"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4499,9 +4193,6 @@
                 "portable",
                 "shim"
             ],
-            "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.29.0"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4528,7 +4219,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/psr-http-message-bridge/zipball/98059dd19bae6579a294e0fe5b3dfdbeb409845a",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/psr-http-message-bridge/v6.4.6/symfony-psr-http-message-bridge-v6.4.6.zip",
                 "reference": "98059dd19bae6579a294e0fe5b3dfdbeb409845a",
                 "shasum": ""
             },
@@ -4560,7 +4251,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4582,9 +4272,6 @@
                 "psr-17",
                 "psr-7"
             ],
-            "support": {
-                "source": "https://github.com/symfony/psr-http-message-bridge/tree/v6.4.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4611,7 +4298,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/service-contracts/zipball/11bbf19a0fb7b36345861e85c5768844c552906e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/service-contracts/v3.4.2/symfony-service-contracts-v3.4.2.zip",
                 "reference": "11bbf19a0fb7b36345861e85c5768844c552906e",
                 "shasum": ""
             },
@@ -4640,7 +4327,6 @@
                     "/Test/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4664,9 +4350,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/service-contracts/tree/v3.4.2"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4693,7 +4376,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/f5832521b998b0bec40bee688ad5de98d4cf111b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/string/v7.0.4/symfony-string-v7.0.4.zip",
                 "reference": "f5832521b998b0bec40bee688ad5de98d4cf111b",
                 "shasum": ""
             },
@@ -4726,7 +4409,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4750,9 +4432,6 @@
                 "utf-8",
                 "utf8"
             ],
-            "support": {
-                "source": "https://github.com/symfony/string/tree/v7.0.4"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4779,7 +4458,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation/zipball/5b75e872f7d135d7abb4613809fadc8d9f3d30a0",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/translation/v7.0.4/symfony-translation-v7.0.4.zip",
                 "reference": "5b75e872f7d135d7abb4613809fadc8d9f3d30a0",
                 "shasum": ""
             },
@@ -4828,7 +4507,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4844,9 +4522,6 @@
             ],
             "description": "Provides tools to internationalize your application",
             "homepage": "https://symfony.com",
-            "support": {
-                "source": "https://github.com/symfony/translation/tree/v7.0.4"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4873,7 +4548,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/translation-contracts/zipball/43810bdb2ddb5400e5c5e778e27b210a0ca83b6b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/translation-contracts/v3.4.2/symfony-translation-contracts-v3.4.2.zip",
                 "reference": "43810bdb2ddb5400e5c5e778e27b210a0ca83b6b",
                 "shasum": ""
             },
@@ -4898,7 +4573,6 @@
                     "/Test/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -4922,9 +4596,6 @@
                 "interoperability",
                 "standards"
             ],
-            "support": {
-                "source": "https://github.com/symfony/translation-contracts/tree/v3.4.2"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -4951,7 +4622,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/66d13dc207d5dab6b4f4c2b5460efe1bea29dbfb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/var-dumper/v7.0.6/symfony-var-dumper-v7.0.6.zip",
                 "reference": "66d13dc207d5dab6b4f4c2b5460efe1bea29dbfb",
                 "shasum": ""
             },
@@ -4985,7 +4656,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5005,9 +4675,6 @@
                 "debug",
                 "dump"
             ],
-            "support": {
-                "source": "https://github.com/symfony/var-dumper/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5034,7 +4701,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-exporter/zipball/c74c568d2a15a1d407cf40d61ea82bc2d521e27b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/var-exporter/v7.0.6/symfony-var-exporter-v7.0.6.zip",
                 "reference": "c74c568d2a15a1d407cf40d61ea82bc2d521e27b",
                 "shasum": ""
             },
@@ -5055,7 +4722,6 @@
                     "/Tests/"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5081,9 +4747,6 @@
                 "proxy",
                 "serialize"
             ],
-            "support": {
-                "source": "https://github.com/symfony/var-exporter/tree/v7.0.6"
-            },
             "funding": [
                 {
                     "url": "https://symfony.com/sponsor",
@@ -5110,7 +4773,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TheNorthMemory/xml/zipball/6f50c63450a0b098772423f8bdc3c4ad2c4c30bb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/thenorthmemory/xml/1.1.1/thenorthmemory-xml-1.1.1.zip",
                 "reference": "6f50c63450a0b098772423f8bdc3c4ad2c4c30bb",
                 "shasum": ""
             },
@@ -5129,7 +4792,6 @@
                     "TheNorthMemory\\Xml\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -5145,10 +4807,6 @@
                 "xml-builder",
                 "xml-parser"
             ],
-            "support": {
-                "issues": "https://github.com/TheNorthMemory/xml/issues",
-                "source": "https://github.com/TheNorthMemory/xml/tree/1.1.1"
-            },
             "time": "2023-01-15T06:01:13+00:00"
         },
         {
@@ -5161,7 +4819,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-container/zipball/2189b39e42af2c14203ed4372b92e38989e9dabb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/topthink/think-container/v2.0.5/topthink-think-container-v2.0.5.zip",
                 "reference": "2189b39e42af2c14203ed4372b92e38989e9dabb",
                 "shasum": ""
             },
@@ -5180,7 +4838,6 @@
                     "think\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -5191,10 +4848,6 @@
                 }
             ],
             "description": "PHP Container & Facade Manager",
-            "support": {
-                "issues": "https://github.com/top-think/think-container/issues",
-                "source": "https://github.com/top-think/think-container/tree/v2.0.5"
-            },
             "time": "2022-05-23T06:24:54+00:00"
         },
         {
@@ -5207,7 +4860,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-helper/zipball/769acbe50a4274327162f9c68ec2e89a38eb2aff",
+                "url": "https://mirrors.huaweicloud.com/repository/php/topthink/think-helper/v3.1.6/topthink-think-helper-v3.1.6.zip",
                 "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff",
                 "shasum": ""
             },
@@ -5226,7 +4879,6 @@
                     "think\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -5237,10 +4889,6 @@
                 }
             ],
             "description": "The ThinkPHP6 Helper Package",
-            "support": {
-                "issues": "https://github.com/top-think/think-helper/issues",
-                "source": "https://github.com/top-think/think-helper/tree/v3.1.6"
-            },
             "time": "2021-12-15T04:27:55+00:00"
         },
         {
@@ -5253,7 +4901,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/top-think/think-validate/zipball/857f9bffc1a09a41e3969a19726cb04315848f0f",
+                "url": "https://mirrors.huaweicloud.com/repository/php/topthink/think-validate/v2.0.2/topthink-think-validate-v2.0.2.zip",
                 "reference": "857f9bffc1a09a41e3969a19726cb04315848f0f",
                 "shasum": ""
             },
@@ -5268,7 +4916,6 @@
                     "think\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "Apache-2.0"
             ],
@@ -5279,10 +4926,6 @@
                 }
             ],
             "description": "think validate",
-            "support": {
-                "issues": "https://github.com/top-think/think-validate/issues",
-                "source": "https://github.com/top-think/think-validate/tree/2.0"
-            },
             "time": "2019-05-15T06:58:23+00:00"
         },
         {
@@ -5295,7 +4938,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/2cf9fb6054c2bb1d59d1f3817706ecdb9d2934c4",
+                "url": "https://mirrors.huaweicloud.com/repository/php/vlucas/phpdotenv/v5.6.0/vlucas-phpdotenv-v5.6.0.zip",
                 "reference": "2cf9fb6054c2bb1d59d1f3817706ecdb9d2934c4",
                 "shasum": ""
             },
@@ -5331,7 +4974,6 @@
                     "Dotenv\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "BSD-3-Clause"
             ],
@@ -5353,10 +4995,6 @@
                 "env",
                 "environment"
             ],
-            "support": {
-                "issues": "https://github.com/vlucas/phpdotenv/issues",
-                "source": "https://github.com/vlucas/phpdotenv/tree/v5.6.0"
-            },
             "funding": [
                 {
                     "url": "https://github.com/GrahamCampbell",
@@ -5379,7 +5017,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/b56450eed252f6801410d810c8e1727224ae0743",
+                "url": "https://mirrors.huaweicloud.com/repository/php/voku/portable-ascii/2.0.1/voku-portable-ascii-2.0.1.zip",
                 "reference": "b56450eed252f6801410d810c8e1727224ae0743",
                 "shasum": ""
             },
@@ -5398,7 +5036,6 @@
                     "voku\\": "src/voku/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5415,10 +5052,6 @@
                 "clean",
                 "php"
             ],
-            "support": {
-                "issues": "https://github.com/voku/portable-ascii/issues",
-                "source": "https://github.com/voku/portable-ascii/tree/2.0.1"
-            },
             "funding": [
                 {
                     "url": "https://www.paypal.me/moelleken",
@@ -5453,7 +5086,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/w7corp/easywechat/zipball/8902917ceeaa20354301e533ff3725f0044c04ca",
+                "url": "https://mirrors.huaweicloud.com/repository/php/w7corp/easywechat/6.15.1/w7corp-easywechat-6.15.1.zip",
                 "reference": "8902917ceeaa20354301e533ff3725f0044c04ca",
                 "shasum": ""
             },
@@ -5512,7 +5145,6 @@
                     "EasyWeChat\\": "src/"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5530,10 +5162,6 @@
                 "weixin",
                 "weixin-sdk"
             ],
-            "support": {
-                "issues": "https://github.com/w7corp/easywechat/issues",
-                "source": "https://github.com/w7corp/easywechat/tree/6.15.1"
-            },
             "funding": [
                 {
                     "url": "https://github.com/overtrue",
@@ -5552,7 +5180,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/admin/zipball/02499473daf6f7dde5a6d742259c9135f95b71d1",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/admin/v0.6.24/webman-admin-v0.6.24.zip",
                 "reference": "02499473daf6f7dde5a6d742259c9135f95b71d1",
                 "shasum": ""
             },
@@ -5572,15 +5200,10 @@
                     "Webman\\Admin\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Webman Admin",
-            "support": {
-                "issues": "https://github.com/webman-php/admin/issues",
-                "source": "https://github.com/webman-php/admin/tree/v0.6.24"
-            },
             "time": "2024-01-23T03:24:54+00:00"
         },
         {
@@ -5593,7 +5216,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/captcha/zipball/e80f271af99cb337406118fa7d90c0699ee1f3bc",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/captcha/v1.0.3/webman-captcha-v1.0.3.zip",
                 "reference": "e80f271af99cb337406118fa7d90c0699ee1f3bc",
                 "shasum": ""
             },
@@ -5611,7 +5234,6 @@
                     "Webman\\Captcha\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5636,9 +5258,6 @@
                 "captcha",
                 "spam"
             ],
-            "support": {
-                "source": "https://github.com/webman-php/captcha/tree/v1.0.3"
-            },
             "time": "2024-03-28T07:54:04+00:00"
         },
         {
@@ -5651,7 +5270,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/console/zipball/0096680820014b12c1f98129a9005e5f960ab292",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/console/v1.3.6/webman-console-v1.3.6.zip",
                 "reference": "0096680820014b12c1f98129a9005e5f960ab292",
                 "shasum": ""
             },
@@ -5668,7 +5287,6 @@
                     "Webman\\Console\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5685,13 +5303,6 @@
             "keywords": [
                 "webman console"
             ],
-            "support": {
-                "email": "walkor@workerman.net",
-                "forum": "http://www.workerman.net/questions",
-                "issues": "https://github.com/webman-php/console/issues",
-                "source": "https://github.com/webman-php/console",
-                "wiki": "http://www.workerman.net/doc/webman"
-            },
             "time": "2024-04-10T07:21:40+00:00"
         },
         {
@@ -5704,7 +5315,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/event/zipball/b1c3f6b70fd290e48288703d59bead0e28f9fb84",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/event/v1.0.5/webman-event-v1.0.5.zip",
                 "reference": "b1c3f6b70fd290e48288703d59bead0e28f9fb84",
                 "shasum": ""
             },
@@ -5714,15 +5325,10 @@
                     "Webman\\Event\\": "src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Webman event plugin",
-            "support": {
-                "issues": "https://github.com/webman-php/event/issues",
-                "source": "https://github.com/webman-php/event/tree/v1.0.5"
-            },
             "time": "2023-12-04T09:22:12+00:00"
         },
         {
@@ -5735,7 +5341,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/redis-queue/zipball/80b9ddca0405bbb6d02e6b368e8036b3b1a13814",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/redis-queue/v1.3.2/webman-redis-queue-v1.3.2.zip",
                 "reference": "80b9ddca0405bbb6d02e6b368e8036b3b1a13814",
                 "shasum": ""
             },
@@ -5748,12 +5354,7 @@
                     "Webman\\RedisQueue\\": "./src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "description": "Redis message queue plugin for webman.",
-            "support": {
-                "issues": "https://github.com/webman-php/redis-queue/issues",
-                "source": "https://github.com/webman-php/redis-queue/tree/v1.3.2"
-            },
             "time": "2024-04-03T02:00:20+00:00"
         },
         {
@@ -5766,7 +5367,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/crontab/zipball/b78f1556f2977715b9cb5653129e6d9cf160d966",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/crontab/v1.0.6/workerman-crontab-v1.0.6.zip",
                 "reference": "b78f1556f2977715b9cb5653129e6d9cf160d966",
                 "shasum": ""
             },
@@ -5780,7 +5381,6 @@
                     "Workerman\\Crontab\\": "./src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5797,13 +5397,6 @@
             "keywords": [
                 "crontab"
             ],
-            "support": {
-                "email": "walkor@workerman.net",
-                "forum": "http://wenda.workerman.net/",
-                "issues": "https://github.com/walkor/workerman/issues",
-                "source": "https://github.com/walkor/crontab",
-                "wiki": "http://doc.workerman.net/"
-            },
             "time": "2022-10-17T01:59:19+00:00"
         },
         {
@@ -5816,7 +5409,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/redis/zipball/542f10c243ba846f1f3b4c07a26136c5fa80d972",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/redis/v2.0.2/workerman-redis-v2.0.2.zip",
                 "reference": "542f10c243ba846f1f3b4c07a26136c5fa80d972",
                 "shasum": ""
             },
@@ -5830,15 +5423,10 @@
                     "Workerman\\Redis\\": "./src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "homepage": "http://www.workerman.net",
-            "support": {
-                "issues": "https://github.com/walkor/redis/issues",
-                "source": "https://github.com/walkor/redis/tree/v2.0.2"
-            },
             "time": "2023-06-08T01:39:47+00:00"
         },
         {
@@ -5851,7 +5439,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/redis-queue/zipball/7b6aee70d69e5c9427c0411d85f8398027831b42",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/redis-queue/v1.2.0/workerman-redis-queue-v1.2.0.zip",
                 "reference": "7b6aee70d69e5c9427c0411d85f8398027831b42",
                 "shasum": ""
             },
@@ -5866,16 +5454,11 @@
                     "Workerman\\RedisQueue\\": "./src"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Message queue system written in PHP based on workerman and backed by Redis.",
             "homepage": "http://www.workerman.net",
-            "support": {
-                "issues": "https://github.com/walkor/redis-queue/issues",
-                "source": "https://github.com/walkor/redis-queue/tree/v1.2.0"
-            },
             "time": "2024-02-28T07:00:03+00:00"
         },
         {
@@ -5888,7 +5471,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/84335520a340ee60adf7cf17aeb0edb9536c24e8",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/webman-framework/v1.5.16/workerman-webman-framework-v1.5.16.zip",
                 "reference": "84335520a340ee60adf7cf17aeb0edb9536c24e8",
                 "shasum": ""
             },
@@ -5913,7 +5496,6 @@
                     "Support\\Exception\\": "./src/support/exception"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5931,13 +5513,6 @@
                 "High Performance",
                 "http service"
             ],
-            "support": {
-                "email": "walkor@workerman.net",
-                "forum": "https://wenda.workerman.net/",
-                "issues": "https://github.com/walkor/webman/issues",
-                "source": "https://github.com/walkor/webman-framework",
-                "wiki": "https://doc.workerman.net/"
-            },
             "time": "2024-01-15T12:11:49+00:00"
         },
         {
@@ -5950,7 +5525,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/workerman/zipball/afc8242fc769ab7cf22eb4ac22b97cb59d465e4e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/workerman/v4.1.15/workerman-workerman-v4.1.15.zip",
                 "reference": "afc8242fc769ab7cf22eb4ac22b97cb59d465e4e",
                 "shasum": ""
             },
@@ -5966,7 +5541,6 @@
                     "Workerman\\": "./"
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -5984,13 +5558,6 @@
                 "asynchronous",
                 "event-loop"
             ],
-            "support": {
-                "email": "walkor@workerman.net",
-                "forum": "http://wenda.workerman.net/",
-                "issues": "https://github.com/walkor/workerman/issues",
-                "source": "https://github.com/walkor/workerman",
-                "wiki": "http://doc.workerman.net/"
-            },
             "funding": [
                 {
                     "url": "https://opencollective.com/workerman",

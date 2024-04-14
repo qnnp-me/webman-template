@@ -16,7 +16,7 @@ return [
   'listen'           => 'http://0.0.0.0:' . env('SERVER_PORT', 8787),
   'transport'        => 'tcp',
   'context'          => [],
-  'name'             => env('SERVER_NAME', 'Webman'),
+  'name'             => env('APP_NAME', 'Webman'),
   'count'            => cpu_count() * 4,
   'user'             => '',
   'group'            => '',

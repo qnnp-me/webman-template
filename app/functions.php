@@ -24,16 +24,14 @@ function json_response(mixed $data = null): Response
   return json($data);
 }
 
-function cors(callable $callback)
+function cors(Response $response): Response
 {
   if (request()->method() == 'OPTIONS') {
-    $result = response('');
-  } else {
-    $result = $callback();
+    return response('');
   }
-  return $result->withHeaders([
+  return $response->withHeaders([
     'Access-Control-Allow-Origin'      => request()->header('Origin'),
-    'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS',
+    'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE, PATCH',
     'Access-Control-Allow-Headers'     => request()->header('Access-Control-Request-Headers'),
     'Access-Control-Allow-Credentials' => 'true',
   ]);
