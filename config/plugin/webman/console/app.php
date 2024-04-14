@@ -4,18 +4,18 @@ return [
 
     'build_dir'  => BASE_PATH . DIRECTORY_SEPARATOR . 'build',
 
-    'phar_filename' => 'webman.phar',
+    'phar_filename' => 'server.phar',
 
-    'bin_filename' => 'webman.bin',
+    'bin_filename' => 'server.bin',
 
     'signature_algorithm'=> Phar::SHA256, //set the signature algorithm for a phar and apply it. The signature algorithm must be one of Phar::MD5, Phar::SHA1, Phar::SHA256, Phar::SHA512, or Phar::OPENSSL.
 
     'private_key_file'  => '', // The file path for certificate or OpenSSL private key file.
 
-    'exclude_pattern'   => '#^(?!.*(composer.json|/.github/|/.idea/|/.git/|/.setting/|/runtime/|/vendor-bin/|/build/|/vendor/webman/admin/))(.*)$#',
+    'exclude_pattern'   => '#^(?!.*(composer.json|/.github/|/.idea/|/.git/|/.setting/|/runtime/|/vendor-bin/|/build/|/vendor/webman/admin/|/public/|/plugin/.+/public/|/database/(migrations|seeds)/))(.*)$#',
 
     'exclude_files'     => [
-        '.env', 'LICENSE', 'composer.json', 'composer.lock', 'start.php', 'webman.phar', 'webman.bin'
+        '.env', 'LICENSE', 'composer.json', 'composer.lock', 'start.php', 'webman.phar', 'webman.bin', 'server.phar', 'server.bin', '.env.example', '.gitignore', '.gitkeep', 'phinx.php'
     ],
 
     'custom_ini' => '

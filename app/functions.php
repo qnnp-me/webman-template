@@ -38,3 +38,24 @@ function cors(callable $callback)
     'Access-Control-Allow-Credentials' => 'true',
   ]);
 }
+
+
+function getAllFiles(string $abs_path): array
+{
+  $list = [];
+  if (file_exists($abs_path) && is_dir($abs_path)) {
+    $dir = opendir($abs_path);
+    while (false !== ($file = readdir($dir))) {
+      if ($file != "." && $file != "..") {
+        if (is_dir($abs_path . "/" . $file)) {
+          $list = array_merge($list, getAllFiles($abs_path . "/" . $file));
+        } else {
+          $list[] = $abs_path . "/" . $file;
+        }
+      }
+    }
+  } else {
+    $list[] = $abs_path;
+  }
+  return $list;
+}

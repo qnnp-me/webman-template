@@ -54,8 +54,8 @@ class WebmanAdminUpdate extends Command
     $this->alert('即将开始为 webman/admin 执行文件升级操作! 请小心处理! ');
 
     // 新旧文件列表
-    $old_file_list = array_map(fn($path) => str_replace($old_path, '', $path), $this->getAllFiles(base_path('plugin/admin')));
-    $new_file_list = array_map(fn($path) => str_replace($new_path, '', $path), $this->getAllFiles(base_path('vendor/webman/admin/src/plugin/admin')));
+    $old_file_list = array_map(fn($path) => str_replace($old_path, '', $path), getAllFiles(base_path('plugin/admin')));
+    $new_file_list = array_map(fn($path) => str_replace($new_path, '', $path), getAllFiles(base_path('vendor/webman/admin/src/plugin/admin')));
     $old_file_list_str = implode("\n", $old_file_list);
     $new_file_list_str = implode("\n", $new_file_list);
 
@@ -117,7 +117,6 @@ class WebmanAdminUpdate extends Command
         $this->warning("文件 $file_path 存在差异");
         $diff = explode("\n", $diff);
         $_diff = $diff;
-//        array_splice($diff, 0, 2);
         usort($_diff, fn($a, $b) => mb_strlen($b) - mb_strlen($a));
         $max_len = max(180, mb_strlen($_diff[0]));
         $diff = array_map(
@@ -150,26 +149,6 @@ class WebmanAdminUpdate extends Command
 
     $this->success("升级完成.");
     return self::SUCCESS;
-  }
-
-  protected function getAllFiles(string $path): array
-  {
-    $list = [];
-    if (file_exists($path) && is_dir($path)) {
-      $dir = opendir($path);
-      while (false !== ($file = readdir($dir))) {
-        if ($file != "." && $file != "..") {
-          if (is_dir($path . "/" . $file)) {
-            $list = array_merge($list, $this->getAllFiles($path . "/" . $file));
-          } else {
-            $list[] = $path . "/" . $file;
-          }
-        }
-      }
-    } else {
-      $list[] = $path;
-    }
-    return $list;
   }
 
   protected function addNewFile($file): bool

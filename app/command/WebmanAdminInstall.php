@@ -306,35 +306,43 @@ PHP;
     $database_name,
     $database_user,
     $database_password,
+    $group = 'ADMIN_MYSQL'
   )
   {
     $file = base_path('.env');
     $content = file_get_contents($file);
-    if (str_contains($content, 'ADMIN_MYSQL_HOST')) {
-      $content = preg_replace('/ADMIN_MYSQL_HOST=(.*)/', "ADMIN_MYSQL_HOST={$database_host}", $content);
+    if (str_contains($content, "{$group}_HOST")) {
+      $content = preg_replace("/{$group}_HOST=(.*)/", "{$group}_HOST={$database_host}", $content);
     } else {
       $content .= "\n";
-      $content .= "ADMIN_MYSQL_HOST={$database_host}\n";
+      $content .= "{$group}_HOST={$database_host}\n";
     }
-    if (str_contains($content, 'ADMIN_MYSQL_PORT')) {
-      $content = preg_replace('/ADMIN_MYSQL_PORT=(.*)/', "ADMIN_MYSQL_PORT={$database_port}", $content);
+    if (str_contains($content, "{$group}_PORT")) {
+      $content = preg_replace("/{$group}_PORT=(.*)/", "{$group}_PORT={$database_port}", $content);
     } else {
-      $content .= "ADMIN_MYSQL_PORT={$database_port}\n";
+      $content .= "{$group}_PORT={$database_port}\n";
     }
-    if (str_contains($content, 'ADMIN_MYSQL_DBNAME')) {
-      $content = preg_replace('/ADMIN_MYSQL_DBNAME=(.*)/', "ADMIN_MYSQL_DBNAME={$database_name}", $content);
+    if (str_contains($content, "{$group}_DBNAME")) {
+      $content = preg_replace("/{$group}_DBNAME=(.*)/", "{$group}_DBNAME={$database_name}", $content);
     } else {
-      $content .= "ADMIN_MYSQL_DBNAME={$database_name}\n";
+      $content .= "{$group}_DBNAME={$database_name}\n";
     }
-    if (str_contains($content, 'ADMIN_MYSQL_USER')) {
-      $content = preg_replace('/ADMIN_MYSQL_USER=(.*)/', "ADMIN_MYSQL_USER={$database_user}", $content);
+    if (str_contains($content, "{$group}_USER")) {
+      $content = preg_replace("/{$group}_USER=(.*)/", "{$group}_USER={$database_user}", $content);
     } else {
-      $content .= "ADMIN_MYSQL_USER={$database_user}\n";
+      $content .= "{$group}_USER={$database_user}\n";
     }
-    if (str_contains($content, 'ADMIN_MYSQL_PASSWORD')) {
-      $content = preg_replace('/ADMIN_MYSQL_PASSWORD=(.*)/', "ADMIN_MYSQL_PASSWORD={$database_password}", $content);
+    if (str_contains($content, "{$group}_PASSWORD")) {
+      $content = preg_replace("/{$group}_PASSWORD=(.*)/", "{$group}_PASSWORD={$database_password}", $content);
     } else {
-      $content .= "ADMIN_MYSQL_PASSWORD={$database_password}\n";
+      $content .= "{$group}_PASSWORD={$database_password}\n";
+    }
+    if ($group != 'MYSQL') {
+      $env = file_get_contents(base_path('plugin/admin/.env.example'));
+      $confirm = '检测到未使用默认的数据库配置前缀, 是否将 webman/admin 的配置前缀示例写入 .env.example 文件?';
+      if (!str_contains($env, $group) && $this->confirm($confirm, true)) {
+
+      }
     }
 
     return file_put_contents($file, $content);

@@ -7,3 +7,5 @@
 /tests/.phpunit.result.cache
 /build
 /plugin/admin/public/upload
+/server.phar
+/server.bin
