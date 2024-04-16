@@ -27,7 +27,7 @@
     "php": ">=8.2",
     "ext-pcntl": "*",
     "ext-posix": "*",
-    "workerman/webman-framework": "^1.5.0",
+    "workerman/webman-framework": "dev-master",
     "monolog/monolog": "^2.0",
     "illuminate/database": "^11.3",
     "illuminate/pagination": "^11.3",
@@ -41,7 +41,7 @@
     "symfony/cache": "^7.0",
     "topthink/think-validate": "^2.0",
     "robmorgan/phinx": "^0.16.0",
-    "webman/admin": "^0.6.24",
+    "webman/admin": "dev-main",
     "w7corp/easywechat": "^6.15",
     "guzzlehttp/guzzle": "^7.8",
     "workerman/crontab": "^1.0",
@@ -49,6 +49,16 @@
     "php-parallel-lint/php-console-color": "^1.0",
     "webman/event": "^1.0"
   },
+  "repositories": [
+    {
+      "url": "git@github.com:webman-php/admin.git",
+      "type": "vcs"
+    },
+    {
+      "url": "git@github.com:walkor/webman-framework.git",
+      "type": "vcs"
+    }
+  ],
   "suggest": {
     "ext-event": "For better performance. "
   },

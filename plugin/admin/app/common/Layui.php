@@ -1,6 +1,7 @@
 <?php
 namespace plugin\admin\app\common;
 
+use plugin\admin\app\common\Util;
 use support\exception\BusinessException;
 
 class Layui

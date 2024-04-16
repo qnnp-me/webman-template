@@ -7,6 +7,7 @@ use Intervention\Image\ImageManagerStatic as Image;
 use plugin\admin\app\controller\Base;
 use plugin\admin\app\controller\Crud;
 use plugin\admin\app\model\Upload;
+use Random\RandomException;
 use support\exception\BusinessException;
 use support\Request;
 use support\Response;
@@ -262,7 +263,8 @@ class UploadController extends Crud
         $file_list = array_map(function ($item) {
           $path =$item['url'];
           if (preg_match("#^/app/admin#",$path)){
-              return base_path("plugin/admin/public" . str_replace("/app/admin", "", $item['url']));
+              $admin_public_path = config('plugin.admin.app.public_path') ?: base_path() . "/plugin/admin/public";
+              return $admin_public_path . str_replace("/app/admin", "", $item['url']);
           }
           return null;
         },$files);
@@ -284,16 +286,18 @@ class UploadController extends Crud
      * @param $relative_dir
      * @return array
      * @throws BusinessException
+     * @throws BusinessException|RandomException
      */
     protected function base(Request $request, $relative_dir): array
     {
-        $relative_dir = ltrim($relative_dir, '/');
+        $relative_dir = ltrim($relative_dir, '\\/');
         $file = current($request->file());
         if (!$file || !$file->isValid()) {
             throw new BusinessException('未找到上传文件', 400);
         }
 
-        $base_dir = config('plugin.admin.app.public_path') . DIRECTORY_SEPARATOR ?: base_path() . '/plugin/admin/public/';
+        $admin_public_path = rtrim(config('plugin.admin.app.public_path', ''), '\\/');
+        $base_dir = $admin_public_path ? $admin_public_path . DIRECTORY_SEPARATOR : base_path() . '/plugin/admin/public/';
         $full_dir = $base_dir . $relative_dir;
         if (!is_dir($full_dir)) {
             mkdir($full_dir, 0777, true);

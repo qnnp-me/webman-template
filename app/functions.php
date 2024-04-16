@@ -1,5 +1,6 @@
 <?php
 
+use app\module\SessionModule;
 use support\Response;
 
 function json_error(string $msg, int $code = 500): Response
@@ -56,4 +57,9 @@ function getAllFiles(string $abs_path): array
     $list[] = $abs_path;
   }
   return $list;
+}
+
+function ss(): SessionModule
+{
+  return SessionModule::getInstance();
 }

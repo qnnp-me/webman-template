@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4976e5c14e2ed52724ac1a7a311e9e0a",
+    "content-hash": "d76b2d86a3010dcb97f95116efa6c223",
     "packages": [
         {
             "name": "brick/math",
@@ -5172,16 +5172,16 @@
         },
         {
             "name": "webman/admin",
-            "version": "v0.6.24",
+            "version": "dev-main",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/admin.git",
-                "reference": "02499473daf6f7dde5a6d742259c9135f95b71d1"
+                "reference": "d6533bde8129c2d6d259a8c1c362247b176f3a9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/webman/admin/v0.6.24/webman-admin-v0.6.24.zip",
-                "reference": "02499473daf6f7dde5a6d742259c9135f95b71d1",
+                "url": "https://api.github.com/repos/webman-php/admin/zipball/d6533bde8129c2d6d259a8c1c362247b176f3a9c",
+                "reference": "d6533bde8129c2d6d259a8c1c362247b176f3a9c",
                 "shasum": ""
             },
             "require": {
@@ -5194,6 +5194,7 @@
                 "webman/event": "^1.0",
                 "workerman/webman-framework": ">=1.4"
             },
+            "default-branch": true,
             "type": "project",
             "autoload": {
                 "psr-4": {
@@ -5204,7 +5205,11 @@
                 "MIT"
             ],
             "description": "Webman Admin",
-            "time": "2024-01-23T03:24:54+00:00"
+            "support": {
+                "source": "https://github.com/webman-php/admin/tree/main",
+                "issues": "https://github.com/webman-php/admin/issues"
+            },
+            "time": "2024-04-15T01:25:36+00:00"
         },
         {
             "name": "webman/captcha",
@@ -5463,16 +5468,16 @@
         },
         {
             "name": "workerman/webman-framework",
-            "version": "v1.5.16",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/webman-framework.git",
-                "reference": "84335520a340ee60adf7cf17aeb0edb9536c24e8"
+                "reference": "4e4efb7cff288f2b8f82f75bc66cbe7407c9d9b6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/webman-framework/v1.5.16/workerman-webman-framework-v1.5.16.zip",
-                "reference": "84335520a340ee60adf7cf17aeb0edb9536c24e8",
+                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/4e4efb7cff288f2b8f82f75bc66cbe7407c9d9b6",
+                "reference": "4e4efb7cff288f2b8f82f75bc66cbe7407c9d9b6",
                 "shasum": ""
             },
             "require": {
@@ -5485,15 +5490,16 @@
             "suggest": {
                 "ext-event": "For better performance. "
             },
+            "default-branch": true,
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "Webman\\": "./src",
-                    "Support\\": "./src/support",
                     "support\\": "./src/support",
-                    "Support\\View\\": "./src/support/view",
+                    "Support\\": "./src/support",
                     "Support\\Bootstrap\\": "./src/support/bootstrap",
-                    "Support\\Exception\\": "./src/support/exception"
+                    "Support\\Exception\\": "./src/support/exception",
+                    "Support\\View\\": "./src/support/view"
                 }
             },
             "license": [
@@ -5510,10 +5516,17 @@
             "description": "High performance HTTP Service Framework.",
             "homepage": "https://www.workerman.net",
             "keywords": [
-                "High Performance",
+                "high performance",
                 "http service"
             ],
-            "time": "2024-01-15T12:11:49+00:00"
+            "support": {
+                "email": "walkor@workerman.net",
+                "issues": "https://github.com/walkor/webman/issues",
+                "forum": "https://wenda.workerman.net/",
+                "wiki": "https://doc.workerman.net/",
+                "source": "https://github.com/walkor/webman-framework"
+            },
+            "time": "2024-03-21T14:35:19+00:00"
         },
         {
             "name": "workerman/workerman",
@@ -5574,7 +5587,10 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "workerman/webman-framework": 20,
+        "webman/admin": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {

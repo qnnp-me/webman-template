@@ -9,9 +9,6 @@ if (class_exists('Dotenv\Dotenv') && file_exists(base_path(false) . '/.env')) {
     Dotenv::createMutable(base_path(false))->load();
   }
 }
-
-var_dump(__FILE__ . ':' . __LINE__ . ':' . __FUNCTION__, base_path("database/migrations"));
-
 return [
   "paths"        => [
     "migrations" => is_phar() ? runtime_path('phinx/database/migrations') : base_path("database/migrations"),
