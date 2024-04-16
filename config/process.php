@@ -45,8 +45,9 @@ return [
   'crontab' => [
     'handler' => process\CrontabManager::class
   ],
-  'init' => [
-    'handler' => process\Init::class,
-    'constructor' => []
+  'init'    => [
+    'handler'     => process\Init\Main::class,
+    'reloadable'  => false,
+    'constructor' => [],
   ],
 ];

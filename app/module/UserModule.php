@@ -85,4 +85,35 @@ class UserModule
     }
     return $user;
   }
+
+  /**
+   * 创建用户
+   * 不传的参数则随机生成
+   */
+  static function createUser($username = null, $password = null, $nickname = null): UserModel
+  {
+    $user = new UserModel();
+    if ($username) {
+      $user->username = $username;
+    } else {
+      $unique = bin2hex(random_bytes(8) | random_bytes(8));
+      $user->username = "User_{$unique}";
+    }
+    if ($password) {
+      $user->password = password_hash($password, PASSWORD_BCRYPT);
+    } else {
+      $unique = bin2hex(random_bytes(8) | random_bytes(8));
+      $user->password = password_hash("password_{$unique}", PASSWORD_BCRYPT);
+    }
+    if ($nickname) {
+      $user->nickname = $nickname;
+    } else {
+      $suffix = bin2hex(random_bytes(4));
+      $user->nickname = "Nickname_{$suffix}";
+    }
+    $user->join_ip = request()->getRealIp();
+    $user->join_time = date('Y-m-d H:i:s');
+    $user->save();
+    return $user;
+  }
 }
