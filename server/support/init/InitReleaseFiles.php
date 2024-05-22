@@ -1,9 +1,8 @@
 <?php
 
-namespace process\Init;
+namespace support\init;
 
 use Phar;
-use process\Init\InitInterface;
 
 class InitReleaseFiles implements InitInterface
 {

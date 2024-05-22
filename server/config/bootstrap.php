@@ -15,5 +15,5 @@
 return [
   support\bootstrap\Session::class,
   support\bootstrap\LaravelDb::class,
-  support\bootstrap\RegisterModelEvents::class,
+  support\bootstrap\ModelEvents::class,
 ];

@@ -1,6 +1,6 @@
 <?php
 
-namespace process\Init;
+namespace support\init;
 
 interface InitInterface
 {

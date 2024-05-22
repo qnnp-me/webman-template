@@ -1,6 +1,6 @@
 <?php
 
-namespace process\Init;
+namespace support\init;
 
 use Phinx\Console\PhinxApplication;
 use Phinx\Wrapper\TextWrapper;
@@ -15,9 +15,6 @@ class InitPhinx implements InitInterface
     $wrap->setOption('configuration', base_path('phinx.php'));
     $wrap->getMigrate();
     echo $wrap->getStatus();
-    $wrap->getSeed(seed: [
-      'WebmanAdminDict',
-      'WebmanAdminRule',
-    ]);
+    $wrap->getSeed(seed: []);
   }
 }

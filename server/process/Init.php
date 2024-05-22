@@ -1,16 +1,16 @@
 <?php
 
-namespace process\Init;
+namespace process;
 
-class Main
+class Init
 {
   public function __construct()
   {
-    $base_path = base_path('process/Init');
+    $base_path = base_path('support/init');
     $all_files = getAllFiles($base_path);
     foreach ($all_files as $file) {
       $class = str_replace(base_path(), '', str_replace(".php", '', $file));
-      if (str_starts_with($class, '/process/Init/Init')) {
+      if (str_starts_with($class, '/support/init/Init')) {
         $class = str_replace('/', '\\', $class);
         if (class_exists($class) && method_exists($class, 'run')) {
           $class::run();

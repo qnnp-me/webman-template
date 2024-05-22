@@ -5,7 +5,7 @@ namespace support\bootstrap;
 use Webman\Bootstrap;
 use Workerman\Worker;
 
-class RegisterModelEvents implements Bootstrap
+class ModelEvents implements Bootstrap
 {
 
   /**

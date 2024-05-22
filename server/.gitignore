@@ -1,6 +1,7 @@
 /.vscode
 *.log
 /runtime
+composer.lock
 /vendor
 /build
 /plugin/admin/public/upload
