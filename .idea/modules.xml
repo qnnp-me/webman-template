@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/personal-query.iml" filepath="$PROJECT_DIR$/.idea/personal-query.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/webman-template.iml" filepath="$PROJECT_DIR$/.idea/webman-template.iml" />
     </modules>
   </component>
 </project>

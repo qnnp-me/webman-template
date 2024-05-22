@@ -285,7 +285,6 @@ class UploadController extends Crud
      * @param Request $request
      * @param $relative_dir
      * @return array
-     * @throws BusinessException
      * @throws BusinessException|RandomException
      */
     protected function base(Request $request, $relative_dir): array

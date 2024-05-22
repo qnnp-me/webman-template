@@ -1,0 +1,11 @@
+{
+    "name": "qnnp/webman-template",
+    "type": "project",
+    "authors": [
+        {
+            "name": "qnnp",
+            "email": "wjp@pfan.ltd"
+        }
+    ],
+    "require": {}
+}
