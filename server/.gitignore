@@ -8,3 +8,5 @@ composer.lock
 .env
 /tests/tmp
 /tests/.phpunit.result.cache
+/public/*
+!/public/404.html
