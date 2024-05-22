@@ -1,6 +1,10 @@
 #!/bin/bash
 
-project_name="${1:-webman}"
+read -r -p "Enter project name: " project_name
+if [ -z "$project_name" ]; then
+project_name="webman"
+fi
+
 
 if [ -d "$project_name" ]; then
 echo "$project_name already exists"
