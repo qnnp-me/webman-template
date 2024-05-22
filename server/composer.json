@@ -65,12 +65,12 @@
   "autoload": {
     "psr-4": {
       "": "./",
-      "app\\": "./app",
-      "App\\": "./app",
-      "app\\View\\Components\\": "./app/view/components"
+      "app\\": "app",
+      "App\\": "app",
+      "app\\View\\Components\\": "app/view/components"
     },
     "files": [
-      "./support/helpers.php"
+      "support/helpers.php"
     ]
   },
   "scripts": {
