@@ -41,13 +41,13 @@ class WebmanAdminUpdate extends Command
     $this->new_path = $new_path;
 
     $builder = new StrictUnifiedDiffOutputBuilder([
-      'collapseRanges'      => true,
+      'collapseRanges' => true,
       'commonLineThreshold' => 6,
-      'contextLines'        => 3,
-      'fromFile'            => '',
-      'fromFileDate'        => null,
-      'toFile'              => '',
-      'toFileDate'          => null,
+      'contextLines' => 3,
+      'fromFile' => '',
+      'fromFileDate' => null,
+      'toFile' => '',
+      'toFileDate' => null,
     ]);
     $differ = new Differ($builder);
 
@@ -104,12 +104,45 @@ class WebmanAdminUpdate extends Command
       $this->notice("没有新增任何文件.");
     }
 
+
     foreach ($new_file_list as $file_path) {
       $new_file_path = $this->new_path . $file_path;
       $old_file_path = $this->old_path . $file_path;
       if (!file_exists($old_file_path)) {
         continue;
       }
+      $text_file_mime_type_list = [
+        'application/javascript',
+        'application/json',
+        'application/x-php',
+        'application/x-sh',
+        'application/x-shar',
+        'application/x-tar',
+        'application/x-tex',
+        'application/x-texinfo',
+        'application/x-troff-man',
+        'application/x-troff-me',
+        'application/x-troff-ms',
+        'application/x-troff',
+        'application/x-wais-source',
+        'application/x-www-form-urlencoded',
+        'application/x-x509-ca-cert',
+        'application/x-x509-server-cert',
+        'application/x-x509-user-cert',
+        'application/x-yaml',
+        'application/x-yml',
+        'application/xml',
+      ];
+      $file_mime_type = mime_content_type($new_file_path);
+      if (!str_starts_with($file_mime_type, "text/") && !in_array($file_mime_type, $text_file_mime_type_list)) {
+        $old_md5 = md5_file($old_file_path);
+        if ($old_md5 != md5_file($new_file_path)) {
+          $this->warning("文件 $file_path 存在差异");
+          $this->confirmUpdateFile($file_path, $old_file_path);
+        }
+        continue;
+      }
+
       $old_file = file_get_contents($old_file_path);
       $new_file = file_get_contents($new_file_path);
       $diff = $differ->diff($old_file, $new_file);
@@ -137,18 +170,22 @@ class WebmanAdminUpdate extends Command
           $diff
         );
         $this->info($diff);
-        if ($this->confirm("是否更新 $file_path ?", true)) {
-          unlink($old_file_path);
-          $this->addNewFile($file_path);
-          $this->success("更新: $file_path -> ok");
-        } else {
-          $this->notice("更新: $file_path -> skipped");
-        }
+        $this->confirmUpdateFile($file_path, $old_file_path);
       }
     }
-
     $this->success("升级完成.");
     return self::SUCCESS;
+  }
+
+  protected function confirmUpdateFile($file_path, $old_file_path): void
+  {
+    if ($this->confirm("是否更新 $file_path ?", true)) {
+      unlink($old_file_path);
+      $this->addNewFile($file_path);
+      $this->success("更新: $file_path -> ok");
+    } else {
+      $this->notice("更新: $file_path -> skipped");
+    }
   }
 
   protected function addNewFile($file): bool

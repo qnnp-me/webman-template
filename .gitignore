@@ -1,11 +1,9 @@
-/runtime
 /.vscode
-/vendor
 *.log
+/runtime
+/vendor
+/build
+/plugin/admin/public/upload
 .env
 /tests/tmp
 /tests/.phpunit.result.cache
-/build
-/plugin/admin/public/upload
-/server.phar
-/server.bin
