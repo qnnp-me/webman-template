@@ -13,7 +13,6 @@ class SessionModule
 {
   protected static SessionModule $instance;
   readonly public string $user;
-  readonly public string $open_user;
 
   public static function getInstance(): SessionModule
   {

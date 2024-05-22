@@ -12,6 +12,7 @@
   </component>
   <component name="PhpIncludePathManager">
     <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
       <path value="$PROJECT_DIR$/server/vendor/webman/event" />
       <path value="$PROJECT_DIR$/server/vendor/webman/redis-queue" />
       <path value="$PROJECT_DIR$/server/vendor/cakephp/chronos" />

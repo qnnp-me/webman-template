@@ -3,16 +3,19 @@
 use app\module\SessionModule;
 use support\Response;
 
-function json_error(string $msg, int $code = 500): Response
+function json_error(string $msg, int $code = 500, $data = null): Response
 {
   $debug = env('APP_DEBUG');
   $result = [
     'code' => $code,
-    'msg'  => $msg,
+    'msg' => $msg,
   ];
+  if ($data) {
+    $result['data'] = $data;
+  }
   if ($debug) {
     $result['debug'] = [
-      'data'   => request()->all(),
+      'data' => request()->all(),
       'header' => request()->header(),
     ];
   }
@@ -20,7 +23,7 @@ function json_error(string $msg, int $code = 500): Response
   return json($result)->withStatus(($code >= 100 && $code < 600) ? $code : 500);
 }
 
-function json_response(mixed $data = null): Response
+function json_success(mixed $data = null): Response
 {
   return json($data);
 }
@@ -31,9 +34,9 @@ function cors(Response $response): Response
     return response('');
   }
   return $response->withHeaders([
-    'Access-Control-Allow-Origin'      => request()->header('Origin'),
-    'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE, PATCH',
-    'Access-Control-Allow-Headers'     => request()->header('Access-Control-Request-Headers'),
+    'Access-Control-Allow-Origin' => request()->header('Origin'),
+    'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE, PATCH',
+    'Access-Control-Allow-Headers' => request()->header('Access-Control-Request-Headers'),
     'Access-Control-Allow-Credentials' => 'true',
   ]);
 }
