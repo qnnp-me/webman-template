@@ -22,7 +22,7 @@ module.exports = {
       },
       alias: {
         map: [
-          ['@common', './src/common'],
+          ['@common', './src'],
           ['@admin', './admin'],
           ['@home', './home'],
         ],

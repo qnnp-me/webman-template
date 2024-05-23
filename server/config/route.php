@@ -14,8 +14,6 @@
 
 use Webman\Route;
 
-
-
-
-
-
+Route::fallback(function () {
+  return response()->withFile(public_path('index.html'));
+});
