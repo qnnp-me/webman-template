@@ -1,6 +1,7 @@
 <?php
 
 use app\module\SessionModule;
+use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use support\Response;
 
 function json_error(string $msg, int $code = 500, $data = null): Response
@@ -25,6 +26,12 @@ function json_error(string $msg, int $code = 500, $data = null): Response
 
 function json_success(mixed $data = null): Response
 {
+  if ($data instanceof LengthAwarePaginator) {
+    return json([
+      'data' => $data->items(),
+      'count' => $data->total(),
+    ]);
+  }
   return json($data);
 }
 
