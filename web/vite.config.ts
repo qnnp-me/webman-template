@@ -2,37 +2,25 @@ import { resolve } from 'path';
 import dynamicImport from 'vite-plugin-dynamic-import';
 
 import { defineConfig } from 'vite';
+import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
 
 import react from '@vitejs/plugin-react-swc';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
-    react(), dynamicImport({
-      filter(id) {
-        return !/\/src\/main\.tsx$/.test(id);
-      },
-    }),
+    react(),
+    chunkSplitPlugin(),
   ],
   build: {
     emptyOutDir: true,
     outDir: '../server/public',
     rollupOptions: {
-      output: {
-        manualChunks: (id: string, e) => {
-          console.log(id);
-          if (id.includes('node_modules')) {
-            const folders = id.split('node_modules/')?.[1]?.split('/');
-            if (folders){
-              return folders[0];
-            }
-            return 'vendor';
-          }
-        },
-      },
+      output: {},
     },
   },
   server: {
+    host: '0.0.0.0',
     proxy: {
       '/api': {
         target: 'http://localhost:8787',
@@ -48,6 +36,7 @@ export default defineConfig({
       '@admin': resolve(__dirname, 'admin'),
       '@home': resolve(__dirname, 'home'),
     },
+    extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },
   optimizeDeps: {
     exclude: ['eslint-plugin-import'],

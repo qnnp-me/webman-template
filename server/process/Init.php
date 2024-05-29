@@ -10,11 +10,9 @@ class Init
     $all_files = getAllFiles($base_path);
     foreach ($all_files as $file) {
       $class = str_replace(base_path(), '', str_replace(".php", '', $file));
-      if (str_starts_with($class, '/support/init/Init')) {
-        $class = str_replace('/', '\\', $class);
-        if (class_exists($class) && method_exists($class, 'run')) {
-          $class::run();
-        }
+      $class = str_replace('/', '\\', $class);
+      if (class_exists($class) && method_exists($class, 'run')) {
+        $class::run();
       }
     }
   }

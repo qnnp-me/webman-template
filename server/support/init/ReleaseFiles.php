@@ -4,7 +4,7 @@ namespace support\init;
 
 use Phar;
 
-class InitReleaseFiles implements InitInterface
+class ReleaseFiles implements InitInterface
 {
 
   static function run(): void

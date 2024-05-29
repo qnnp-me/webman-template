@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ReactBuddyPluginProjectSettings">
+    <option name="componentSubDirectory" value="test" />
+    <option name="defaultDirectory" value="$PROJECT_DIR$/web/storybook" />
+    <option name="devServerConfigs">
+      <DevServerState>
+        <option name="packageJsonPath" value="$PROJECT_DIR$/web/package.json" />
+        <option name="scriptName" value="dev" />
+        <option name="url" value="http://localhost:5173" />
+      </DevServerState>
+    </option>
+  </component>
+  <component name="StorybookProjectConfigState">
+    <option name="componentSubDirectory" />
+    <option name="defaultDirectory" value="$PROJECT_DIR$/web/storybook" />
+    <option name="useCSF7plus" value="false" />
+  </component>
+</project>

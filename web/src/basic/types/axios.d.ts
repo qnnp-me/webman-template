@@ -3,7 +3,7 @@ import axios from 'axios';
 declare module 'axios' {
   export interface AxiosInstance {
     request<T = unknown> (config: AxiosRequestConfig): Promise<T>;
-    get<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T>;
+    get<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<AdminResponse<T>>;
     delete<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T>;
     head<T = unknown>(url: string, config?: AxiosRequestConfig): Promise<T>;
     post<T = unknown>(url: string, data?: unknown, config?: AxiosRequestConfig): Promise<T>;

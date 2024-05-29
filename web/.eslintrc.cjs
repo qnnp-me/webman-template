@@ -17,6 +17,7 @@ module.exports = {
   settings: {
     'import/extensions': allExtensions,
     'import/resolver': {
+      typescript: {},
       node: {
         extensions: allExtensions,
       },
