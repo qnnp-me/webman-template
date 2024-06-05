@@ -6,7 +6,7 @@ import Button from 'antd/es/button';
 import Result from 'antd/es/result';
 import { useNavigate } from 'react-router-dom';
 
-import utils from '@common/basic/utils/utils.ts';
+import * as utils from '@common/basic/utils/utils.ts';
 
 export default function Page404({ home }: { home?: string }) {
   home = home || (location.pathname.startsWith('/admin') ? '/admin' : '/');

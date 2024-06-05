@@ -1,24 +1,24 @@
-import log from 'loglevel';
 import { DetailedHTMLProps, ImgHTMLAttributes, useEffect, useState } from 'react';
 
-import { ConfigProvider } from 'antd';
 import { SpaceProps } from 'antd/lib';
 import Space from 'antd/lib/space';
 import Spin from 'antd/lib/spin';
 
 import { ReloadOutlined } from '@ant-design/icons';
-import utils from '@common/basic/utils/utils.ts';
+import { AntdIconProps } from '@ant-design/icons/es/components/AntdIcon';
+import * as utils from '@common/basic/utils/utils.ts';
 
 export const Captcha = (props: {
   withFresh?: boolean
+  size?: 'small' | 'middle' | 'large'
   // PHP 端使用 session()->get("captcha-$type") 读取验证码, 不区分大小写
   captchaType: string
   imgProps?: DetailedHTMLProps<ImgHTMLAttributes<HTMLImageElement>, HTMLImageElement>
+  iconProps?: React.ForwardRefExoticComponent<Omit<AntdIconProps, 'ref'> & React.RefAttributes<HTMLSpanElement>>
   containerProps?: SpaceProps
   onLoad?: () => void
   onClick?: () => void
 }) => {
-  const { componentSize } = ConfigProvider.useConfig();
   const { captchaType = 'login', withFresh = true, onLoad, onClick } = props;
   const [loading, setLoading] = useState(false);
   const getCaptchaUrl = () => {
@@ -33,7 +33,6 @@ export const Captcha = (props: {
     helper[captchaType] = () => {
       setUrl(getCaptchaUrl());
     };
-    log.debug('size', componentSize);
     return () => {
       delete helper[captchaType];
     };
@@ -57,11 +56,18 @@ export const Captcha = (props: {
           alt="验证码"
         />
       </Spin>
-      {withFresh && <ReloadOutlined
-        spin={loading}
-        style={{ fontSize: '20px', cursor: 'pointer' }}
-        onClick={() => setLoading(true)}
-      />}
+      {withFresh && <div
+        style={{
+          cursor: 'pointer',
+        }}
+      >
+        <ReloadOutlined
+          style={{ fontSize: '18px' }}
+          {...props.iconProps}
+          spin={loading}
+          onClick={() => setLoading(true)}
+        />
+      </div>}
     </Space>
   );
 };

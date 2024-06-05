@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 
 import { useLocation } from 'react-router-dom';
 
-import utils from '@common/basic/utils/utils.ts';
+import * as utils from '@common/basic/utils/utils.ts';
 
 export default function PageAdminIframe() {
   const { pathname } = useLocation();
