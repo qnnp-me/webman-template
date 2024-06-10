@@ -10,6 +10,7 @@ import { useNavigate, useSearchParams } from 'react-router-dom';
 
 import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
 import { Captcha, refreshCaptcha } from '@common/basic/components/Captcha.tsx';
+import { Icon } from '@common/basic/components/Icon/Icon.tsx';
 import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
 
 type loginData = {
@@ -111,18 +112,26 @@ export default function PageAdminLogin() {
         opacity: 1,
       }}
       containerStyle={{}}
+      size={'large'}
     >
       {failedMessage
         ? <Alert type={'error'} showIcon style={{ margin: '12px 0' }} message={failedMessage}/>
         : <Divider/>}
-      <ProFormText name={'username'} placeholder={'请输入用户名'} rules={getFormRules('username')}/>
+      <ProFormText
+        fieldProps={{ prefix: <Icon icon={'UserOutlined'}/> }}
+        name={'username'}
+        placeholder={'请输入用户名'}
+        rules={getFormRules('username')}
+      />
       <ProFormText.Password
+        fieldProps={{ prefix: <Icon icon={'LockOutlined'}/> }}
         name={'password'}
         placeholder={'请输入密码'}
         rules={getFormRules('password')}
       />
       <ProFormText
         fieldProps={{
+          prefix: <Icon icon={'SafetyOutlined'}/>,
           ref: captchaInput as never,
           maxLength: 4,
         }}
@@ -132,7 +141,8 @@ export default function PageAdminLogin() {
         addonWarpStyle={{ display: 'flex', flexWrap: 'nowrap', alignItems: 'flex-start' }}
         addonAfter={<Space>
           <Captcha
-            imgProps={{ style: { height: '32px', width: '96px' } }}
+            // imgProps={{ style: { height: '32px', width: '96px' } }}
+            imgProps={{ style: { height: '40px', width: '120px' } }}
             captchaType={'login'}
             onClick={() => {
               captchaInput.current?.focus();

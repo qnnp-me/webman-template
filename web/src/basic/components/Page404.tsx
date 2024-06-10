@@ -6,9 +6,10 @@ import Button from 'antd/es/button';
 import Result from 'antd/es/result';
 import { useNavigate } from 'react-router-dom';
 
+import { Icon } from '@common/basic/components/Icon/Icon.tsx';
 import * as utils from '@common/basic/utils/utils.ts';
 
-export default function Page404({ home }: { home?: string }) {
+export const Page404 = ({ home }: { home?: string }) => {
   home = home || (location.pathname.startsWith('/admin') ? '/admin' : '/');
   const nav = useNavigate();
   useEffect(() => {
@@ -21,11 +22,13 @@ export default function Page404({ home }: { home?: string }) {
       title={'您访问的页面不存在'}
       subTitle={'请检查您的网络或者联系管理员'}
       extra={<Space>
-        <Button type={'primary'} onClick={() => nav(home, { replace: true })}>返回首页</Button>
-        {home === '/admin' && import.meta.env.DEV &&
-          <Button>创建此菜单</Button>
-        }
+        <Button icon={<Icon icon={'CaretLeftFilled'}/>} onClick={() => history.back()}>返回上一页</Button>
+        <Button
+          icon={<Icon icon={'HomeOutlined'}/>}
+          type={'primary'}
+          onClick={() => nav(home, { replace: true })}
+        >返回首页</Button>
       </Space>}
     />
   </div>;
-}
+};

@@ -14,7 +14,9 @@ declare type AdminMenuItemType = {
   // 父级id
   pid: number;
   // 标识
-  key: string;
+  key?: string;
+  // 前端处理转换的 key, 避免 key 影响到前端代码
+  _key?: string;
   // 图标
   icon: string;
   name: string;
@@ -33,6 +35,9 @@ declare type SysConfigType = {
   logo: {
     title: string;
     image: string;
+    icp: string;
+    beian: string;
+    footer_txt: string;
   };
   menu: {
     data: string;

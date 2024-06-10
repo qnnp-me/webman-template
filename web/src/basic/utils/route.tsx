@@ -2,8 +2,10 @@ import { ComponentType, lazy, Suspense } from 'react';
 
 import { createBrowserRouter, Outlet, RouteObject } from 'react-router-dom';
 
-import Page404 from '@common/basic/components/Page404.tsx';
-import PageLoading from '@common/basic/components/PageLoading.tsx';
+import { BasicConfig } from '../../../basic.config.ts';
+
+import { Page404 } from '@common/basic/components/Page404.tsx';
+import { PageLoading } from '@common/basic/components/PageLoading.tsx';
 import { ComponentPreviews, useInitial } from '@common/dev';
 import { DevSupport } from '@react-buddy/ide-toolbox';
 
@@ -13,6 +15,7 @@ export const getRoutes = () => {
     '@home/**/*.tsx',
     '!/**/_*/**/*.tsx',
   ]);
+  const adminFolder = BasicConfig.adminFolder;
   const routes: RouteObject[] = [];
   for (const filePath in pages) {
     const dir = filePath.split('/').slice(0, -1).join('/');
@@ -21,7 +24,7 @@ export const getRoutes = () => {
       continue;
     }
     let path = dir.replace(/^\/home\/pages/, '/');
-    path = path.replace(/^\/admin\/pages/, '/admin').replace(/(\[[^\]]+)_(])/g, '$1?$2').replace(/\[([^\]]+)]/g, ':$1');
+    path = path.replace(new RegExp(`^/${adminFolder}/pages`), `/${adminFolder}`).replace(/(\[[^\]]+)_(])/g, '$1?$2').replace(/\[([^\]]+)]/g, ':$1');
     const Component = lazy(pages[filePath] as () => Promise<{ default: ComponentType }>);
     const route = {} as RouteObject;
     if (file === 'index.tsx') {
@@ -32,7 +35,12 @@ export const getRoutes = () => {
       route.path = `${path}/*`;
     } else if (file === '[layout].tsx') {
       route.path = path;
-      route.children = [];
+      route.children = [
+        {
+          path: '*',
+          element: <Page404/>,
+        },
+      ];
     } else if (/^\[([^\]]+)]\.tsx$/.test(file)) {
       const slug = file.match(/^\[([^\]]+)]\.tsx$/)![1];
       route.path = `${path}/:${slug}`;

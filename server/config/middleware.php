@@ -13,7 +13,7 @@
  */
 
 return [
-  'console' => [
-    plugin\admin\api\Middleware::class
+  'api' => [
+    app\api\middleware\ApiAdminAuthMiddleware::class
   ]
 ];

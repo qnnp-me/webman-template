@@ -6,12 +6,11 @@ import Space from 'antd/lib/space';
 import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import styles from '@admin/pages/assets/styles/[layout].module.scss';
-import '@admin/pages/assets/styles/layui-icon.css';
 import { LogoutOutlined } from '@ant-design/icons';
 import { MenuDataItem, ProLayout } from '@ant-design/pro-components';
+import { Icon } from '@common/basic/components/Icon/Icon.tsx';
 import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-
-import log from 'loglevel';
+import { AntdIconType } from '@common/basic/types/antd';
 
 const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
   const { modal } = App.useApp();
@@ -29,14 +28,13 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
   const [splitMenus] = useState<boolean>(true);
   useEffect(handleRootTagClassChange, []);
   useEffect(() => {
-    if (isAdminUserStorageReady && !isLogin && location.pathname !== '/admin/login') {
+    if (isAdminUserStorageReady && !isLogin && location.pathname != '/admin/login') {
       navigate(`/admin/login?replaceTo=${location.pathname}`, { replace: true });
       return;
     }
   }, [isLogin, location.pathname, isAdminUserStorageReady]);
   const [layoutMenus, setLayoutMenus] = useState<MenuDataItem[]>([]);
   useEffect(() => {
-
     const menus: AdminMenuItemType[] = [];
     const webmanAdminMenu = [];
     for (const menuItem of adminMenuList) {
@@ -47,7 +45,7 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
         menus.push(menuItem);
       }
     }
-    if (isSuperAdmin) {
+    if (isSuperAdmin && window.location.host.match(/(^localhost|^127\.0\.0\.1)/)) {
       menus.push({
         name: 'WebmanAdmin',
         href: splitMenus ? '/admin/iframe/app/admin/index/dashboard' : undefined,
@@ -55,8 +53,10 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
       } as never);
     }
     setLayoutMenus(prepareMenuData(menus, splitMenus));
-  }, []);
+  }, [isSuperAdmin, adminMenuList]);
+  const [collapsed, setCollapsed] = useState(false);
   return <ProLayout
+    onCollapse={setCollapsed}
     title={sysConfig.logo.title}
     logo={sysConfig.logo.image}
     className={styles.layout}
@@ -76,6 +76,14 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
           <Dropdown
             menu={{
               items: [
+                {
+                  key: 'setting',
+                  icon: <Icon icon={'UserOutlined'}/>,
+                  label: '个人设置',
+                  onClick: () => {
+                    navigate('/admin/my/setting');
+                  },
+                },
                 {
                   key: 'logout',
                   icon: <LogoutOutlined/>,
@@ -106,32 +114,55 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
     }}
     layout={'mix'}
     splitMenus={splitMenus}
-    menuItemRender={(item, dom) => {
-      return (
-        <Link
-          to={item.path as string}
-          target={item.path?.startsWith('http') ? '_blank' : undefined}
-        >
-          <Space>
-            {`${item.icon}`.startsWith('layui-icon') && <LayuiIcon icon={item.icon as never}/>}
-            {dom}
-          </Space>
-        </Link>
-      );
-    }}
-    subMenuItemRender={(props, _dom) => {
-      return <Space>
-        {`${props.icon}`.startsWith('layui-icon') && <LayuiIcon icon={props.icon as never}/>}
+    menuProps={{ className: `${styles.mainMenu} ${collapsed ? styles.mainMenuCollapsed : ''}` }}
+    menuItemRender={(item) =>
+      <Link
+        onClick={e => {
+          if (location.pathname == item.path?.split('?')[0]) {
+            e.preventDefault();
+          }
+        }}
+        to={item.path as string}
+        target={item.path?.startsWith('http') ? '_blank' : undefined}
+      >
+        <Space className={styles.mainMenuItem}>
+          {item.icon}
+          {item.name}
+        </Space>
+      </Link>
+    }
+    subMenuItemRender={(props) =>
+      <Space className={styles.mainMenuItem}>
+        {props.icon}
         {props.name}
-      </Space>;
-    }}
+      </Space>
+    }
     menuDataRender={() => layoutMenus}
     route={layoutMenus}
     loading={loading || (!isAdminUserStorageReady)}
-    breadcrumbRender={(...breadcrumb) => {
-      log.debug(breadcrumb);
-      return [];
+    breadcrumbRender={breadcrumb => {
+      return breadcrumb;
     }}
+    bgLayoutImgList={[
+      {
+        src: 'https://img.alicdn.com/imgextra/i2/O1CN01O4etvp1DvpFLKfuWq_!!6000000000279-2-tps-609-606.png',
+        left: 85,
+        bottom: 100,
+        height: '303px',
+      },
+      {
+        src: 'https://img.alicdn.com/imgextra/i2/O1CN01O4etvp1DvpFLKfuWq_!!6000000000279-2-tps-609-606.png',
+        bottom: -68,
+        right: -45,
+        height: '303px',
+      },
+      {
+        src: 'https://img.alicdn.com/imgextra/i3/O1CN018NxReL1shX85Yz6Cx_!!6000000005798-2-tps-884-496.png',
+        bottom: 0,
+        left: 0,
+        width: '331px',
+      },
+    ]}
   >
     {isAdminUserStorageReady && ((!isLogin && window.location.pathname.startsWith('/admin/login')) || isLogin) &&
       <Outlet/>}
@@ -154,11 +185,13 @@ const prepareMenuData = (data: AdminMenuItemType[], splitMenus = false) =>
       menu.children = prepareMenuData(item.children || [], false);
     }
     if (!menu.path && splitMenus) {
-      menu.path = getFirstAvailableMenu(menu.children || [])?.path;
+      const path = getFirstAvailableMenu(menu.children || [])?.path;
+      menu.path = `${path}${path?.match(/\?/g) ? '&_from=header' : '?_from=header'}`;
     }
     if (item.icon) {
-      menu.icon = item.icon;
+      menu.icon = <Icon icon={item.icon as AntdIconType | LayuiIconType}/>;
     }
+    menu.key = menu.path;
     return menu;
   });
 const getFirstAvailableMenu = (menus: MenuDataItem[]): MenuDataItem | null => {
@@ -175,7 +208,4 @@ const getFirstAvailableMenu = (menus: MenuDataItem[]): MenuDataItem | null => {
     }
   }
   return null;
-};
-const LayuiIcon = ({ icon }: { icon: string }) => {
-  return <i className={`${icon}`}/>;
 };

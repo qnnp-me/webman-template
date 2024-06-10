@@ -10,6 +10,7 @@ import {
   ApiGetAdminUserInfo,
   ApiGetSystemConfig,
 } from '@common/basic/utils/ApiAdminUser.ts';
+import { ApiGetCommonSystemInfo } from '@common/basic/utils/ApiCommonSystem.ts';
 import * as utils from '@common/basic/utils/utils.ts';
 
 type AdminUserStorageDataType = {
@@ -39,11 +40,14 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
         isSuperAdmin: false,
         isLogin: false,
         isAdminUserStorageReady: false,
-        sysConfig: defaultSysConfig,
+        sysConfig: defaultSysConfig as SysConfigType,
       };
 
       const adminUserLogout = () => {
-        setState(initialAdminUserState);
+        setState({
+          ...initialAdminUserState,
+          isAdminUserStorageReady: true,
+        });
         axios.get(`/app/admin/account/logout?fresh=${Date.now()}`);
       };
 
@@ -51,14 +55,32 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
         utils.checkPermission(permissions, getState().adminPermissionList);
 
       const updateAdminUserInfo = async () => {
-        const sysConfig = await ApiGetSystemConfig();
-        const adminPermissionList = await ApiGetAdminPermissionList();
-        const adminMenuList = await ApiGetAdminMenuList();
-        const adminUserInfo = await ApiGetAdminUserInfo();
+        let sysConfig: SysConfigType;
+        let adminPermissionList = [] as AdminPermission[];
+        let adminMenuList = [] as AdminMenuItemType[];
+        let adminUserInfo = {} as AdminUserInfoType;
+        try {
+          sysConfig = await ApiGetSystemConfig();
+          adminPermissionList = await ApiGetAdminPermissionList();
+          adminMenuList = await ApiGetAdminMenuList();
+          adminUserInfo = await ApiGetAdminUserInfo();
+        } catch (e) {
+          const commonInfo = await ApiGetCommonSystemInfo();
+          sysConfig = {
+            logo: {
+              title: commonInfo.title,
+              image: commonInfo.logo,
+              icp: commonInfo.icp,
+              beian: commonInfo.beian,
+              footer_txt: commonInfo.footer_txt,
+            },
+          } as SysConfigType;
+        }
         setState({
-          isLogin: true,
+          isLogin: !!adminUserInfo.id,
           sysConfig, adminPermissionList, adminMenuList, adminUserInfo,
           isSuperAdmin: adminPermissionList.includes('*'),
+          isAdminUserStorageReady: true,
         });
         window.Admin = window.Admin || {};
         window.Admin.Account = adminUserInfo;
@@ -88,7 +110,7 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
           })
           .catch(() => {
           })
-          .then(()=>{
+          .then(() => {
             state?.setAdminUserInfoReady();
           });
       },

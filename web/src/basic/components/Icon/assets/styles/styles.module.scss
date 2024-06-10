@@ -1,0 +1,41 @@
+.icon_select_dropdown {
+  position: relative;
+  max-height: 80vh;
+  overflow: auto;
+  height: 330px;
+  width: 300px;
+  padding-bottom: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  font-size: 32px;
+  // 子元素按序排列, 垂直顶对齐, 保持子元素高度不受影响
+  flex-direction: row;
+  align-content: flex-start;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.icon_option {
+  padding: 0 6px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+
+.icon_select_label {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+
+  &:hover {
+    color: var(--ant-color-primary);
+  }
+}

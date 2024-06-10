@@ -20,34 +20,23 @@ function json_error(string $msg, int $code = 500, $data = null): Response
       'header' => request()->header(),
     ];
   }
-  // if $code is between http status code range with it else return 500
   return json($result)->withStatus(($code >= 100 && $code < 600) ? $code : 500);
 }
 
-function json_success(mixed $data = null): Response
+function json_success(mixed $data = null, array $extra = []): Response
 {
   if ($data instanceof LengthAwarePaginator) {
     return json([
       'data' => $data->items(),
       'count' => $data->total(),
+      ...$extra,
     ]);
   }
-  return json($data);
-}
-
-function cors(Response $response): Response
-{
-  if (request()->method() == 'OPTIONS') {
-    return response('');
-  }
-  return $response->withHeaders([
-    'Access-Control-Allow-Origin' => request()->header('Origin'),
-    'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE, PATCH',
-    'Access-Control-Allow-Headers' => request()->header('Access-Control-Request-Headers'),
-    'Access-Control-Allow-Credentials' => 'true',
+  return json([
+    'data' => $data,
+    ...$extra,
   ]);
 }
-
 
 function getAllFiles(string $abs_path): array
 {

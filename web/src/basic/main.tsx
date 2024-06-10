@@ -19,7 +19,7 @@ ReactDOM
   .createRoot(document.getElementById('root')!)
   .render(
     <GlobalInit>
-      <ConfigProvider locale={zhCN}>
+      <ConfigProvider locale={zhCN} theme={{ cssVar: true }}>
         <App>
           <RouterProvider router={getRoutes()}/>
         </App>

@@ -2,11 +2,11 @@ import { useEffect } from 'react';
 
 import * as utils from '@common/basic/utils/utils.ts';
 
-export default function PageLoading({ loading = false, delay = 0, children = null }: {
+export const PageLoading = ({ loading = false, delay = 0, children = null }: {
   loading?: boolean;
   delay?: number;
   children?: React.ReactNode;
-}) {
+}) => {
   useEffect(() => {
     let timer: NodeJS.Timeout;
     if (delay) {
@@ -22,4 +22,4 @@ export default function PageLoading({ loading = false, delay = 0, children = nul
     };
   }, [loading]);
   return <>{children}</>;
-}
+};

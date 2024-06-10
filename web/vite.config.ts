@@ -28,6 +28,9 @@ export default defineConfig({
       '/app': {
         target: 'http://localhost:8787',
       },
+      '/upload': {
+        target: 'http://localhost:8787',
+      },
     },
   },
   resolve: {

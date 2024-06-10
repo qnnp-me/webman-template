@@ -6,6 +6,7 @@ import { App, FormInstance } from 'antd';
 import { ModalForm, ModalFormProps } from '@ant-design/pro-components';
 
 export const ModalEditForm = <T = unknown>(props: {
+  open?: boolean,
   // 初始或者编辑的数据
   editData: T
   onFinish: (values: T) => unknown
@@ -16,6 +17,7 @@ export const ModalEditForm = <T = unknown>(props: {
   children: React.ReactNode
 } & Omit<ModalFormProps, 'onFinish'>) => {
   const {
+    open,
     editData,
     form,
     onFinish,
@@ -25,10 +27,10 @@ export const ModalEditForm = <T = unknown>(props: {
     children,
   } = props;
   const { modal } = App.useApp();
-  const [open, setOpen] = useState(!!editData);
+  const [openModal, setOpen] = useState(!!editData);
   const [initialValues, setInitialValues] = useState<T>(editData);
   useEffect(() => {
-    setOpen(!!editData);
+    open == undefined && setOpen(!!editData);
     if (editData) {
       setInitialValues(editData);
       form && requestAnimationFrame(() => {
@@ -41,6 +43,9 @@ export const ModalEditForm = <T = unknown>(props: {
       });
     }
   }, [editData]);
+  useEffect(() => {
+    open != undefined && setOpen(open);
+  }, [open]);
   const handleCancel = () => {
     if (form && cancelConfirm) {
       const changed = !isEqual(form.getFieldsValue(), initialValues);
@@ -58,7 +63,7 @@ export const ModalEditForm = <T = unknown>(props: {
   };
   return <ModalForm<T>
     isKeyPressSubmit
-    open={open}
+    open={openModal}
     onFinish={onFinish as never}
     request={(() => Promise.resolve(initialValues)) as never}
     {...omit(props, ['editData', 'cancelConfirm'] as (keyof typeof props)[]) as object}
