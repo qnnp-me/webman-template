@@ -3,9 +3,19 @@ const allExtensions = [...typeScriptExtensions, '.js', '.jsx'];
 module.exports = {
   root: true,
   env: { browser: true, es2020: true },
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
   extends: [
     'eslint:recommended',
-    'plugin:@typescript-eslint/recommended',
+    // 'plugin:@typescript-eslint/recommended',
+    'plugin:@typescript-eslint/recommended-type-checked',
+    // 'plugin:@typescript-eslint/strict-type-checked',
+    'plugin:react/recommended',
+    'plugin:react/jsx-runtime',
     'plugin:react-hooks/recommended',
     'plugin:import/recommended',
     'plugin:import/errors',
@@ -23,6 +33,7 @@ module.exports = {
       },
       alias: {
         map: [
+          ['@root', './'],
           ['@common', './src'],
           ['@admin', './admin'],
           ['@home', './home'],
