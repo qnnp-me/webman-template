@@ -39,7 +39,7 @@ export default function PageAdminLogin() {
   const [goBack, setGoBack] = useState(false);
   useEffect(() => {
     if (adminUserInfo.id) {
-      const timer = setTimeout(() => modal.confirm({
+      const timer = setTimeout(() => void modal.confirm({
         title: '您已登录，是否重新登录？',
         keyboard: false,
         maskClosable: false,
@@ -80,15 +80,20 @@ export default function PageAdminLogin() {
       await handleLoginFormSubmit(values);
       await updateAdminUserInfo();
       handleLoginSuccess();
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    } catch (e: any) {
+    } catch (e: unknown) {
       refreshCaptcha('login');
       log.error('AdminLoginForm -> login failed:', e);
       notification.error({
         message: '登录失败',
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/ban-ts-comment,
+        // @ts-expect-error
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         description: e.msg || e.statusText || JSON.stringify(e),
         key: 'login',
       });
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/ban-ts-comment,
+      // @ts-expect-error
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment,@typescript-eslint/no-unsafe-argument
       setFailedMessage(e.msg || e.statusText || '登录失败');
     }
     setLogging(false);

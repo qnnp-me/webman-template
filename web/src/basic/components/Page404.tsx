@@ -22,7 +22,10 @@ export const Page404 = ({ home }: { home?: string }) => {
       title={'您访问的页面不存在'}
       subTitle={'请检查您的网络或者联系管理员'}
       extra={<Space>
-        <Button icon={<Icon icon={'CaretLeftFilled'}/>} onClick={() => history.back()}>返回上一页</Button>
+        <Button
+          icon={<Icon icon={'CaretLeftFilled'}/>}
+          onClick={() => history.back()}
+        >返回上一页</Button>
         <Button
           icon={<Icon icon={'HomeOutlined'}/>}
           type={'primary'}

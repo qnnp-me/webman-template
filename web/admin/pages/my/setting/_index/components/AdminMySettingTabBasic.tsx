@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 import { App } from 'antd';
+import { UploadChangeParam } from 'antd/es/upload';
+import { UploadFile } from 'antd/lib';
 
 import { BetaSchemaForm, ProFormInstance, ProFormUploadButton } from '@ant-design/pro-components';
 import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
@@ -28,13 +30,13 @@ export const AdminMySettingTabBasic = () => {
             { required: true, message: '请上传头像' },
           ],
         },
-        convertValue: (value) => {
+        convertValue: (value: string | UploadFile[] | UploadChangeParam) => {
           if (!value) return [];
           if (Array.isArray(value)) {
             return value;
           }
-          if (value.fileList) {
-            return value.fileList;
+          if ((value as UploadChangeParam | undefined)?.fileList) {
+            return (value as UploadChangeParam).fileList;
           }
           return [
             {
@@ -53,14 +55,14 @@ export const AdminMySettingTabBasic = () => {
                 return false;
               },
               onRemove() {
-                form.setFieldValue(_schema.dataIndex||_schema.name, undefined);
+                form.setFieldValue(_schema.dataIndex || _schema.name, undefined);
                 return false;
               },
               maxCount: 1,
               multiple: false,
               accept: 'image/*',
               onPreview: (file) => {
-                modal.info({
+                void modal.info({
                   icon: null,
                   width: 'max-content',
                   height: 'max-content',

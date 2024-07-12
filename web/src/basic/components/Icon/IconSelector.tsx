@@ -16,8 +16,8 @@ const options: {
   label: React.ReactNode;
   value: AntdIconType | LayuiIconType;
 }[] = IconKeys.map(label => {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  const Icon = (Icons as any)[label];
+  // eslint-disable-next-line import/namespace
+  const Icon = Icons[label];
   return ({
     label: <Icon/>,
     value: label,
@@ -26,9 +26,8 @@ const options: {
 options.push(...layuiIcons.map(label => ({
   label: <Icon icon={label as LayuiIconType}/>,
   value: label,
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-})) as any);
-const optionsGrouped: Record<string, (typeof options)> = {};
+})) as typeof options);
+const optionsGrouped: Partial<Record<string, (typeof options)>> = {};
 for (const option of options) {
   if (/Outlined$/.test(option.value)) {
     optionsGrouped['Outlined'] = optionsGrouped['Outlined'] || [];
@@ -78,7 +77,9 @@ export const IconSelector = ({ value, onChange }: {
           allowClear
           size={'small'}
           placeholder={'搜索图标'}
-          onInput={(e) => setSearch((e.target as HTMLInputElement).value.replace(/[^a-zA-Z0-9]/g, ''))}
+          onInput={(e) => {
+            setSearch((e.target as HTMLInputElement).value.replace(/[^a-zA-Z0-9]/g, ''));
+          }}
           onKeyDown={e => {
             if (e.key == 'Escape') {
               setSearch('');
@@ -91,10 +92,10 @@ export const IconSelector = ({ value, onChange }: {
           },
           destroyInactiveTabPane: true,
           items: Object.keys(optionsGrouped).sort((a) => a == 'Outlined' ? -1 : 0).map(group => {
-            const list = optionsGrouped[group].filter(item => item.value.toLowerCase().includes(search.toLowerCase()));
+            const list = optionsGrouped[group]?.filter(item => item.value.toLowerCase().includes(search.toLowerCase()));
             const pageSize = 36;
-            const total = list.length;
-            const currentPageList = list.slice((page - 1) * pageSize, page * pageSize);
+            const total = list?.length || 0;
+            const currentPageList = list?.slice((page - 1) * pageSize, page * pageSize);
             return {
               label: ({
                 Filled: '实底风格',
@@ -106,7 +107,7 @@ export const IconSelector = ({ value, onChange }: {
               children: <div
                 className={styles.icon_select_dropdown}
               >
-                {currentPageList.map(option => {
+                {currentPageList?.map(option => {
                   return <div
                     className={styles.icon_option}
                     key={option.value as string} onClick={() => {
@@ -114,8 +115,7 @@ export const IconSelector = ({ value, onChange }: {
                     setSelectorOpen(false);
                   }}
                     title={option.value}
-                    children={option.label}
-                  />;
+                  >{option.label}</div>;
                 })}
                 <div
                   style={{
@@ -130,10 +130,16 @@ export const IconSelector = ({ value, onChange }: {
                     userSelect: 'none',
                   }}
                 >
-                  <Icon onClick={() => page > 1 && setPage(page - 1)} icon={'LeftSquareFilled'}/>
-                  <span>{page}/{Math.ceil(total / pageSize)}</span>
                   <Icon
-                    onClick={() => page < Math.ceil(total / pageSize) && setPage(page + 1)}
+                    onClick={() => {
+                      page > 1 && setPage(page - 1);
+                    }} icon={'LeftSquareFilled'}
+                  />
+                  <span>{page}/{Math.ceil(total / pageSize) as unknown as string}</span>
+                  <Icon
+                    onClick={() => {
+                      page < Math.ceil(total / pageSize) && setPage(page + 1);
+                    }}
                     icon={'RightSquareFilled'}
                   />
                 </div>
@@ -144,7 +150,11 @@ export const IconSelector = ({ value, onChange }: {
       />
     }
   >
-      <span className={styles.icon_select_label} onClick={() => setSelectorOpen(!selectorOpen)}>
+      <span
+        className={styles.icon_select_label} onClick={() => {
+        setSelectorOpen(!selectorOpen);
+      }}
+      >
         {value ? <Icon icon={value}/> :
           <span style={{ fontSize: '14px', color: '#aaa' }}><Icon icon={'SelectOutlined'}/> 请选择图标</span>}
         <span style={{ fontSize: '12px', color: '#aaa' }}>

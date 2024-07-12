@@ -24,7 +24,7 @@ class SettingController extends ControllerBasic
     $old_logo = $request->input('old_logo');
     $file_path = $upload_path . DIRECTORY_SEPARATOR . time() . '.' . $file->getUploadExtension();
     $file->move($file_path);
-    if (str_starts_with($old_logo, '/upload/logo/')) {
+    if (str_starts_with($old_logo, '/upload/logo/') && file_exists(public_path($old_logo))) {
       unlink(public_path($old_logo));
     }
     return json_success( '/upload/logo/' . basename($file_path));

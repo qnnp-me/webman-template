@@ -12,7 +12,7 @@ const prepareRuleTree = (list: AdminMenuItemType[], withWebmanAdmin = false) => 
   });
   if (!withWebmanAdmin) {
     tree = tree.filter(node => {
-      return !((node.children?.[0]?._key as unknown as string)?.startsWith('plugin\\admin')
+      return !((node.children?.[0]?._key as unknown as string|undefined)?.startsWith('plugin\\admin')
         || /^(demos?([0-9]*|-(system|common|error))|auth|database|user|common|plugin|dev)$/.test((node.children?.[0]?._key as unknown as string) || ''));
     });
   }

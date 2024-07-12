@@ -1,5 +1,4 @@
 import axios from 'axios';
-
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
@@ -48,7 +47,7 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
           ...initialAdminUserState,
           isAdminUserStorageReady: true,
         });
-        axios.get(`/app/admin/account/logout?fresh=${Date.now()}`);
+        void axios.get(`/app/admin/account/logout?fresh=${Date.now() as unknown as string}`);
       };
 
       const hasAdminPermission = (permissions: AdminPermission | AdminPermission[]) =>
@@ -82,8 +81,10 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
           isSuperAdmin: adminPermissionList.includes('*'),
           isAdminUserStorageReady: true,
         });
-        window.Admin = window.Admin || {};
-        window.Admin.Account = adminUserInfo;
+        window.Admin = window.Admin || {} as unknown as typeof window.Admin;
+        if (window.Admin) {
+          window.Admin.Account = adminUserInfo;
+        }
       };
 
       const setAdminUserInfoReady = () => {
@@ -101,17 +102,17 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
     {
       name: 'admin-user-storage',
       onRehydrateStorage: () => (state) => {
-        state?.updateAdminUserInfo()
+        void state?.updateAdminUserInfo()
           .then(() => {
-            if (state?.adminUserInfo) {
-              window.Admin = window.Admin || {};
+            window.Admin = window.Admin || {} as unknown as typeof window.Admin;
+            if (window.Admin) {
               window.Admin.Account = state.adminUserInfo;
             }
           })
           .catch(() => {
           })
           .then(() => {
-            state?.setAdminUserInfoReady();
+            state.setAdminUserInfoReady();
           });
       },
     },

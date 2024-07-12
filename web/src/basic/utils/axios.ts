@@ -1,31 +1,34 @@
-import axios from 'axios';
+import axios, { AxiosError } from 'axios';
 import log from 'loglevel';
 
 import { Res } from '@common/basic/types/axios';
 
 const handleServerError = (res: Res) => {
   log.debug('axios -> server error', res);
+  const errMsg = res.msg || '服务端错误, 并且服务端未返回错误信息';
   return Promise.reject({
     ...res,
-    msg: res.msg || '服务端错误, 并且服务端未返回错误信息',
-  });
+    name: 'server error',
+    message: errMsg,
+    msg: errMsg,
+  } as Error);
 };
 
 export const initAxios = () => {
   axios.interceptors.response.use(
     response => {
-      const res = response.data;
+      const res = response.data as unknown as Res | undefined;
       if (res?.code) {
         return handleServerError(res);
       }
-      return res;
+      return res as never;
     },
-    error => {
-      if (error?.msg) {
-        return Promise.reject(error);
+    (error: Error | Res | undefined) => {
+      if ((error as Res | undefined)?.msg) {
+        return Promise.reject(error as Error);
       }
-      if (error.response) {
-        const res = error.response.data;
+      if ((error as AxiosError | undefined)?.response) {
+        const res = (error as AxiosError).response?.data as Res | undefined;
         if (res?.msg) {
           return handleServerError(res);
         }
@@ -35,10 +38,11 @@ export const initAxios = () => {
       }
       return Promise.reject(
         {
-          code: error.code,
-          msg: error.message,
-          data: error.response.data,
-        },
+          ...error,
+          code: (error as AxiosError | undefined)?.code,
+          msg: (error as AxiosError | undefined)?.message,
+          data: (error as AxiosError | undefined)?.response?.data,
+        } as unknown as Error,
       );
     },
   );

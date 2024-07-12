@@ -11,7 +11,9 @@ export const SystemStatus = () => {
   const [status, setStatus] = useState<string>();
   const [loading, setLoading] = useState(true);
   const [doUpdate, _update] = useState(0);
-  const update = () => _update(Date.now());
+  const update = () => {
+    _update(Date.now());
+  };
   const getStatus = (loading = true) => {
     loading && setLoading(true);
     ApiGetManageDashboardStatus()
@@ -19,19 +21,25 @@ export const SystemStatus = () => {
         setStatus(res);
         setLoading(false);
       })
-      .catch(err => {
-        setStatus(err.msg);
+      .catch((err: unknown) => {
+        setStatus((err as Error).message);
         setLoading(false);
       });
   };
   useEffect(() => {
     getStatus(!doUpdate);
     const timer = setTimeout(update, 5000);
-    return () => clearTimeout(timer);
+    return () => {
+      clearTimeout(timer);
+    };
   }, [doUpdate]);
   return <ProCard
     loading={loading} bodyStyle={{ overflow: 'auto' }} title={'系统状态'} extra={<Space>
-    <Button icon={<Icon icon={'ReloadOutlined'}/>} onClick={()=>getStatus()}></Button>
+    <Button
+      icon={<Icon icon={'ReloadOutlined'}/>} onClick={() => {
+      getStatus();
+    }}
+    ></Button>
   </Space>}
   >
     <pre>

@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react';
 
 import { App } from 'antd';
+import { UploadChangeParam } from 'antd/es/upload';
+import { UploadFile } from 'antd/lib';
 
 import { ApiUpdateAppAdminConfig } from '@admin/pages/system/setting/_index/utils/ApiAppAdminConfig.ts';
 import { ApiUploadManageSettingUploadLogo } from '@admin/pages/system/setting/_index/utils/ApiManageSetting.ts';
@@ -21,22 +23,21 @@ export const AdminSystemSettingTabBasic = () => {
       style={{
         maxWidth: '500px',
       }}
-      onFinish={async values => {
+      onFinish={async (values: Omit<SysConfigType['logo'], 'image'> & {
+        image: string | UploadChangeParam | UploadFile | undefined
+      }) => {
         try {
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-          if ((values.image as any)?.fileList && (values.image as any).fileList[0]) {
+          if ((values.image as UploadChangeParam | undefined)?.fileList && (values.image as UploadChangeParam).fileList[0]) {
             values.image = await ApiUploadManageSettingUploadLogo({
-              // eslint-disable-next-line @typescript-eslint/no-explicit-any
-              file: (values.image as any).fileList[0].originFileObj,
+              file: (values.image as UploadChangeParam).fileList[0].originFileObj as File,
               old_logo: sysConfig.logo.image,
             });
           }
-          await ApiUpdateAppAdminConfig({ logo: values });
-          message.success('保存成功');
-          updateAdminUserInfo();
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } catch (e: any) {
-          message.error(e.msg);
+          await ApiUpdateAppAdminConfig({ logo: values as SysConfigType['logo'] });
+          void message.success('保存成功');
+          void updateAdminUserInfo();
+        } catch (e: unknown) {
+          void message.error((e as Error).message);
         }
       }}
       layout={'horizontal'}
@@ -61,13 +62,13 @@ export const AdminSystemSettingTabBasic = () => {
               { required: true, message: '请上传Logo' },
             ],
           },
-          convertValue: (value) => {
+          convertValue: (value: string | UploadChangeParam | UploadFile | undefined) => {
             if (!value) return [];
             if (Array.isArray(value)) {
               return value;
             }
-            if (value.fileList) {
-              return value.fileList;
+            if ((value as UploadChangeParam | undefined)?.fileList) {
+              return (value as UploadChangeParam).fileList;
             }
             return [
               {
@@ -92,8 +93,8 @@ export const AdminSystemSettingTabBasic = () => {
                 maxCount: 1,
                 multiple: false,
                 accept: 'image/*',
-                onPreview: (file) => {
-                  modal.info({
+                onPreview: (file) =>
+                  void modal.info({
                     icon: null,
                     width: 'max-content',
                     height: 'max-content',
@@ -114,8 +115,7 @@ export const AdminSystemSettingTabBasic = () => {
                     maskClosable: true,
                     closable: true,
                     content: <img src={file.url || URL.createObjectURL(file.originFileObj as File)}/>,
-                  });
-                },
+                  }),
               }}
             />,
         },

@@ -50,7 +50,7 @@ export const ModalEditForm = <T = unknown>(props: {
     if (form && cancelConfirm) {
       const changed = !isEqual(form.getFieldsValue(), initialValues);
       if (changed) {
-        modal.confirm({
+        void modal.confirm({
           title: '确认取消?',
           content: '表单数据尚未保存, 是否确认取消?',
           centered: true,
@@ -75,6 +75,5 @@ export const ModalEditForm = <T = unknown>(props: {
       onCancel: handleCancel,
       ...modalProps,
     }}
-    children={children}
-  />;
+  >{children}</ModalForm>;
 };

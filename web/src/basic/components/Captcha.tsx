@@ -26,7 +26,7 @@ export const Captcha = (props: {
   };
   const [url, setUrl] = useState(getCaptchaUrl());
   useEffect(() => {
-    loading && setTimeout(() => setUrl(getCaptchaUrl()), 50);
+    loading && setTimeout(() => { setUrl(getCaptchaUrl()); }, 50);
     loading && onClick?.();
   }, [loading]);
   useEffect(() => {
@@ -34,6 +34,7 @@ export const Captcha = (props: {
       setUrl(getCaptchaUrl());
     };
     return () => {
+      // eslint-disable-next-line @typescript-eslint/no-dynamic-delete
       delete helper[captchaType];
     };
   }, []);
@@ -41,7 +42,7 @@ export const Captcha = (props: {
     <Space {...props.containerProps} >
       <Spin spinning={loading}>
         <img
-          onClick={() => setLoading(true)}
+          onClick={() => { setLoading(true); }}
           {...props.imgProps}
           style={{
             display: 'block',
@@ -65,7 +66,7 @@ export const Captcha = (props: {
           style={{ fontSize: '18px' }}
           {...props.iconProps}
           spin={loading}
-          onClick={() => setLoading(true)}
+          onClick={() => { setLoading(true); }}
         />
       </div>}
     </Space>

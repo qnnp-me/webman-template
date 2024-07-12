@@ -39,6 +39,7 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
     const webmanAdminMenu = [];
     for (const menuItem of adminMenuList) {
       const firstAvailableMenu = getFirstAvailableMenu([menuItem] as never);
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call
       if (firstAvailableMenu?.href?.startsWith('/app/admin/')) {
         webmanAdminMenu.push(menuItem);
       } else {
@@ -88,14 +89,13 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
                   key: 'logout',
                   icon: <LogoutOutlined/>,
                   label: '退出登录',
-                  onClick: () => {
-                    modal.confirm({
+                  onClick: () =>
+                    void modal.confirm({
                       title: '确认退出登录？',
                       onOk: () => {
                         adminUserLogout();
                       },
-                    });
-                  },
+                    }),
                 },
               ],
             }}
@@ -131,7 +131,7 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
         </Space>
       </Link>
     }
-    subMenuItemRender={(props) =>
+    subMenuItemRender={(props: MenuDataItem) =>
       <Space className={styles.mainMenuItem}>
         {props.icon}
         {props.name}
@@ -182,11 +182,11 @@ const prepareMenuData = (data: AdminMenuItemType[], splitMenus = false) =>
     menu.path = item.href?.replace(/^\/app\//, '/admin/iframe/app/');
     menu.flatMenu = splitMenus ? !!menu.children?.length : !!item.href;
     if (item.children?.length) {
-      menu.children = prepareMenuData(item.children || [], false);
+      menu.children = prepareMenuData(item.children, false);
     }
     if (!menu.path && splitMenus) {
-      const path = getFirstAvailableMenu(menu.children || [])?.path;
-      menu.path = `${path}${path?.match(/\?/g) ? '&_from=header' : '?_from=header'}`;
+      const path = getFirstAvailableMenu(menu.children || [])?.path || '';
+      menu.path = `${path}${path.match(/\?/g) ? '&_from=header' : '?_from=header'}`;
     }
     if (item.icon) {
       menu.icon = <Icon icon={item.icon as AntdIconType | LayuiIconType}/>;

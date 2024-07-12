@@ -27,7 +27,7 @@ export const TableEditableCellText = <T = unknown, V = unknown>(
     type={'number'}
     ref={inputRef as never}
     value={editValue as string}
-    onInput={e => setEditValue((e.target as HTMLInputElement).value as V)}
+    onInput={e => { setEditValue((e.target as HTMLInputElement).value as V); }}
     variant={editable ? 'outlined' : 'filled'}
     readOnly={!editable}
     onClick={e => {
@@ -37,7 +37,7 @@ export const TableEditableCellText = <T = unknown, V = unknown>(
     onFocus={() => {
       setEditable(true);
     }}
-    onBlur={() => setEditable(false)}
+    onBlur={() => { setEditable(false); }}
     onKeyDown={e => {
       if (e.key === 'Enter') {
         handleSubmit();

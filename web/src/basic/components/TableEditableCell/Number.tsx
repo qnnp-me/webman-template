@@ -27,7 +27,7 @@ export const TableEditableCellNumber = <T = unknown, V = unknown>(
     type={'number'}
     ref={inputRef as never}
     value={editValue as string}
-    onChange={e => setEditValue(e as V)}
+    onChange={e => { setEditValue(e as V); }}
     variant={editable ? 'outlined' : 'filled'}
     readOnly={!editable}
     onClick={e => {
@@ -37,7 +37,7 @@ export const TableEditableCellNumber = <T = unknown, V = unknown>(
     onFocus={() => {
       setEditable(true);
     }}
-    onBlur={() => setEditable(false)}
+    onBlur={() => { setEditable(false); }}
     onKeyDown={e => {
       if (e.key === 'Enter') {
         handleSubmit();

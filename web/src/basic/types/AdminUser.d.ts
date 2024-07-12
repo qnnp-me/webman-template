@@ -12,17 +12,17 @@ declare type AdminMenuItemType = {
   id: number;
   value: number;
   // 父级id
-  pid: number;
+  pid?: number;
   // 标识
   key?: string;
   // 前端处理转换的 key, 避免 key 影响到前端代码
   _key?: string;
   // 图标
-  icon: string;
+  icon?: string;
   name: string;
   title: string;
   // 链接
-  href: string;
+  href?: string;
   // 0: 目录 1: 菜单 2: 权限
   type: 0 | 1 | 2;
   // 排序越大排越前

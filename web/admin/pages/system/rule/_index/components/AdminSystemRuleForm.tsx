@@ -1,14 +1,3 @@
-import { cloneDeep } from 'lodash';
-import { useEffect, useRef, useState } from 'react';
-
-import { App, Form, InputRef } from 'antd';
-
-import {
-  APiAddAdminRule,
-  ApiGetAdminRuleFolderTree,
-  ApiGetAdminRuleMenuTree,
-  ApiUpdateAdminRule,
-} from '@admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
 import {
   ProForm,
   ProFormDependency,
@@ -17,28 +6,41 @@ import {
   ProFormText,
   ProFormTreeSelect,
 } from '@ant-design/pro-components';
+import { App, Form, InputRef } from 'antd';
+import { cloneDeep } from 'lodash';
+import { useEffect, useRef, useState } from 'react';
+
+import {
+  APiAddAdminRule,
+  ApiGetAdminRuleFolderTree,
+  ApiGetAdminRuleMenuTree,
+  ApiUpdateAdminRule,
+} from '@admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
 import { Icon } from '@common/basic/components/Icon/Icon.tsx';
 import { IconSelector } from '@common/basic/components/Icon/IconSelector.tsx';
 import { ModalEditForm } from '@common/basic/components/ModalEditForm.tsx';
 import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
+import { AntdIconType } from '@common/basic/types/antd';
 
-let resetTimer: NodeJS.Timeout;
+let resetTimer: NodeJS.Timeout | undefined;
 const pidLabel: {
   [key: number]: string
 } = {};
-const hiddeFields = true;
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-const readTree = (tree: any[]) => {
+const readTree = <T = unknown, N extends { id: number, title: string, children?: T[] } = {
+  id: number,
+  title: string,
+  children?: T[]
+}>(tree: N[]) => {
   for (const node of tree) {
     pidLabel[node.id] = node.title;
     if (node.children?.length) {
-      readTree(node.children);
+      readTree(node.children as unknown as N[]);
     }
   }
 };
 export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAdmin = false }: {
   withWebmanAdmin?: boolean
-  editData: AdminMenuItemType
+  editData: AdminMenuItemType | undefined
   onFinish: () => void
   onCancel: () => void
 }) => {
@@ -46,14 +48,14 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
   const { updateAdminUserInfo } = useAdminUserStorage();
   const { message } = App.useApp();
   const [form] = Form.useForm();
-  const [data, setData] = useState<AdminMenuItemType>(editData);
-  const [type, setType] = useState<number>(editData?.type);
+  const [data, setData] = useState<AdminMenuItemType | undefined>(editData);
+  const [type, setType] = useState<number | undefined>(editData?.type);
   useEffect(() => {
     setOpen(!!editData);
     if (editData) {
       resetTimer && clearTimeout(resetTimer);
-      const _data = cloneDeep(editData);
-      _data.type = _data.type === undefined ? 1 : _data.type;
+      const _data: AdminMenuItemType = cloneDeep(editData);
+      _data.type = (_data.type as number | undefined) === undefined ? 1 : _data.type;
       _data.pid = _data.pid || undefined as unknown as number;
       _data.key = _data.key || _data._key;
       setData(_data);
@@ -70,6 +72,7 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
   }, [open]);
   const [pidTree, setPidTree] = useState<AdminMenuItemType[]>([]);
   useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-misused-promises
     requestAnimationFrame(async () => {
       let result = [] as never;
       if (type === 2) {
@@ -89,9 +92,9 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
         '目录',
         '菜单',
         '权限',
-      ][data?.type]}&emsp;{editData?.pid ? `父级: ${pidLabel[editData.pid]}` : ''}</span>}
+      ][data?.type || 0]}&emsp;{editData?.pid ? `父级: ${pidLabel[editData.pid]}` : ''}</span>}
       form={form}
-      editData={data}
+      editData={data || {} as AdminMenuItemType}
       onFinish={async (values) => {
         values.pid = values.pid || 0;
         try {
@@ -100,15 +103,14 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
           } else {
             await APiAddAdminRule(values);
           }
-          // eslint-disable-next-line @typescript-eslint/no-explicit-any
-        } catch (e: any) {
-          message.error(e.msg);
+        } catch (e: unknown) {
+          void message.error((e as Error).message);
           return;
         }
-        updateAdminUserInfo();
+        await updateAdminUserInfo();
         onFinish();
         setOpen(false);
-        message.success('操作成功');
+        void message.success('操作成功');
       }}
       onCancel={() => {
         setOpen(false);
@@ -117,10 +119,10 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
       layout={'horizontal'}
       width={'min(500px, 96vw)'}
       onValuesChange={() => {
-        const type = form.getFieldValue('type');
+        const type = form.getFieldValue('type') as number;
         if (type == 0) {
-          const pid = form.getFieldValue('pid');
-          const title = form.getFieldValue('title');
+          const pid = form.getFieldValue('pid') as number;
+          const title = form.getFieldValue('title') as string;
           form.setFieldValue('key', `${pid ? `${pidLabel[pid]}->` : ''}${title || ''}`);
         }
         if (type == 1) {
@@ -128,12 +130,12 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
         }
       }}
     >
-      <ProFormText hidden name={'id'}/>
+      <ProFormText hidden name={'id'} />
       <ProFormRadio.Group
         name={'type'}
         label={'类型'}
         radioType={'button'}
-        hidden={hiddeFields && (!!data?.id || editData?.type !== undefined)}
+        hidden={(!!data?.id || editData?.type !== undefined)}
         options={[
           { label: '目录', value: 0 },
           { label: '菜单', value: 1 },
@@ -142,18 +144,19 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
         rules={[{ required: true, message: '请选择类型' }]}
         fieldProps={{
           onChange(e) {
+            // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
             setType(e.target.value);
             form.setFieldValue('pid', undefined);
           },
         }}
       />
-      <ProFormText name={'title'} label={'标题'} rules={[{ required: true, message: '请输入标题' }]}/>
+      <ProFormText name={'title'} label={'标题'} rules={[{ required: true, message: '请输入标题' }]} />
       <ProFormDependency
         name={['type']}
       >
         {({ type }) =>
           <ProFormText
-            hidden={hiddeFields && type < 2}
+            hidden={type < 2}
             name={'key'}
             label={'唯一标识'}
             rules={[{ required: true, message: '请输入唯一标识' }]}
@@ -179,7 +182,7 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
       </ProFormDependency>
       <ProFormDependency name={['type']}>
         {({ type }) => type < 2 && <ProForm.Item name={'icon'} label={'图标'}>
-          <IconSelector/>
+          <IconSelector />
         </ProForm.Item>}
       </ProFormDependency>
       <ProFormTreeSelect
@@ -194,22 +197,18 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
             children: 'children',
           },
           treeIcon: true,
-          treeTitleRender: (node) => {
-            if (node.icon && typeof node.icon === 'string') {
-              node.icon = <Icon icon={node.icon}/>;
+          treeTitleRender: (node: AdminMenuItemType & { icon: string | Element, selectable: boolean }) => {
+            if (typeof node.icon === 'string') {
+              node.icon = <Icon icon={node.icon as AntdIconType} /> as unknown as string;
             }
-            if (type == 2 && !!node.children?.length) {
-              node.selectable = false;
-            } else {
-              node.selectable = true;
-            }
+            node.selectable = !(type == 2 && !!node.children?.length);
             return node.title;
           },
         }}
         name={'pid'}
         label={'父级标识'}
       />
-      <ProFormDigit fieldProps={{ step: 1, min: 0, changeOnWheel: true }} name={'weight'} label={'排序'}/>
+      <ProFormDigit fieldProps={{ step: 1, min: 0, changeOnWheel: true }} name={'weight'} label={'排序'} />
     </ModalEditForm>
   );
 };

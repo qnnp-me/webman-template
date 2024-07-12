@@ -2,3 +2,4 @@
 .idea/*
 !.idea/rcb-settings.xml
 .env
+.lh

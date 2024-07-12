@@ -1,5 +1,5 @@
+import { DevSupport } from '@react-buddy/ide-toolbox';
 import { ComponentType, lazy, Suspense } from 'react';
-
 import { createBrowserRouter, Outlet, RouteObject } from 'react-router-dom';
 
 import { BasicConfig } from '../../../basic.config.ts';
@@ -7,7 +7,6 @@ import { BasicConfig } from '../../../basic.config.ts';
 import { Page404 } from '@common/basic/components/Page404.tsx';
 import { PageLoading } from '@common/basic/components/PageLoading.tsx';
 import { ComponentPreviews, useInitial } from '@common/dev';
-import { DevSupport } from '@react-buddy/ide-toolbox';
 
 export const getRoutes = () => {
   const pages = import.meta.glob([
@@ -38,7 +37,7 @@ export const getRoutes = () => {
       route.children = [
         {
           path: '*',
-          element: <Page404/>,
+          element: <Page404 />,
         },
       ];
     } else if (/^\[([^\]]+)]\.tsx$/.test(file)) {
@@ -48,15 +47,15 @@ export const getRoutes = () => {
       route.path = `${path}/${file.replace(/\.tsx$/, '')}`;
     }
     route.loader = pages[filePath];
-    route.element = <Suspense fallback={<PageLoading loading={true}/>}>
-      <Component/>
+    route.element = <Suspense fallback={<PageLoading loading={true} />}>
+      <Component />
     </Suspense>;
     (routes.find(route => dir.startsWith(route.path!))?.children || routes)
       .push(route);
   }
   routes.push({
     path: '*',
-    element: <Page404/>,
+    element: <Page404 />,
   });
   return createBrowserRouter([
     {
@@ -64,7 +63,7 @@ export const getRoutes = () => {
         ComponentPreviews={ComponentPreviews}
         useInitialHook={useInitial}
       >
-        <Outlet/>
+        <Outlet />
       </DevSupport>,
       children: routes,
     },
