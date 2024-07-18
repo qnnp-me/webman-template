@@ -22,6 +22,9 @@ fi
 
 git clone https://github.com/qnnp-me/webman-template.git "$project_name"
 rm -rf "$project_name/.git"
+rm -rf "$project_name/README.md"
+rm -rf "$project_name/web/README.md"
+rm -rf "$project_name/server/README.md"
 
 # install dependencies
 
