@@ -1,7 +1,6 @@
 #!/bin/bash
 
 WORKDIR=$(pwd)
-BASEDIR=$(dirname "$0")
 
 read -r -p "Enter project name: " project_name
 if [ -z "$project_name" ]; then
