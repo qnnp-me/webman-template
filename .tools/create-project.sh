@@ -23,7 +23,6 @@ fi
 
 git clone https://github.com/qnnp-me/webman-template.git "$project_name"
 rm -rf "$project_name/.git"
-rm -rf "$project_name/.tools/create-project.sh"
 
 # install dependencies
 
@@ -47,3 +46,5 @@ fi
 pnpm i
 
 cd "$WORKDIR" || exit
+
+rm -rf "$project_name/.tools/create-project.sh"
