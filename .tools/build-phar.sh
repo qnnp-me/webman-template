@@ -1,9 +1,11 @@
 #!/bin/bash
 
+WORKDIR=$(pwd)
+BASEDIR=$(dirname "$0")
+
 set -e
 
-current_dir=$(pwd)
-cd "../server" || true
+cd "$BASEDIR/../server" || true
 
 set +e
 php -d phar.readonly=0 ./webman build:phar
@@ -11,6 +13,7 @@ status=$?
 set -e
 
 if [ $status -ne 0 ]; then
-    echo "Build failed"
-    cd "$current_dir" || true
+  echo "Build failed"
 fi
+
+cd "$WORKDIR" || true
