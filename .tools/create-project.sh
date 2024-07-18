@@ -32,10 +32,10 @@ if [ -z "$composer_exists" ]; then
   echo "composer not found"
   exit
 fi
-cd "$BASEDIR/$project_name/server" || exit
+cd "$WORKDIR/$project_name/server" || exit
 composer install
 
-cd "$BASEDIR/$project_name/web" || exit
+cd "$WORKDIR/$project_name/web" || exit
 
 pnpm_exists=$(which pnpm)
 
