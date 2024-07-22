@@ -11,13 +11,9 @@ class ReleaseFiles implements InitInterface
   {
     if (is_phar()) {
       $phar = Phar::running();
-      if ($phar) {
+      if ($phar && config('extract.enable')) {
         $phar = new Phar($phar);
-        $extract_list = [
-          'database/'            => runtime_path('phinx'),
-          'public/'              => run_path(),
-          'plugin/admin/public/' => run_path(),
-        ];
+        $extract_list = config('extract.list');
         foreach ($extract_list as $from => $to) {
           $phar->extractTo($to, $from, true);
         }
