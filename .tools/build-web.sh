@@ -5,15 +5,15 @@ BASEDIR=$(dirname "$0")
 
 set -e
 
-cd "$BASEDIR/../server" || true
+cd "$BASEDIR/../web" || true
 
 set +e
-php -d phar.readonly=0 ./webman build:bin 8.2
+pnpm build
 status=$?
 set -e
 
 if [ $status -ne 0 ]; then
-  echo "Build bin failed"
+  echo "Build web failed"
 fi
 
 cd "$WORKDIR" || true

@@ -13,7 +13,7 @@ status=$?
 set -e
 
 if [ $status -ne 0 ]; then
-  echo "Build failed"
+  echo "Build phar failed"
 fi
 
 cd "$WORKDIR" || true
