@@ -13,10 +13,10 @@
  */
 
 return [
-  'debug'              => env('APP_DEBUG', true),
-  'controller_suffix'  => 'Controller',
-  'controller_reuse'   => false,
-  'public_path'        => base_path(false) . '/plugin/admin/public',
-  'plugin_market_host' => 'https://www.workerman.net',
-  'version'            => '0.6.20'
+    'debug' => env('APP_DEBUG', true),
+    'controller_suffix' => 'Controller',
+    'controller_reuse' => false,
+    'public_path' => base_path(false) . '/plugin/admin/public',
+    'plugin_market_host' => 'https://www.workerman.net',
+    'version' => '0.6.29'
 ];

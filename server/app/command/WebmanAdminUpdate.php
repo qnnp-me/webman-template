@@ -54,15 +54,15 @@ class WebmanAdminUpdate extends Command
     $this->alert('即将开始为 webman/admin 执行文件升级操作! 请小心处理! ');
 
     // 新旧文件列表
-    $old_file_list = array_map(fn($path) => str_replace($old_path, '', $path), getAllFiles(base_path('plugin/admin')));
-    $new_file_list = array_map(fn($path) => str_replace($new_path, '', $path), getAllFiles(base_path('vendor/webman/admin/src/plugin/admin')));
+    $old_file_list = array_map(fn ($path) => str_replace($old_path, '', $path), getAllFiles(base_path('plugin/admin')));
+    $new_file_list = array_map(fn ($path) => str_replace($new_path, '', $path), getAllFiles(base_path('vendor/webman/admin/src/plugin/admin')));
     $old_file_list_str = implode("\n", $old_file_list);
     $new_file_list_str = implode("\n", $new_file_list);
 
     // 需要操作的文件列表
-    $file_op_list = array_filter(explode("\n", $differ->diff($old_file_list_str, $new_file_list_str)), fn($path) => preg_match("#^[+\-]/.+#", $path));
-    $del_file_list = array_filter($file_op_list, fn($path) => preg_match("#^-/.+#", $path));
-    $new_file_list_str = array_filter($file_op_list, fn($path) => preg_match("#^\+/.+#", $path));
+    $file_op_list = array_filter(explode("\n", $differ->diff($old_file_list_str, $new_file_list_str)), fn ($path) => preg_match("#^[+\-]/.+#", $path));
+    $del_file_list = array_filter($file_op_list, fn ($path) => preg_match("#^-/.+#", $path));
+    $new_file_list_str = array_filter($file_op_list, fn ($path) => preg_match("#^\+/.+#", $path));
     if ($this->confirm('是否选择删除自定义的新文件?', true)) {
       $this->info(['将要操作删除的文件:', ...$del_file_list]);
       $all = false;
@@ -150,7 +150,7 @@ class WebmanAdminUpdate extends Command
         $this->warning("文件 $file_path 存在差异");
         $diff = explode("\n", $diff);
         $_diff = $diff;
-        usort($_diff, fn($a, $b) => mb_strlen($b) - mb_strlen($a));
+        usort($_diff, fn ($a, $b) => mb_strlen($b) - mb_strlen($a));
         $max_len = max(180, mb_strlen($_diff[0]));
         $diff = array_map(
           function ($line) use ($max_len) {
@@ -199,5 +199,4 @@ class WebmanAdminUpdate extends Command
     $file = preg_replace("#^-#", "", $file);
     return unlink($this->old_path . $file);
   }
-
 }

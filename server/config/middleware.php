@@ -1,4 +1,5 @@
 <?php
+
 /**
  * This file is part of webman.
  *
@@ -14,6 +15,6 @@
 
 return [
   'api' => [
-    app\api\middleware\ApiAdminAuthMiddleware::class
+    // app\api\middleware\ApiAdminAuthMiddleware::class
   ]
 ];
