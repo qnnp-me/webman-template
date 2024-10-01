@@ -12,7 +12,15 @@ class Init
       $class = str_replace(base_path(), '', str_replace(".php", '', $file));
       $class = str_replace('/', '\\', $class);
       if (class_exists($class) && method_exists($class, 'run')) {
-        $class::run();
+        $ref = new \ReflectionClass($class);
+        if ($ref->hasMethod('run')) {
+          $method = $ref->getMethod('run');
+          if ($method->isStatic()) {
+            $class::run();
+          }else{
+            $ref->newInstance()->run();
+          }
+        }
       }
     }
   }

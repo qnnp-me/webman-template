@@ -1,14 +1,14 @@
 <?php
 
-namespace support\init;
+namespace app\init;
 
 use Phinx\Console\PhinxApplication;
 use Phinx\Wrapper\TextWrapper;
 
-class Phinx implements InitInterface
+class Phinx
 {
 
-  static function run(): void
+  function run(): void
   {
     if (env('APP_ENV') == 'dev') return;
 

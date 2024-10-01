@@ -43,7 +43,7 @@ return [
     ]
   ],
   'crontab' => [
-    'handler' => process\CrontabManager::class
+    'handler' => process\Cron::class
   ],
   'init'    => [
     'handler'     => process\Init::class,

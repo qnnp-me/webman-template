@@ -1,24 +1,39 @@
 <?php
-/**
- * This file is part of webman.
- *
- * Licensed under The MIT License
- * For full copyright and license information, please see the MIT-LICENSE.txt
- * Redistributions of files must retain the above copyright notice.
- *
- * @author    walkor<walkor@workerman.net>
- * @copyright walkor<walkor@workerman.net>
- * @link      http://www.workerman.net/
- * @license   http://www.opensource.org/licenses/mit-license.php MIT License
- */
 
 namespace support;
-
-/**
- * Class Response
- * @package support
- */
 class Response extends \Webman\Http\Response
 {
+  public function __construct($status = 200, array $headers = array(), $body = '')
+  {
+    $headers += ['Content-Encoding' => 'gzip'];
+    $body = $this->getGzipBody($body);
+    parent::__construct($status, $headers, $body);
+  }
 
+  protected function getGzipBody(string $body): string
+  {
+    $body_hash = md5($body);
+    if (!is_dir(runtime_path('gzip_cache'))) {
+      mkdir(runtime_path('gzip_cache'));
+    }
+    $cache_file = runtime_path('gzip_cache/' . $body_hash . '.gz');
+    if (file_exists($cache_file)) {
+      $body = file_get_contents($cache_file) ?: '';
+    } else {
+      $body = gzencode($body);
+      file_put_contents($cache_file, $body);
+    }
+    return $body;
+  }
+
+  public function withBody($body): Response
+  {
+    $body = $this->getGzipBody($body);
+    return parent::withBody($body);
+  }
+
+  function getMimeTypeMap(): ?array
+  {
+    return self::$_mimeTypeMap;
+  }
 }

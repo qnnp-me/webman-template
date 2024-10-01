@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "22b8a7714486d50c2a538655bc2b69a5",
+    "content-hash": "79b80418d2ecab51147c21fc2770522d",
     "packages": [
         {
             "name": "brick/math",
@@ -117,20 +117,20 @@
         },
         {
             "name": "cakephp/core",
-            "version": "5.0.10",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/core.git",
-                "reference": "63a873e41a5ec74e00d1321b533e26c2631eeca5"
+                "reference": "f0c9c3701ed092ea03654bfec74a4b62b00faa3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/core/5.0.10/cakephp-core-5.0.10.zip",
-                "reference": "63a873e41a5ec74e00d1321b533e26c2631eeca5",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/core/5.1.0/cakephp-core-5.1.0.zip",
+                "reference": "f0c9c3701ed092ea03654bfec74a4b62b00faa3f",
                 "shasum": ""
             },
             "require": {
-                "cakephp/utility": "^5.0",
+                "cakephp/utility": "^5.1",
                 "league/container": "^4.2",
                 "php": ">=8.1",
                 "psr/container": "^1.1 || ^2.0"
@@ -168,33 +168,32 @@
                 "core",
                 "framework"
             ],
-            "time": "2024-06-08T17:54:49+00:00"
+            "time": "2024-09-06T12:23:52+00:00"
         },
         {
             "name": "cakephp/database",
-            "version": "5.0.10",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/database.git",
-                "reference": "61042e3b086689ee3bee88792250e51da370eaec"
+                "reference": "acec75fc244a5154e8b7a661ef9d3c0fef86c385"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/database/5.0.10/cakephp-database-5.0.10.zip",
-                "reference": "61042e3b086689ee3bee88792250e51da370eaec",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/database/5.1.0/cakephp-database-5.1.0.zip",
+                "reference": "acec75fc244a5154e8b7a661ef9d3c0fef86c385",
                 "shasum": ""
             },
             "require": {
-                "cakephp/chronos": "^3.0.2",
-                "cakephp/core": "^5.0",
-                "cakephp/datasource": "^5.0",
+                "cakephp/chronos": "^3.1",
+                "cakephp/core": "^5.1",
+                "cakephp/datasource": "^5.1",
                 "php": ">=8.1",
                 "psr/log": "^3.0"
             },
             "require-dev": {
-                "cakephp/i18n": "^5.0",
-                "cakephp/log": "^5.0",
-                "phpstan/phpstan": "^1.10"
+                "cakephp/i18n": "^5.1",
+                "cakephp/log": "^5.1"
             },
             "suggest": {
                 "cakephp/i18n": "If you are using locale-aware datetime formats.",
@@ -224,32 +223,31 @@
                 "database abstraction",
                 "pdo"
             ],
-            "time": "2024-06-08T07:44:07+00:00"
+            "time": "2024-09-12T14:55:57+00:00"
         },
         {
             "name": "cakephp/datasource",
-            "version": "5.0.10",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/datasource.git",
-                "reference": "28b8ce86ef77bd45fef7ba9ad31f03bf2fa81fa5"
+                "reference": "19bdf9d5ba048a3adb1f803391409e1419454f2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/datasource/5.0.10/cakephp-datasource-5.0.10.zip",
-                "reference": "28b8ce86ef77bd45fef7ba9ad31f03bf2fa81fa5",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/datasource/5.1.0/cakephp-datasource-5.1.0.zip",
+                "reference": "19bdf9d5ba048a3adb1f803391409e1419454f2b",
                 "shasum": ""
             },
             "require": {
-                "cakephp/core": "^5.0",
+                "cakephp/core": "^5.1",
                 "php": ">=8.1",
                 "psr/simple-cache": "^2.0 || ^3.0"
             },
             "require-dev": {
-                "cakephp/cache": "^5.0",
-                "cakephp/collection": "^5.0",
-                "cakephp/utility": "^5.0",
-                "phpstan/phpstan": "^1.10"
+                "cakephp/cache": "^5.1",
+                "cakephp/collection": "^5.1",
+                "cakephp/utility": "^5.1"
             },
             "suggest": {
                 "cakephp/cache": "If you decide to use Query caching.",
@@ -280,24 +278,24 @@
                 "entity",
                 "query"
             ],
-            "time": "2024-05-24T02:41:11+00:00"
+            "time": "2024-09-06T12:23:52+00:00"
         },
         {
             "name": "cakephp/utility",
-            "version": "5.0.10",
+            "version": "5.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/utility.git",
-                "reference": "6ddf7ad73bb6f7aeb303b19baff4b1e5a5d02cb5"
+                "reference": "e40c6ed007e3a9eb5873ca174c2f9160677b5570"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/utility/5.0.10/cakephp-utility-5.0.10.zip",
-                "reference": "6ddf7ad73bb6f7aeb303b19baff4b1e5a5d02cb5",
+                "url": "https://mirrors.huaweicloud.com/repository/php/cakephp/utility/5.1.0/cakephp-utility-5.1.0.zip",
+                "reference": "e40c6ed007e3a9eb5873ca174c2f9160677b5570",
                 "shasum": ""
             },
             "require": {
-                "cakephp/core": "^5.0",
+                "cakephp/core": "^5.1",
                 "php": ">=8.1"
             },
             "suggest": {
@@ -332,7 +330,7 @@
                 "string",
                 "utility"
             ],
-            "time": "2024-06-23T00:10:36+00:00"
+            "time": "2024-09-06T12:23:52+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -853,16 +851,16 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/bus.git",
-                "reference": "9a8649eb57a6621eed87ecc18af7eb84aa180992"
+                "reference": "96d0fba7928cd0bc93198b9310065917340125ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/bus/v11.19.0/illuminate-bus-v11.19.0.zip",
-                "reference": "9a8649eb57a6621eed87ecc18af7eb84aa180992",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/bus/v11.25.0/illuminate-bus-v11.25.0.zip",
+                "reference": "96d0fba7928cd0bc93198b9310065917340125ed",
                 "shasum": ""
             },
             "require": {
@@ -897,20 +895,20 @@
             ],
             "description": "The Illuminate Bus package.",
             "homepage": "https://laravel.com",
-            "time": "2024-06-28T20:10:30+00:00"
+            "time": "2024-08-31T23:42:47+00:00"
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/collections.git",
-                "reference": "2be24113fe25ef18be33bbd083ad36bf1e751eb5"
+                "reference": "465044f988f9a07c901388beeb15201d711387aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/collections/v11.19.0/illuminate-collections-v11.19.0.zip",
-                "reference": "2be24113fe25ef18be33bbd083ad36bf1e751eb5",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/collections/v11.25.0/illuminate-collections-v11.25.0.zip",
+                "reference": "465044f988f9a07c901388beeb15201d711387aa",
                 "shasum": ""
             },
             "require": {
@@ -947,11 +945,11 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "time": "2024-07-23T14:08:10+00:00"
+            "time": "2024-09-25T15:08:32+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/conditionable.git",
@@ -959,7 +957,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/conditionable/v11.19.0/illuminate-conditionable-v11.19.0.zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/conditionable/v11.25.0/illuminate-conditionable-v11.25.0.zip",
                 "reference": "362dd761b9920367bca1427a902158225e9e3a23",
                 "shasum": ""
             },
@@ -992,16 +990,16 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
-                "reference": "122c62229b209678013c0833793d7cf94d14bbbd"
+                "reference": "d6aca7c315d68cb6807c139facd7ea134b4f5104"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/container/v11.19.0/illuminate-container-v11.19.0.zip",
-                "reference": "122c62229b209678013c0833793d7cf94d14bbbd",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/container/v11.25.0/illuminate-container-v11.25.0.zip",
+                "reference": "d6aca7c315d68cb6807c139facd7ea134b4f5104",
                 "shasum": ""
             },
             "require": {
@@ -1034,20 +1032,20 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2024-07-26T06:12:27+00:00"
+            "time": "2024-09-20T12:51:05+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
-                "reference": "ebe2b8d69b8fb1c07111e3500d464e77dfab3202"
+                "reference": "56312862af937bd6da8e6dc8bbd88188dfb478f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/contracts/v11.19.0/illuminate-contracts-v11.19.0.zip",
-                "reference": "ebe2b8d69b8fb1c07111e3500d464e77dfab3202",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/contracts/v11.25.0/illuminate-contracts-v11.25.0.zip",
+                "reference": "56312862af937bd6da8e6dc8bbd88188dfb478f8",
                 "shasum": ""
             },
             "require": {
@@ -1077,20 +1075,20 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2024-07-29T06:48:51+00:00"
+            "time": "2024-09-22T15:08:08+00:00"
         },
         {
             "name": "illuminate/database",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
-                "reference": "db151e9a3221705cb4149c39dce2c51799708637"
+                "reference": "9f5ea42ec518d983d3bd45151d6c414c62ab4e79"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/database/v11.19.0/illuminate-database-v11.19.0.zip",
-                "reference": "db151e9a3221705cb4149c39dce2c51799708637",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/database/v11.25.0/illuminate-database-v11.25.0.zip",
+                "reference": "9f5ea42ec518d983d3bd45151d6c414c62ab4e79",
                 "shasum": ""
             },
             "require": {
@@ -1110,6 +1108,7 @@
                 "illuminate/events": "Required to use the observers with Eloquent (^11.0).",
                 "illuminate/filesystem": "Required to use the migrations (^11.0).",
                 "illuminate/pagination": "Required to paginate the result set (^11.0).",
+                "laravel/serializable-closure": "Required to handle circular references in model serialization (^1.3).",
                 "symfony/finder": "Required to use Eloquent model factories (^7.0)."
             },
             "type": "library",
@@ -1140,20 +1139,20 @@
                 "orm",
                 "sql"
             ],
-            "time": "2024-07-30T07:00:12+00:00"
+            "time": "2024-09-25T15:46:33+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/events.git",
-                "reference": "2ca94accf7e30e478a1cb2b0501c5be4478cb717"
+                "reference": "cfd8a636234cc5b5f736f2987f33b0d471d974b3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/events/v11.19.0/illuminate-events-v11.19.0.zip",
-                "reference": "2ca94accf7e30e478a1cb2b0501c5be4478cb717",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/events/v11.25.0/illuminate-events-v11.25.0.zip",
+                "reference": "cfd8a636234cc5b5f736f2987f33b0d471d974b3",
                 "shasum": ""
             },
             "require": {
@@ -1190,11 +1189,11 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "https://laravel.com",
-            "time": "2024-06-28T20:10:30+00:00"
+            "time": "2024-08-07T14:43:54+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/macroable.git",
@@ -1202,7 +1201,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/macroable/v11.19.0/illuminate-macroable-v11.19.0.zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/macroable/v11.25.0/illuminate-macroable-v11.25.0.zip",
                 "reference": "e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed",
                 "shasum": ""
             },
@@ -1235,7 +1234,7 @@
         },
         {
             "name": "illuminate/pagination",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pagination.git",
@@ -1243,7 +1242,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pagination/v11.19.0/illuminate-pagination-v11.19.0.zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pagination/v11.25.0/illuminate-pagination-v11.25.0.zip",
                 "reference": "930e3a41636b6ff4fa3d3cd47fb4bc24359c8691",
                 "shasum": ""
             },
@@ -1280,7 +1279,7 @@
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/pipeline.git",
@@ -1288,7 +1287,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pipeline/v11.19.0/illuminate-pipeline-v11.19.0.zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/pipeline/v11.25.0/illuminate-pipeline-v11.25.0.zip",
                 "reference": "ca9266eecf659f7e60c06758969b2ae3918ea3da",
                 "shasum": ""
             },
@@ -1323,7 +1322,7 @@
         },
         {
             "name": "illuminate/redis",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/redis.git",
@@ -1331,7 +1330,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/redis/v11.19.0/illuminate-redis-v11.19.0.zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/redis/v11.25.0/illuminate-redis-v11.25.0.zip",
                 "reference": "f30b3192f316b0024e70ef06cc0b2e1a2f134d79",
                 "shasum": ""
             },
@@ -1372,16 +1371,16 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.19.0",
+            "version": "v11.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "f3c19ee61d875dca1045df2d90000ae97f1645f9"
+                "reference": "ead1796b74be915705e66a695fce8d3cd4bb9034"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/support/v11.19.0/illuminate-support-v11.19.0.zip",
-                "reference": "f3c19ee61d875dca1045df2d90000ae97f1645f9",
+                "url": "https://mirrors.huaweicloud.com/repository/php/illuminate/support/v11.25.0/illuminate-support-v11.25.0.zip",
+                "reference": "ead1796b74be915705e66a695fce8d3cd4bb9034",
                 "shasum": ""
             },
             "require": {
@@ -1405,6 +1404,7 @@
             },
             "suggest": {
                 "illuminate/filesystem": "Required to use the composer class (^11.0).",
+                "laravel/serializable-closure": "Required to use the once function (^1.3).",
                 "league/commonmark": "Required to use Str::markdown() and Stringable::markdown() (^2.0.2).",
                 "ramsey/uuid": "Required to use Str::uuid() (^4.7).",
                 "symfony/process": "Required to use the composer class (^7.0).",
@@ -1420,6 +1420,7 @@
             },
             "autoload": {
                 "files": [
+                    "functions.php",
                     "helpers.php"
                 ],
                 "psr-4": {
@@ -1437,7 +1438,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2024-07-30T06:57:25+00:00"
+            "time": "2024-09-25T07:16:58+00:00"
         },
         {
             "name": "intervention/image",
@@ -1517,6 +1518,62 @@
                 }
             ],
             "time": "2022-05-21T17:30:32+00:00"
+        },
+        {
+            "name": "laravel/serializable-closure",
+            "version": "v1.3.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/serializable-closure.git",
+                "reference": "1dc4a3dbfa2b7628a3114e43e32120cce7cdda9c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.huaweicloud.com/repository/php/laravel/serializable-closure/v1.3.5/laravel-serializable-closure-v1.3.5.zip",
+                "reference": "1dc4a3dbfa2b7628a3114e43e32120cce7cdda9c",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.3|^8.0"
+            },
+            "require-dev": {
+                "illuminate/support": "^8.0|^9.0|^10.0|^11.0",
+                "nesbot/carbon": "^2.61|^3.0",
+                "pestphp/pest": "^1.21.3",
+                "phpstan/phpstan": "^1.8.2",
+                "symfony/var-dumper": "^5.4.11|^6.2.0|^7.0.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Laravel\\SerializableClosure\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylor@laravel.com"
+                },
+                {
+                    "name": "Nuno Maduro",
+                    "email": "nuno@laravel.com"
+                }
+            ],
+            "description": "Laravel Serializable Closure provides an easy and secure way to serialize closures in PHP.",
+            "keywords": [
+                "closure",
+                "laravel",
+                "serializable"
+            ],
+            "time": "2024-09-23T13:33:08+00:00"
         },
         {
             "name": "league/container",
@@ -1694,16 +1751,16 @@
         },
         {
             "name": "nesbot/carbon",
-            "version": "3.7.0",
+            "version": "3.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139"
+                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/nesbot/carbon/3.7.0/nesbot-carbon-3.7.0.zip",
-                "reference": "cb4374784c87d0a0294e8513a52eb63c0aff3139",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nesbot/carbon/3.8.0/nesbot-carbon-3.8.0.zip",
+                "reference": "bbd3eef89af8ba66a3aa7952b5439168fbcc529f",
                 "shasum": ""
             },
             "require": {
@@ -1790,7 +1847,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-16T22:29:20+00:00"
+            "time": "2024-08-19T06:22:39+00:00"
         },
         {
             "name": "nikic/fast-route",
@@ -1839,16 +1896,16 @@
         },
         {
             "name": "nyholm/psr7",
-            "version": "1.8.1",
+            "version": "1.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Nyholm/psr7.git",
-                "reference": "aa5fc277a4f5508013d571341ade0c3886d4d00e"
+                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/nyholm/psr7/1.8.1/nyholm-psr7-1.8.1.zip",
-                "reference": "aa5fc277a4f5508013d571341ade0c3886d4d00e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/nyholm/psr7/1.8.2/nyholm-psr7-1.8.2.zip",
+                "reference": "a71f2b11690f4b24d099d6b16690a90ae14fc6f3",
                 "shasum": ""
             },
             "require": {
@@ -1908,7 +1965,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-11-13T09:31:12+00:00"
+            "time": "2024-09-09T07:06:30+00:00"
         },
         {
             "name": "nyholm/psr7-server",
@@ -2437,16 +2494,16 @@
         },
         {
             "name": "psr/log",
-            "version": "3.0.0",
+            "version": "3.0.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-fig/log.git",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001"
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/psr/log/3.0.0/psr-log-3.0.0.zip",
-                "reference": "fe5ea303b0887d5caefd3d431c3e61ad47037001",
+                "url": "https://mirrors.huaweicloud.com/repository/php/psr/log/3.0.2/psr-log-3.0.2.zip",
+                "reference": "f16e1d5863e37f8d8c2a01719f5b34baa2b714d3",
                 "shasum": ""
             },
             "require": {
@@ -2479,7 +2536,7 @@
                 "psr",
                 "psr-3"
             ],
-            "time": "2021-07-14T16:46:02+00:00"
+            "time": "2024-09-11T13:17:53+00:00"
         },
         {
             "name": "psr/simple-cache",
@@ -2569,16 +2626,16 @@
         },
         {
             "name": "robmorgan/phinx",
-            "version": "0.16.2",
+            "version": "0.16.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cakephp/phinx.git",
-                "reference": "577908073d3f355ceb47ca9fc6bd978cb1526c70"
+                "reference": "0ef61fc10395dc25ab37c45125a5be5d6231299c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/robmorgan/phinx/0.16.2/robmorgan-phinx-0.16.2.zip",
-                "reference": "577908073d3f355ceb47ca9fc6bd978cb1526c70",
+                "url": "https://mirrors.huaweicloud.com/repository/php/robmorgan/phinx/0.16.4/robmorgan-phinx-0.16.4.zip",
+                "reference": "0ef61fc10395dc25ab37c45125a5be5d6231299c",
                 "shasum": ""
             },
             "require": {
@@ -2647,7 +2704,7 @@
                 "migrations",
                 "phinx"
             ],
-            "time": "2024-07-17T21:40:58+00:00"
+            "time": "2024-09-25T16:10:29+00:00"
         },
         {
             "name": "sebastian/diff",
@@ -2712,16 +2769,16 @@
         },
         {
             "name": "symfony/cache",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache.git",
-                "reference": "8ac37acee794372f9732fe8a61a8221f6762148e"
+                "reference": "86e5296b10e4dec8c8441056ca606aedb8a3be0a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/cache/v7.1.3/symfony-cache-v7.1.3.zip",
-                "reference": "8ac37acee794372f9732fe8a61a8221f6762148e",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/cache/v7.1.5/symfony-cache-v7.1.5.zip",
+                "reference": "86e5296b10e4dec8c8441056ca606aedb8a3be0a",
                 "shasum": ""
             },
             "require": {
@@ -2801,7 +2858,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-17T06:10:24+00:00"
+            "time": "2024-09-17T09:16:35+00:00"
         },
         {
             "name": "symfony/cache-contracts",
@@ -3018,16 +3075,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "cb1dcb30ebc7005c29864ee78adb47b5fb7c3cd9"
+                "reference": "0fa539d12b3ccf068a722bbbffa07ca7079af9ee"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/console/v7.1.3/symfony-console-v7.1.3.zip",
-                "reference": "cb1dcb30ebc7005c29864ee78adb47b5fb7c3cd9",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/console/v7.1.5/symfony-console-v7.1.5.zip",
+                "reference": "0fa539d12b3ccf068a722bbbffa07ca7079af9ee",
                 "shasum": ""
             },
             "require": {
@@ -3103,7 +3160,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:41:01+00:00"
+            "time": "2024-09-20T08:28:38+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3170,16 +3227,16 @@
         },
         {
             "name": "symfony/filesystem",
-            "version": "v7.1.2",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/filesystem.git",
-                "reference": "92a91985250c251de9b947a14bb2c9390b1a562c"
+                "reference": "61fe0566189bf32e8cfee78335d8776f64a66f5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/filesystem/v7.1.2/symfony-filesystem-v7.1.2.zip",
-                "reference": "92a91985250c251de9b947a14bb2c9390b1a562c",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/filesystem/v7.1.5/symfony-filesystem-v7.1.5.zip",
+                "reference": "61fe0566189bf32e8cfee78335d8776f64a66f5a",
                 "shasum": ""
             },
             "require": {
@@ -3228,20 +3285,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-28T10:03:55+00:00"
+            "time": "2024-09-17T09:16:35+00:00"
         },
         {
             "name": "symfony/http-client",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "b79858aa7a051ea791b0d50269a234a0b50cb231"
+                "reference": "abca35865118edf35a23f2f24978a1784c831cb4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-client/v7.1.3/symfony-http-client-v7.1.3.zip",
-                "reference": "b79858aa7a051ea791b0d50269a234a0b50cb231",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-client/v7.1.5/symfony-http-client-v7.1.5.zip",
+                "reference": "abca35865118edf35a23f2f24978a1784c831cb4",
                 "shasum": ""
             },
             "require": {
@@ -3318,7 +3375,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-17T06:10:24+00:00"
+            "time": "2024-09-20T13:35:23+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -3396,16 +3453,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "f602d5c17d1fa02f8019ace2687d9d136b7f4a1a"
+                "reference": "e30ef73b1e44eea7eb37ba69600a354e553f694b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-foundation/v7.1.3/symfony-http-foundation-v7.1.3.zip",
-                "reference": "f602d5c17d1fa02f8019ace2687d9d136b7f4a1a",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/http-foundation/v7.1.5/symfony-http-foundation-v7.1.5.zip",
+                "reference": "e30ef73b1e44eea7eb37ba69600a354e553f694b",
                 "shasum": ""
             },
             "require": {
@@ -3465,20 +3522,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:41:01+00:00"
+            "time": "2024-09-20T08:28:38+00:00"
         },
         {
             "name": "symfony/mime",
-            "version": "v7.1.2",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/mime.git",
-                "reference": "26a00b85477e69a4bab63b66c5dce64f18b0cbfc"
+                "reference": "711d2e167e8ce65b05aea6b258c449671cdd38ff"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/mime/v7.1.2/symfony-mime-v7.1.2.zip",
-                "reference": "26a00b85477e69a4bab63b66c5dce64f18b0cbfc",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/mime/v7.1.5/symfony-mime-v7.1.5.zip",
+                "reference": "711d2e167e8ce65b05aea6b258c449671cdd38ff",
                 "shasum": ""
             },
             "require": {
@@ -3545,24 +3602,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-28T10:03:55+00:00"
+            "time": "2024-09-20T08:28:38+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-ctype.git",
-                "reference": "0424dff1c58f028c451efff2045f5d92410bd540"
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-ctype/v1.30.0/symfony-polyfill-ctype-v1.30.0.zip",
-                "reference": "0424dff1c58f028c451efff2045f5d92410bd540",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-ctype/v1.31.0/symfony-polyfill-ctype-v1.31.0.zip",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-ctype": "*"
@@ -3620,24 +3677,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-intl-grapheme",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-grapheme.git",
-                "reference": "64647a7c30b2283f5d49b874d84a18fc22054b7a"
+                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-grapheme/v1.30.0/symfony-polyfill-intl-grapheme-v1.30.0.zip",
-                "reference": "64647a7c30b2283f5d49b874d84a18fc22054b7a",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-grapheme/v1.31.0/symfony-polyfill-intl-grapheme-v1.31.0.zip",
+                "reference": "b9123926e3b7bc2f98c02ad54f6a4b02b91a8abe",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -3694,26 +3751,25 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-intl-idn",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-idn.git",
-                "reference": "a6e83bdeb3c84391d1dfe16f42e40727ce524a5c"
+                "reference": "c36586dcf89a12315939e00ec9b4474adcb1d773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-idn/v1.30.0/symfony-polyfill-intl-idn-v1.30.0.zip",
-                "reference": "a6e83bdeb3c84391d1dfe16f42e40727ce524a5c",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-idn/v1.31.0/symfony-polyfill-intl-idn-v1.31.0.zip",
+                "reference": "c36586dcf89a12315939e00ec9b4474adcb1d773",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1",
-                "symfony/polyfill-intl-normalizer": "^1.10",
-                "symfony/polyfill-php72": "^1.10"
+                "php": ">=7.2",
+                "symfony/polyfill-intl-normalizer": "^1.10"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -3774,24 +3830,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-intl-normalizer",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-normalizer.git",
-                "reference": "a95281b0be0d9ab48050ebd988b967875cdb9fdb"
+                "reference": "3833d7255cc303546435cb650316bff708a1c75c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-normalizer/v1.30.0/symfony-polyfill-intl-normalizer-v1.30.0.zip",
-                "reference": "a95281b0be0d9ab48050ebd988b967875cdb9fdb",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-intl-normalizer/v1.31.0/symfony-polyfill-intl-normalizer-v1.31.0.zip",
+                "reference": "3833d7255cc303546435cb650316bff708a1c75c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -3851,24 +3907,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c"
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-mbstring/v1.30.0/symfony-polyfill-mbstring-v1.30.0.zip",
-                "reference": "fd22ab50000ef01661e2a31d850ebaa297f8e03c",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-mbstring/v1.31.0/symfony-polyfill-mbstring-v1.31.0.zip",
+                "reference": "85181ba99b2345b0ef10ce42ecac37612d9fd341",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "provide": {
                 "ext-mbstring": "*"
@@ -3927,93 +3983,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:30:46+00:00"
-        },
-        {
-            "name": "symfony/polyfill-php72",
-            "version": "v1.30.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php72.git",
-                "reference": "10112722600777e02d2745716b70c5db4ca70442"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php72/v1.30.0/symfony-polyfill-php72-v1.30.0.zip",
-                "reference": "10112722600777e02d2745716b70c5db4ca70442",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.1"
-            },
-            "type": "library",
-            "extra": {
-                "thanks": {
-                    "name": "symfony/polyfill",
-                    "url": "https://github.com/symfony/polyfill"
-                }
-            },
-            "autoload": {
-                "files": [
-                    "bootstrap.php"
-                ],
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php72\\": ""
-                }
-            },
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.2+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2024-06-19T12:30:46+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-php80",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php80.git",
-                "reference": "77fa7995ac1b21ab60769b7323d600a991a90433"
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php80/v1.30.0/symfony-polyfill-php80-v1.30.0.zip",
-                "reference": "77fa7995ac1b21ab60769b7323d600a991a90433",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php80/v1.31.0/symfony-polyfill-php80-v1.31.0.zip",
+                "reference": "60328e362d4c2c802a54fcbf04f9d3fb892b4cf8",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "type": "library",
             "extra": {
@@ -4072,24 +4059,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T15:07:36+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
-                "reference": "3fb075789fb91f9ad9af537c4012d523085bd5af"
+                "reference": "4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php81/v1.30.0/symfony-polyfill-php81-v1.30.0.zip",
-                "reference": "3fb075789fb91f9ad9af537c4012d523085bd5af",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php81/v1.31.0/symfony-polyfill-php81-v1.31.0.zip",
+                "reference": "4a4cfc2d253c21a5ad0e53071df248ed48c6ce5c",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "type": "library",
             "extra": {
@@ -4144,24 +4131,24 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:30:46+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.30.0",
+            "version": "v1.31.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "dbdcdf1a4dcc2743591f1079d0c35ab1e2dcbbc9"
+                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php83/v1.30.0/symfony-polyfill-php83-v1.30.0.zip",
-                "reference": "dbdcdf1a4dcc2743591f1079d0c35ab1e2dcbbc9",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/polyfill-php83/v1.31.0/symfony-polyfill-php83-v1.31.0.zip",
+                "reference": "2fb86d65e2d424369ad2905e83b236a8805ba491",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.1"
+                "php": ">=7.2"
             },
             "type": "library",
             "extra": {
@@ -4216,20 +4203,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-06-19T12:35:24+00:00"
+            "time": "2024-09-09T11:45:10+00:00"
         },
         {
             "name": "symfony/psr-http-message-bridge",
-            "version": "v6.4.10",
+            "version": "v6.4.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/psr-http-message-bridge.git",
-                "reference": "89a24648d73e4eee30893b0da16abc454a65c53b"
+                "reference": "74835ba54eca99a38f374f7a6d932fa510124773"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/psr-http-message-bridge/v6.4.10/symfony-psr-http-message-bridge-v6.4.10.zip",
-                "reference": "89a24648d73e4eee30893b0da16abc454a65c53b",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/psr-http-message-bridge/v6.4.11/symfony-psr-http-message-bridge-v6.4.11.zip",
+                "reference": "74835ba54eca99a38f374f7a6d932fa510124773",
                 "shasum": ""
             },
             "require": {
@@ -4295,7 +4282,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-15T09:36:38+00:00"
+            "time": "2024-08-14T13:55:58+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -4378,16 +4365,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "ea272a882be7f20cad58d5d78c215001617b7f07"
+                "reference": "d66f9c343fa894ec2037cc928381df90a7ad4306"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/string/v7.1.3/symfony-string-v7.1.3.zip",
-                "reference": "ea272a882be7f20cad58d5d78c215001617b7f07",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/string/v7.1.5/symfony-string-v7.1.5.zip",
+                "reference": "d66f9c343fa894ec2037cc928381df90a7ad4306",
                 "shasum": ""
             },
             "require": {
@@ -4457,20 +4444,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-22T10:25:37+00:00"
+            "time": "2024-09-20T08:28:38+00:00"
         },
         {
             "name": "symfony/translation",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",
-                "reference": "8d5e50c813ba2859a6dfc99a0765c550507934a1"
+                "reference": "235535e3f84f3dfbdbde0208ede6ca75c3a489ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/translation/v7.1.3/symfony-translation-v7.1.3.zip",
-                "reference": "8d5e50c813ba2859a6dfc99a0765c550507934a1",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/translation/v7.1.5/symfony-translation-v7.1.5.zip",
+                "reference": "235535e3f84f3dfbdbde0208ede6ca75c3a489ea",
                 "shasum": ""
             },
             "require": {
@@ -4547,7 +4534,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:41:01+00:00"
+            "time": "2024-09-16T06:30:38+00:00"
         },
         {
             "name": "symfony/translation-contracts",
@@ -4625,16 +4612,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.1.3",
+            "version": "v7.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "86af4617cca75a6e28598f49ae0690f3b9d4591f"
+                "reference": "e20e03889539fd4e4211e14d2179226c513c010d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/var-dumper/v7.1.3/symfony-var-dumper-v7.1.3.zip",
-                "reference": "86af4617cca75a6e28598f49ae0690f3b9d4591f",
+                "url": "https://mirrors.huaweicloud.com/repository/php/symfony/var-dumper/v7.1.5/symfony-var-dumper-v7.1.5.zip",
+                "reference": "e20e03889539fd4e4211e14d2179226c513c010d",
                 "shasum": ""
             },
             "require": {
@@ -4700,7 +4687,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-07-26T12:41:01+00:00"
+            "time": "2024-09-16T10:07:02+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -4863,16 +4850,16 @@
         },
         {
             "name": "topthink/think-helper",
-            "version": "v3.1.6",
+            "version": "v3.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/top-think/think-helper.git",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff"
+                "reference": "612eea76eec2a22f41b0e24be27f49454e4fd5f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/topthink/think-helper/v3.1.6/topthink-think-helper-v3.1.6.zip",
-                "reference": "769acbe50a4274327162f9c68ec2e89a38eb2aff",
+                "url": "https://mirrors.huaweicloud.com/repository/php/topthink/think-helper/v3.1.8/topthink-think-helper-v3.1.8.zip",
+                "reference": "612eea76eec2a22f41b0e24be27f49454e4fd5f5",
                 "shasum": ""
             },
             "require": {
@@ -4900,7 +4887,7 @@
                 }
             ],
             "description": "The ThinkPHP6 Helper Package",
-            "time": "2021-12-15T04:27:55+00:00"
+            "time": "2024-08-26T15:07:58+00:00"
         },
         {
             "name": "topthink/think-validate",
@@ -5089,16 +5076,16 @@
         },
         {
             "name": "w7corp/easywechat",
-            "version": "6.15.1",
+            "version": "6.15.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/w7corp/easywechat.git",
-                "reference": "8902917ceeaa20354301e533ff3725f0044c04ca"
+                "reference": "27e8b686632ff3f0f599c7085f516657a084d821"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/w7corp/easywechat/6.15.1/w7corp-easywechat-6.15.1.zip",
-                "reference": "8902917ceeaa20354301e533ff3725f0044c04ca",
+                "url": "https://mirrors.huaweicloud.com/repository/php/w7corp/easywechat/6.15.2/w7corp-easywechat-6.15.2.zip",
+                "reference": "27e8b686632ff3f0f599c7085f516657a084d821",
                 "shasum": ""
             },
             "require": {
@@ -5123,7 +5110,6 @@
                 "thenorthmemory/xml": "^1.0"
             },
             "require-dev": {
-                "brainmaestro/composer-git-hooks": "^2.8",
                 "jetbrains/phpstorm-attributes": "^1.0",
                 "laravel/pint": "^1.2",
                 "mikey179/vfsstream": "^1.6",
@@ -5133,24 +5119,6 @@
                 "symfony/var-dumper": "^5.2"
             },
             "type": "library",
-            "extra": {
-                "hooks": {
-                    "pre-commit": [
-                        "composer check-style",
-                        "composer phpstan",
-                        "composer test"
-                    ],
-                    "pre-push": [
-                        "composer check-style"
-                    ],
-                    "config": {
-                        "stop-on-failure": [
-                            "pre-commit",
-                            "pre-push"
-                        ]
-                    }
-                }
-            },
             "autoload": {
                 "psr-4": {
                     "EasyWeChat\\": "src/"
@@ -5179,20 +5147,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-03-29T12:23:19+00:00"
+            "time": "2024-08-19T13:33:33+00:00"
         },
         {
             "name": "webman/admin",
-            "version": "v0.6.29",
+            "version": "v0.6.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/admin.git",
-                "reference": "a9540f2ecc3783bb4b8e008f47f221a36426d80c"
+                "reference": "9cb7b1aa12be5968a5f796856e3928e0e04231a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/webman/admin/v0.6.29/webman-admin-v0.6.29.zip",
-                "reference": "a9540f2ecc3783bb4b8e008f47f221a36426d80c",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/admin/v0.6.31/webman-admin-v0.6.31.zip",
+                "reference": "9cb7b1aa12be5968a5f796856e3928e0e04231a3",
                 "shasum": ""
             },
             "require": {
@@ -5201,6 +5169,7 @@
                 "illuminate/events": ">=7.30",
                 "illuminate/pagination": ">=7.30",
                 "intervention/image": "^2.7",
+                "laravel/serializable-closure": "^1.0",
                 "webman/captcha": "^1.0.0",
                 "webman/event": "^1.0",
                 "workerman/webman-framework": ">=1.4"
@@ -5215,7 +5184,7 @@
                 "MIT"
             ],
             "description": "Webman Admin",
-            "time": "2024-06-17T06:54:29+00:00"
+            "time": "2024-09-12T12:50:06+00:00"
         },
         {
             "name": "webman/captcha",
@@ -5273,16 +5242,16 @@
         },
         {
             "name": "webman/console",
-            "version": "v1.3.9",
+            "version": "v1.3.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/console.git",
-                "reference": "9ba334486b9c8dc6b88e98f423d8fedfe3d71d45"
+                "reference": "cf7812603114c97bfdeb7d8e3e6eabe567357d77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/webman/console/v1.3.9/webman-console-v1.3.9.zip",
-                "reference": "9ba334486b9c8dc6b88e98f423d8fedfe3d71d45",
+                "url": "https://mirrors.huaweicloud.com/repository/php/webman/console/v1.3.11/webman-console-v1.3.11.zip",
+                "reference": "cf7812603114c97bfdeb7d8e3e6eabe567357d77",
                 "shasum": ""
             },
             "require": {
@@ -5314,7 +5283,7 @@
             "keywords": [
                 "webman console"
             ],
-            "time": "2024-06-12T01:30:26+00:00"
+            "time": "2024-09-24T06:37:05+00:00"
         },
         {
             "name": "webman/event",
@@ -5412,16 +5381,16 @@
         },
         {
             "name": "workerman/redis",
-            "version": "v2.0.2",
+            "version": "v2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/redis.git",
-                "reference": "542f10c243ba846f1f3b4c07a26136c5fa80d972"
+                "reference": "4e910d4b0c2f2101a1f8dbd28be79fd864f7aab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/redis/v2.0.2/workerman-redis-v2.0.2.zip",
-                "reference": "542f10c243ba846f1f3b4c07a26136c5fa80d972",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/redis/v2.0.3/workerman-redis-v2.0.3.zip",
+                "reference": "4e910d4b0c2f2101a1f8dbd28be79fd864f7aab8",
                 "shasum": ""
             },
             "require": {
@@ -5438,7 +5407,7 @@
                 "MIT"
             ],
             "homepage": "http://www.workerman.net",
-            "time": "2023-06-08T01:39:47+00:00"
+            "time": "2024-08-01T03:38:26+00:00"
         },
         {
             "name": "workerman/redis-queue",
@@ -5474,16 +5443,16 @@
         },
         {
             "name": "workerman/webman-framework",
-            "version": "v1.5.21",
+            "version": "v1.5.24",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/webman-framework.git",
-                "reference": "811cf511abcff352e3671777bc1d1fb42fa6c7ce"
+                "reference": "be1a0425e3fcbd9e8ffaec94e35ed5452480356f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/webman-framework/v1.5.21/workerman-webman-framework-v1.5.21.zip",
-                "reference": "811cf511abcff352e3671777bc1d1fb42fa6c7ce",
+                "url": "https://mirrors.huaweicloud.com/repository/php/workerman/webman-framework/v1.5.24/workerman-webman-framework-v1.5.24.zip",
+                "reference": "be1a0425e3fcbd9e8ffaec94e35ed5452480356f",
                 "shasum": ""
             },
             "require": {
@@ -5524,7 +5493,7 @@
                 "High Performance",
                 "http service"
             ],
-            "time": "2024-07-23T09:16:53+00:00"
+            "time": "2024-09-15T13:03:20+00:00"
         },
         {
             "name": "workerman/workerman",
@@ -5590,9 +5559,11 @@
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.2",
+        "ext-event": "*",
         "ext-fileinfo": "*",
         "ext-pcntl": "*",
-        "ext-posix": "*"
+        "ext-posix": "*",
+        "ext-zlib": "*"
     },
     "platform-dev": [],
     "plugin-api-version": "2.6.0"

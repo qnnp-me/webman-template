@@ -1,11 +1,12 @@
 #!/bin/bash
 
 WORKDIR=$(pwd)
-BASEDIR=$(dirname "$0")
+SCRIPT=$(readlink -f "$0")
+BASEDIR=$(dirname "$(dirname "$SCRIPT")")
 
 set -e
 
-cd "$BASEDIR/../server" || true
+cd "$BASEDIR/server" || exit 1
 
 set +e
 php -d phar.readonly=0 ./webman build:phar
@@ -16,4 +17,4 @@ if [ $status -ne 0 ]; then
   echo "Build phar failed"
 fi
 
-cd "$WORKDIR" || true
+cd "$BASEDIR" || exit 1

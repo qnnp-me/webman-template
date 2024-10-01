@@ -1,6 +1,6 @@
 <?php
 
-namespace support\init;
+namespace app\init;
 
 use Attribute;
 use plugin\admin\app\common\Util;
@@ -8,32 +8,10 @@ use plugin\admin\app\model\Rule;
 use ReflectionClass;
 use ReflectionException;
 
-class ForWeb implements InitInterface
+class ForWeb
 {
   protected static string $base_path;
   protected static string $web_folder = 'web';
-
-  static function run(): void
-  {
-    self::$base_path = dirname(run_path()) . DIRECTORY_SEPARATOR . self::$web_folder;
-    if (file_exists(self::$base_path)) {
-      $ref = new ReflectionClass(self::class);
-      $methods = $ref->getMethods();
-      foreach ($methods as $method) {
-        if (!$method->isStatic()) {
-          continue;
-        }
-        $attrs = $method->getAttributes(Action::class);
-        if (count($attrs) > 0) {
-          try {
-            $method->invoke(null);
-          } catch (ReflectionException $e) {
-            echo $e->getMessage();
-          }
-        }
-      }
-    }
-  }
 
   #[Action]
   static function generate_types(): void
@@ -54,6 +32,28 @@ TS;
       $permissions .= "  | '$code'\n";
     }
     file_put_contents(self::$base_path . DIRECTORY_SEPARATOR . 'src/basic/types/AdminPermission.d.ts', $permissions);
+  }
+
+  function run(): void
+  {
+    self::$base_path = dirname(run_path()) . DIRECTORY_SEPARATOR . self::$web_folder;
+    if (file_exists(self::$base_path)) {
+      $ref = new ReflectionClass(self::class);
+      $methods = $ref->getMethods();
+      foreach ($methods as $method) {
+        if (!$method->isStatic()) {
+          continue;
+        }
+        $attrs = $method->getAttributes(Action::class);
+        if (count($attrs) > 0) {
+          try {
+            $method->invoke(null);
+          } catch (ReflectionException $e) {
+            echo $e->getMessage();
+          }
+        }
+      }
+    }
   }
 }
 

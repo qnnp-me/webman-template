@@ -1,13 +1,13 @@
 <?php
 
-namespace support\init;
+namespace app\init;
 
 use Phar;
 
-class ReleaseFiles implements InitInterface
+class ReleaseFiles
 {
 
-  static function run(): void
+  function run(): void
   {
     if (is_phar()) {
       $phar = Phar::running();

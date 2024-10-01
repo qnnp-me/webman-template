@@ -1,6 +1,6 @@
 <?php
 
-namespace support\bootstrap;
+namespace app\bootstrap;
 
 use Webman\Bootstrap;
 use Workerman\Worker;
