@@ -2,7 +2,7 @@
 
 namespace process;
 
-use app\attr\CronRule;
+use app\cron\CronRule;
 use Exception;
 use ReflectionClass;
 use Workerman\Crontab\Crontab;

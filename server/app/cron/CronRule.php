@@ -1,6 +1,6 @@
 <?php
 
-namespace app\attr;
+namespace app\cron;
 
 use Attribute;
 
