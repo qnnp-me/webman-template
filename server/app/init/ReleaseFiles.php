@@ -6,6 +6,7 @@ use Phar;
 
 class ReleaseFiles
 {
+  public int $weight = 0;
 
   function run(): void
   {
