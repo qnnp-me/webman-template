@@ -20,7 +20,7 @@ class AppSetup extends Command
     return $command_helper->color(' 用于项目部署初始化必要环境和配置 ', 231, 244);
   }
 
-  protected function configure()
+  protected function configure(): void
   {
     $this->addArgument(
       'r',
