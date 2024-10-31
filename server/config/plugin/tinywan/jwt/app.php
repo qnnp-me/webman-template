@@ -6,11 +6,11 @@ return [
     /** 算法类型 HS256、HS384、HS512、RS256、RS384、RS512、ES256、ES384、Ed25519 */
     'algorithms'               => 'RS512',
     /** access令牌秘钥 */
-    'access_secret_key'        => '2022d3d3LmJq',
+    'access_secret_key'        => file_exists(runtime_path('jwt_key/access_secret_key.key')) ? file_get_contents(runtime_path('jwt_key/access_secret_key.key')) : '',
     /** access令牌过期时间，单位：秒。默认 2 小时 */
     'access_exp'               => 7200,
     /** refresh令牌秘钥 */
-    'refresh_secret_key'       => '2022KTxigxc9o50c',
+    'refresh_secret_key'       => file_exists(runtime_path('jwt_key/refresh_secret_key.key')) ? file_get_contents(runtime_path('jwt_key/refresh_secret_key.key')) : '',
     /** refresh令牌过期时间，单位：秒。默认 7 天 */
     'refresh_exp'              => 604800,
     /** refresh 令牌是否禁用，默认不禁用 false */
