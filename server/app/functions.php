@@ -1,7 +1,7 @@
 <?php
 
-use app\module\SessionModule;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
+use support\helper\SessionHelper;
 use support\Response;
 
 function json_error(string $msg, int $code = 500, $data = null): Response
@@ -104,7 +104,7 @@ function get_files(string $path, array|string $include = [], array|string $exclu
   }
 }
 
-function ss(): SessionModule
+function ss(): SessionHelper
 {
-  return SessionModule::getInstance();
+  return SessionHelper::getInstance();
 }

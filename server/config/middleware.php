@@ -14,7 +14,7 @@
  */
 
 return [
-  'api' => [
-    // app\api\middleware\ApiAdminAuthMiddleware::class
+  '@' => [
+
   ]
 ];

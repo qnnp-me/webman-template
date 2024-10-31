@@ -17,7 +17,7 @@ return [
   'transport'        => 'tcp',
   'context'          => [],
   'name'             => env('APP_NAME', 'Webman'),
-  'count'            => cpu_count() * 4,
+  'count'            => env('CPU_COUNT', cpu_count() * 4),
   'user'             => '',
   'group'            => '',
   'reusePort'        => false,

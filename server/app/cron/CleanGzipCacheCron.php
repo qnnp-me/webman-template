@@ -2,6 +2,8 @@
 
 namespace app\cron;
 
+use support\attribute\CronRule;
+
 class CleanGzipCacheCron
 {
   # 每分钟检查一次 gzip 缓存, 缓存时间最长 5 分钟
