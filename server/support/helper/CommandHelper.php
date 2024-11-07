@@ -2,6 +2,7 @@
 
 namespace support\helper;
 
+use Monolog\Logger;
 use PHP_Parallel_Lint\PhpConsoleColor\ConsoleColor;
 use Symfony\Component\Console\Helper\QuestionHelper;
 use Symfony\Component\Console\Input\InputInterface;
@@ -51,34 +52,35 @@ class CommandHelper
     return "$prefix $messages";
   }
 
-  function success(string|iterable $messages): void
-  {
-    $this->writeln($this->addPrefix($messages, '💐'), tag: "Success", back: 70);
-  }
 
   function info(string|iterable $messages): void
   {
+    if (Logger::INFO < config('log.default.handlers.0.constructor.2', Logger::DEBUG)) return;
     $this->writeln($this->addPrefix($messages, '🔖'), tag: "Info   ", back: 244);
-  }
-
-  function warning(string|iterable $messages): void
-  {
-    $this->writeln($this->addPrefix($messages, '🚨'), tag: "Warning", back: 220);
-  }
-
-  function failed(string|iterable $messages): void
-  {
-    $this->writeln($this->addPrefix($messages, '💔'), tag: "Failed ", back: 160);
-  }
-
-  function error(string|iterable $messages): void
-  {
-    $this->writeln($this->addPrefix($messages, '🐞'), tag: "Error  ", back: 160);
   }
 
   function notice(string|iterable $messages): void
   {
+    if (Logger::NOTICE < config('log.default.handlers.0.constructor.2', Logger::DEBUG)) return;
     $this->writeln($this->addPrefix($messages, '💬'), tag: "Notice ", back: 45);
+  }
+
+  function warning(string|iterable $messages): void
+  {
+    if (Logger::WARNING < config('log.default.handlers.0.constructor.2', Logger::DEBUG)) return;
+    $this->writeln($this->addPrefix($messages, '🚨'), tag: "Warning", back: 220);
+  }
+
+  function error(string|iterable $messages): void
+  {
+    if (Logger::ERROR < config('log.default.handlers.0.constructor.2', Logger::DEBUG)) return;
+    $this->writeln($this->addPrefix($messages, '🐞'), tag: "Error  ", back: 160);
+  }
+
+  function failed(string|iterable $messages): void
+  {
+    if (Logger::CRITICAL < config('log.default.handlers.0.constructor.2', Logger::DEBUG)) return;
+    $this->writeln($this->addPrefix($messages, '💔'), tag: "Failed ", back: 160);
   }
 
   protected function writeln(string|iterable $messages, int $options = 0, string $tag = null, int $front = 231, int $back = 240): void
@@ -107,6 +109,9 @@ class CommandHelper
     $this->output->write($messages, $newline, $options);
   }
 
+  /**
+   * 将会阻断输入，直到用户输入回车
+   */
   function alert(string $messages): void
   {
     $helper = new QuestionHelper();
@@ -116,6 +121,11 @@ class CommandHelper
       " ⏎ : ",
     );
     $helper->ask($this->input, $this->output, $question);
+  }
+
+  function success(string|iterable $messages): void
+  {
+    $this->writeln($this->addPrefix($messages, '💐'), tag: "Success", back: 70);
   }
 
   function confirm(string $question, bool $default = false, $trueAnswerRegex = '/^y/ i'): bool

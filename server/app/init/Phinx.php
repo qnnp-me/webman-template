@@ -31,20 +31,18 @@ class Phinx extends InitAbstract
       }
     }
 
-    $command_helper->notice('Phinx Migrate');
     $migrate_result = $wrap->getMigrate();
     $has_error = str_contains($migrate_result, 'Exception:');
-    if ($has_error || str_contains($migrate_result, ' == '))
+    if ($has_error || str_contains($migrate_result, ' == ')) {
+      $command_helper->notice('Phinx Migrate');
       $command_helper->{$has_error ? 'error' : 'info'}(explode("\n", $migrate_result));
-    else
-      $command_helper->info('No migration');
+    }
 
-    $command_helper->notice('Phinx Seed');
     $seed_result = $wrap->getSeed(seed: $seeds);
     $has_error = str_contains($seed_result, 'Exception:');
-    if ($has_error || str_contains($seed_result, ' == '))
+    if ($has_error || str_contains($seed_result, ' == ')) {
+      $command_helper->notice('Phinx Seed');
       $command_helper->{$has_error ? 'error' : 'info'}(explode("\n", $seed_result));
-    else
-      $command_helper->info('No seed');
+    }
   }
 }

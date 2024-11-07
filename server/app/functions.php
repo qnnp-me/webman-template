@@ -38,24 +38,9 @@ function json_success(mixed $data = null, array $extra = []): Response
   ]);
 }
 
-function getAllFiles(string $abs_path): array
+function scan_all_files(string $abs_path): Generator
 {
-  $list = [];
-  if (file_exists($abs_path) && is_dir($abs_path)) {
-    $dir = opendir($abs_path);
-    while (false !== ($file = readdir($dir))) {
-      if ($file != "." && $file != "..") {
-        if (is_dir($abs_path . "/" . $file)) {
-          $list = array_merge($list, getAllFiles($abs_path . "/" . $file));
-        } else {
-          $list[] = $abs_path . "/" . $file;
-        }
-      }
-    }
-  } else {
-    $list[] = $abs_path;
-  }
-  return $list;
+  return scan_files($abs_path);
 }
 
 /**
@@ -64,7 +49,7 @@ function getAllFiles(string $abs_path): array
  * @param array|string $exclude Ex: `'*.php'` `['.php', '.js']` `['~^[A-Z].*\.php$~', '/\.js$/']`
  * @return Generator
  */
-function get_files(string $path, array|string $include = [], array|string $exclude = []): Generator
+function scan_files(string $path, array|string $include = [], array|string $exclude = []): Generator
 {
   if (!is_array($include)) $include = [$include];
   if (!is_array($exclude)) $exclude = [$exclude];
@@ -76,7 +61,7 @@ function get_files(string $path, array|string $include = [], array|string $exclu
       if (in_array($item, ['.', '..'])) continue;
       $item_path = $path . DIRECTORY_SEPARATOR . $item;
       if (is_dir($item_path)) {
-        yield from get_files($item_path, $include, $exclude);
+        yield from scan_files($item_path, $include, $exclude);
       } else {
         $match_check = function (array $include, $item, bool $default = false) {
           foreach ($include as $i) {

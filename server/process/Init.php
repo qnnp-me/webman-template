@@ -17,7 +17,7 @@ class Init
   {
     $command_helper = new CommandHelper();
     $base_path = base_path('app/init');
-    $all_files = getAllFiles($base_path);
+    $all_files = scan_all_files($base_path);
     $init_functions = [];
     $command_helper->notice('Processing Init Files');
     foreach ($all_files as $file) {
