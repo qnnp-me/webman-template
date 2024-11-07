@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bc2c0710f865ea8e2e9c0bd3adf469f",
+    "content-hash": "89ba910dbf961dd575cc419a4685e21c",
     "packages": [
         {
             "name": "brick/math",
@@ -1548,6 +1548,70 @@
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
             "time": "2024-10-29T20:21:52+00:00"
+        },
+        {
+            "name": "intervention/image",
+            "version": "2.7.2",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/intervention/image/2.7.2/intervention-image-2.7.2.zip",
+                "reference": "04be355f8d6734c826045d02a1079ad658322dad",
+                "shasum": ""
+            },
+            "require": {
+                "ext-fileinfo": "*",
+                "guzzlehttp/psr7": "~1.1 || ^2.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "~0.9.2",
+                "phpunit/phpunit": "^4.8 || ^5.7 || ^7.5.15"
+            },
+            "suggest": {
+                "ext-gd": "to use GD library based image processing.",
+                "ext-imagick": "to use Imagick based image processing.",
+                "intervention/imagecache": "Caching extension for the Intervention Image library"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                },
+                "laravel": {
+                    "providers": [
+                        "Intervention\\Image\\ImageServiceProvider"
+                    ],
+                    "aliases": {
+                        "Image": "Intervention\\Image\\Facades\\Image"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Intervention\\Image\\": "src/Intervention/Image"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Oliver Vogel",
+                    "email": "oliver@intervention.io",
+                    "homepage": "https://intervention.io/"
+                }
+            ],
+            "description": "Image handling and manipulation library with support for Laravel integration",
+            "homepage": "http://image.intervention.io/",
+            "keywords": [
+                "gd",
+                "image",
+                "imagick",
+                "laravel",
+                "thumbnail",
+                "watermark"
+            ],
+            "time": "2022-05-21T17:30:32+00:00"
         },
         {
             "name": "laravel/serializable-closure",
@@ -4356,6 +4420,38 @@
                 "php"
             ],
             "time": "2022-03-08T17:03:00+00:00"
+        },
+        {
+            "name": "webman/admin",
+            "version": "v0.6.31",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/webman/admin/v0.6.31/webman-admin-v0.6.31.zip",
+                "reference": "9cb7b1aa12be5968a5f796856e3928e0e04231a3",
+                "shasum": ""
+            },
+            "require": {
+                "guzzlehttp/guzzle": "^7.5",
+                "illuminate/database": ">=7.30",
+                "illuminate/events": ">=7.30",
+                "illuminate/pagination": ">=7.30",
+                "intervention/image": "^2.7",
+                "laravel/serializable-closure": "^1.0",
+                "webman/captcha": "^1.0.0",
+                "webman/event": "^1.0",
+                "workerman/webman-framework": ">=1.4"
+            },
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "Webman\\Admin\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Webman Admin",
+            "time": "2024-09-12T12:50:06+00:00"
         },
         {
             "name": "webman/captcha",

@@ -4,7 +4,12 @@
 composer.lock
 /vendor
 /build
-/plugin/admin/public/upload
+/plugin/admin
+!/plugin/admin/config
+!/plugin/admin/config/app.php
+!/plugin/admin/config/database.php
+!/plugin/admin/config/log.php
+!/plugin/admin/config/redis.php
 .env
 /tests/tmp
 /tests/.phpunit.result.cache
