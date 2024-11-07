@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "89ba910dbf961dd575cc419a4685e21c",
+    "content-hash": "ca4fc04413191c479d26d9a76bc5c647",
     "packages": [
         {
             "name": "brick/math",
@@ -4562,6 +4562,30 @@
             ],
             "description": "Webman event plugin",
             "time": "2023-12-04T09:22:12+00:00"
+        },
+        {
+            "name": "webman/log",
+            "version": "v1.2.0",
+            "dist": {
+                "type": "zip",
+                "url": "https://mirrors.tencent.com/repository/composer/webman/log/v1.2.0/webman-log-v1.2.0.zip",
+                "reference": "6a534e5f25074e41c107cc3643f3aad9fcf09298",
+                "shasum": ""
+            },
+            "require": {
+                "workerman/webman-framework": ">=1.5.15"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webman\\Log\\": "src"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "description": "Webman plugin webman/log",
+            "time": "2024-10-25T02:23:03+00:00"
         },
         {
             "name": "webman/redis-queue",
