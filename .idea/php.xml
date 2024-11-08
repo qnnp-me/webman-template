@@ -109,6 +109,7 @@
       <path value="$PROJECT_DIR$/server/vendor/firebase/php-jwt" />
       <path value="$PROJECT_DIR$/server/vendor/webman/admin" />
       <path value="$PROJECT_DIR$/server/vendor/intervention/image" />
+      <path value="$PROJECT_DIR$/server/vendor/webman/log" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />
