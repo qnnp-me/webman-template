@@ -1,40 +1,36 @@
-import { isEqual, omit } from 'lodash';
-import { useEffect, useState } from 'react';
-
-import { App, FormInstance } from 'antd';
-
-import { ModalForm, ModalFormProps } from '@ant-design/pro-components';
+import {ModalForm, ModalFormProps, ProForm} from '@ant-design/pro-components';
+import {App} from 'antd';
+import {isEqual, omit} from 'lodash';
+import {useEffect, useState} from 'react';
 
 export const ModalEditForm = <T = unknown>(props: {
-  open?: boolean,
   // 初始或者编辑的数据
-  editData: T
+  editData?: T
   onFinish: (values: T) => unknown
   onCancel: () => void
-  form?: FormInstance<T>
   // 是否需要二次确认取消, 前提是有 form 的
   cancelConfirm?: boolean
   children: React.ReactNode
-} & Omit<ModalFormProps, 'onFinish'>) => {
+} & Omit<ModalFormProps<T>, 'onFinish'>) => {
   const {
     open,
     editData,
-    form,
     onFinish,
     onCancel,
     modalProps,
     cancelConfirm = false,
     children,
   } = props;
-  const { modal } = App.useApp();
+  const [local_form] = ProForm.useForm<T>();
+  const form = props.form || local_form;
+  const {modal} = App.useApp();
   const [openModal, setOpen] = useState(!!editData);
-  const [initialValues, setInitialValues] = useState<T>(editData);
+  const [initialValues, setInitialValues] = useState<T | undefined>(editData);
   useEffect(() => {
     open == undefined && setOpen(!!editData);
     if (editData) {
       setInitialValues(editData);
       form && requestAnimationFrame(() => {
-        form.resetFields();
         if (cancelConfirm) {
           requestAnimationFrame(() => {
             setInitialValues(form.getFieldsValue());
@@ -45,11 +41,19 @@ export const ModalEditForm = <T = unknown>(props: {
   }, [editData]);
   useEffect(() => {
     open != undefined && setOpen(open);
+    open && form.resetFields();
   }, [open]);
   const handleCancel = () => {
     if (form && cancelConfirm) {
-      const changed = !isEqual(form.getFieldsValue(), initialValues);
+      const changed = !isEqual(
+        JSON.parse(JSON.stringify(form.getFieldsValue())),
+        initialValues,
+      );
       if (changed) {
+        console.log(
+          JSON.parse(JSON.stringify(form.getFieldsValue())),
+          initialValues,
+        );
         void modal.confirm({
           title: '确认取消?',
           content: '表单数据尚未保存, 是否确认取消?',
@@ -62,11 +66,22 @@ export const ModalEditForm = <T = unknown>(props: {
     onCancel();
   };
   return <ModalForm<T>
+    form={form}
     isKeyPressSubmit
     open={openModal}
     onFinish={onFinish as never}
-    request={(() => Promise.resolve(initialValues)) as never}
     {...omit(props, ['editData', 'cancelConfirm'] as (keyof typeof props)[]) as object}
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-expect-error
+    request={props.request
+      ? (...args) =>
+        props.request!(...args)
+          .then(data => {
+            setInitialValues(data);
+            return data;
+          })
+      : (() => Promise.resolve(initialValues))
+    }
     modalProps={{
       closable: false,
       maskClosable: false,

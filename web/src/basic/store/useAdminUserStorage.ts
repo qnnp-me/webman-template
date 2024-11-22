@@ -2,15 +2,15 @@ import axios from 'axios';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import defaultSysConfig from '@common/basic/assets/json/pear.config.json';
+import defaultSysConfig from '@basic/assets/json/pear.config.json';
 import {
   ApiGetAdminMenuList,
   ApiGetAdminPermissionList,
   ApiGetAdminUserInfo,
   ApiGetSystemConfig,
-} from '@common/basic/utils/ApiAdminUser.ts';
-import { ApiGetCommonSystemInfo } from '@common/basic/utils/ApiCommonSystem.ts';
-import * as utils from '@common/basic/utils/utils.ts';
+} from '@basic/utils/ApiAdminUser.ts';
+import { ApiGetCommonSystemInfo } from '@basic/utils/ApiCommonSystem.ts';
+import * as utils from '@basic/utils/utils.ts';
 
 type AdminUserStorageDataType = {
   adminPermissionList: AdminPermission[];

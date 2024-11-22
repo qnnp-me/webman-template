@@ -31,7 +31,7 @@ TS;
       $code = str_replace('/', '.', trim($key, '/'));
       $permissions .= "  | '$code'\n";
     }
-    file_put_contents(self::$base_path . DIRECTORY_SEPARATOR . 'src/basic/types/AdminPermission.d.ts', $permissions);
+    file_put_contents(self::$base_path . DIRECTORY_SEPARATOR . 'src/types/AdminPermission.d.ts', $permissions);
   }
 
   function run(): void

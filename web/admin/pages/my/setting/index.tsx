@@ -1,5 +1,6 @@
-import { AdminMySettingTabBasic } from '@admin/pages/my/setting/_index/components/AdminMySettingTabBasic.tsx';
 import { ProCard } from '@ant-design/pro-components';
+
+import {AdminMySettingTabBasic} from '#admin/pages/my/setting/_index/components/AdminMySettingTabBasic.tsx';
 
 export default function PageAdminMySetting() {
   return <ProCard

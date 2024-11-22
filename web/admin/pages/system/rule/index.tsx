@@ -1,26 +1,27 @@
-import { PlusOutlined } from '@ant-design/icons';
-import { ActionType, ProCard, ProTable } from '@ant-design/pro-components';
-import { App, Badge, Divider, Popconfirm, Space, Switch, Tooltip } from 'antd';
+import {PlusOutlined} from '@ant-design/icons';
+import {ActionType, ProCard, ProTable} from '@ant-design/pro-components';
+import {App, Badge, Divider, Popconfirm, Space} from 'antd';
 import Button from 'antd/es/button';
 import Dropdown from 'antd/es/dropdown/dropdown';
-import { useEffect, useRef, useState } from 'react';
+import {useRef, useState} from 'react';
 
-import { AdminSystemRuleForm } from '@admin/pages/system/rule/_index/components/AdminSystemRuleForm.tsx';
+import {AdminSystemRuleForm} from '#admin/pages/system/rule/_index/components/AdminSystemRuleForm.tsx';
 import {
   ApiDeleteAdminRule,
   ApiGetAdminRuleTree,
   ApiUpdateAdminRule,
-} from '@admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import { TableEditableCell } from '@common/basic/components/TableEditableCell';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-import { AntdIconType, ProColumnsType } from '@common/basic/types/antd';
+} from '#admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
+
+import {AntdIconType, ProColumnsType} from '../../../../src/types/antd';
+
+import {Icon} from '@basic/components/Icon/Icon.tsx';
+import {TableEditableCell} from '@basic/components/TableEditableCell';
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
 export default function PageAdminSystemRule() {
-  const [withWebmanAdmin, setWithWebmanAdmin] = useState(false);
-  const { updateAdminUserInfo, hasAdminPermission, isSuperAdmin } =
+  const {updateAdminUserInfo, hasAdminPermission} =
     useAdminUserStorage();
-  const { message, modal } = App.useApp();
+  const {message} = App.useApp();
   const [editData, setEditData] = useState<AdminMenuItemType>();
   const handleAdd = () => {
     setEditData({} as AdminMenuItemType);
@@ -34,9 +35,9 @@ export default function PageAdminSystemRule() {
       width: 250,
       render: (title, record) => {
         return (
-          <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+          <div style={{display: 'flex', justifyContent: 'space-between'}}>
             <span>
-              <Icon icon={record.icon as AntdIconType | LayuiIconType} />
+              <Icon icon={record.icon as AntdIconType | LayuiIconType}/>
               &nbsp;
               {title}
             </span>
@@ -88,7 +89,7 @@ export default function PageAdminSystemRule() {
       align: 'right',
       render: ((record: AdminMenuItemType) => (
         <Space
-          split={<Divider type={'vertical'} />}
+          split={<Divider type={'vertical'}/>}
           onClick={(e) => {
             e.preventDefault();
           }}
@@ -188,13 +189,10 @@ export default function PageAdminSystemRule() {
     {},
   ];
 
-  useEffect(() => {
-    requestAnimationFrame(() => void table.current?.reload(true));
-  }, [withWebmanAdmin]);
-
   return (
     <ProCard>
       <ProTable<AdminMenuItemType>
+        size={'small'}
         bordered
         actionRef={table}
         search={false}
@@ -202,84 +200,36 @@ export default function PageAdminSystemRule() {
         scroll={{
           x: columns.reduce((acc, cur) => acc + Number(cur.width || 0), 0),
         }}
-        options={
-          {
-            // density:false,
-          }
-        }
+        options={{density: false}}
         toolbar={{
-          search: (
-            <Space>
-              {hasAdminPermission('app.admin.rule.insert') && (
-                <Button
-                  type={'primary'}
-                  icon={<PlusOutlined />}
-                  key={'add'}
-                  onClick={handleAdd}
-                >
-                  新增菜单/权限
-                </Button>
-              )}
-            </Space>
-          ),
-          actions: [
-            <Space key={'actions'}>
-              {import.meta.env.DEV && isSuperAdmin && (
-                <Switch
-                  checkedChildren={'显示 WA 菜单'}
-                  unCheckedChildren={'隐藏 WA 菜单'}
-                  value={withWebmanAdmin}
-                  onChange={(e) =>
-                    requestAnimationFrame(() => {
-                      setWithWebmanAdmin(e);
-                    })
-                  }
-                ></Switch>
-              )}
-              {import.meta.env.DEV && isSuperAdmin && (
-                <Tooltip
-                  title={
-                    <span>
-                      将 Webman Admin 相关菜单移动到框架相关目录中.
-                      <br />如 WA 的 &quot;权限管理 &gt; 菜单管理&quot;
-                      下的权限移动到框架的菜单 &quot;系统设置 &gt;
-                      菜单和权限&quot; 中
-                    </span>
-                  }
-                >
-                  <Button
-                    icon={<Icon icon={'ExportOutlined'} />}
-                    size={'small'}
-                    onClick={() => {
-                      void modal.confirm({
-                        title: '移动 WA 菜单',
-                        content: '确定移动 WA 菜单吗？',
-                        onOk: () => {},
-                      });
-                    }}
-                  >
-                    移动 WA 菜单
-                  </Button>
-                </Tooltip>
-              )}
-            </Space>,
-          ],
+          search: <Space>
+            {hasAdminPermission('app.admin.rule.insert') && (
+              <Button
+                type={'primary'}
+                icon={<PlusOutlined/>}
+                key={'add'}
+                onClick={handleAdd}
+                size={'small'}
+              >
+                新增菜单/权限
+              </Button>
+            )}
+          </Space>,
         }}
         expandable={{
           expandRowByClick: true,
         }}
         columns={columns}
-        request={async () => {
-          const data = await ApiGetAdminRuleTree(withWebmanAdmin);
-          return {
+        request={() => ApiGetAdminRuleTree().then(data => (
+          {
             data,
             success: true,
-          };
-        }}
+            total: data.length,
+          }
+        ))}
         pagination={false}
       />
       <AdminSystemRuleForm
-        withWebmanAdmin={withWebmanAdmin}
         editData={editData as AdminMenuItemType}
         onFinish={() => {
           void table.current?.reload();

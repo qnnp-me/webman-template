@@ -10,11 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@ant-design/cssinjs": "^1.21.1",
+    "@ant-design/cssinjs": "^1.22.0",
     "@ant-design/icons": "^5.5.1",
-    "@ant-design/pro-components": "^2.7.19",
-    "@ant-design/pro-provider": "^2.14.9",
-    "antd": "^5.21.2",
+    "@ant-design/pro-components": "^2.8.2",
+    "@ant-design/pro-provider": "^2.15.2",
+    "antd": "^5.22.2",
     "axios": "^1.7.7",
     "dayjs": "^1.11.13",
     "lodash": "^4.17.21",
@@ -22,17 +22,15 @@
     "rc-field-form": "^1.44.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.26.2",
+    "react-router-dom": "^6.28.0",
     "sanitize.css": "^13.0.0",
     "zustand": "^4.5.5"
   },
   "devDependencies": {
-    "@react-buddy/ide-toolbox": "^2.4.0",
-    "@react-buddy/palette-antd": "^5.3.1",
-    "@types/lodash": "^4.17.9",
-    "@types/node": "^20.16.10",
-    "@types/react": "^18.3.10",
-    "@types/react-dom": "^18.3.0",
+    "@types/lodash": "^4.17.13",
+    "@types/node": "^20.17.6",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
     "@typescript-eslint/eslint-plugin": "^7.18.0",
     "@typescript-eslint/parser": "^7.18.0",
     "@vitejs/plugin-react-swc": "^3.7.1",
@@ -40,20 +38,19 @@
     "eslint-import-resolver-alias": "^1.1.2",
     "eslint-import-resolver-typescript": "^3.6.3",
     "eslint-import-resolver-vite": "^2.0.1",
-    "eslint-plugin-import": "^2.30.0",
-    "eslint-plugin-react": "^7.37.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-react": "^7.37.2",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "eslint-plugin-react-refresh": "^0.4.12",
+    "eslint-plugin-react-refresh": "^0.4.14",
     "rollup-plugin-visualizer": "^5.12.0",
-    "sass": "^1.79.4",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.8",
+    "sass": "^1.81.0",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.11",
     "vite-plugin-chunk-split": "^0.5.0",
     "vite-plugin-dynamic-import": "^1.6.0"
   },
-  "packageManager": "pnpm@9.4.0",
   "volta": {
     "node": "20.15.0",
-    "pnpm": "9.4.0"
+    "pnpm": "9.14.2"
   }
 }

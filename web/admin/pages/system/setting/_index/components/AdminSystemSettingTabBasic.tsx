@@ -1,14 +1,15 @@
-import { useEffect, useRef } from 'react';
-
+import { BetaSchemaForm, ProFormInstance, ProFormUploadButton } from '@ant-design/pro-components';
 import { App } from 'antd';
 import { UploadChangeParam } from 'antd/es/upload';
 import { UploadFile } from 'antd/lib';
+import { useEffect, useRef } from 'react';
 
-import { ApiUpdateAppAdminConfig } from '@admin/pages/system/setting/_index/utils/ApiAppAdminConfig.ts';
-import { ApiUploadManageSettingUploadLogo } from '@admin/pages/system/setting/_index/utils/ApiManageSetting.ts';
-import { BetaSchemaForm, ProFormInstance, ProFormUploadButton } from '@ant-design/pro-components';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-import { BetaSchemaColumnType } from '@common/basic/types/antd';
+import { ApiUpdateAppAdminConfig } from '#admin/pages/system/setting/_index/utils/ApiAppAdminConfig.ts';
+import { ApiUploadManageSettingUploadLogo } from '#admin/pages/system/setting/_index/utils/ApiManageSetting.ts';
+
+import {BetaSchemaColumnType} from '../../../../../../src/types/antd';
+
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
 export const AdminSystemSettingTabBasic = () => {
   const { sysConfig, updateAdminUserInfo } = useAdminUserStorage();

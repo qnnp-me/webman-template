@@ -1,12 +1,12 @@
-import { useEffect, useRef } from 'react';
-
+import { BetaSchemaForm, ProFormInstance, ProFormUploadButton } from '@ant-design/pro-components';
 import { App } from 'antd';
 import { UploadChangeParam } from 'antd/es/upload';
 import { UploadFile } from 'antd/lib';
+import { useEffect, useRef } from 'react';
 
-import { BetaSchemaForm, ProFormInstance, ProFormUploadButton } from '@ant-design/pro-components';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-import { BetaSchemaColumnsType } from '@common/basic/types/antd';
+import {BetaSchemaColumnsType} from '../../../../../../src/types/antd';
+
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
 export const AdminMySettingTabBasic = () => {
   const { modal } = App.useApp();

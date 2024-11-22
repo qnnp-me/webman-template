@@ -1,13 +1,3 @@
-@font-face {
-    font-family: layui-icon;
-    src: url(/app/admin/component/layui/font/iconfont.eot?v=282);
-    src: url(/app/admin/component/layui/font/iconfont.eot?v=282#iefix) format('embedded-opentype'),
-    url(/app/admin/component/layui/font/iconfont.woff2?v=282) format('woff2'),
-    url(/app/admin/component/layui/font/iconfont.woff?v=282) format('woff'),
-    url(/app/admin/component/layui/font/iconfont.ttf?v=282) format('truetype'),
-    url(/app/admin/component/layui/font/iconfont.svg?v=282#layui-icon) format('svg')
-}
-
 .layui-icon {
     font-family: layui-icon !important;
     font-style: normal;

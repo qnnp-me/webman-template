@@ -1,7 +1,7 @@
 import axios, { AxiosError } from 'axios';
 import log from 'loglevel';
 
-import { Res } from '@common/basic/types/axios';
+import {Res} from '../../types/axios';
 
 const handleServerError = (res: Res) => {
   log.debug('axios -> server error', res);
@@ -24,7 +24,7 @@ export const initAxios = () => {
       return res as never;
     },
     (error: Error | Res | undefined) => {
-      if ((error as Res | undefined)?.msg) {
+      if ((error as Res)?.msg) {
         return Promise.reject(error as Error);
       }
       if ((error as AxiosError | undefined)?.response) {

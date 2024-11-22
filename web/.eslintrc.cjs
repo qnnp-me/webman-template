@@ -2,7 +2,7 @@ const typeScriptExtensions = ['.ts', '.cts', '.mts', '.tsx'];
 const allExtensions = [...typeScriptExtensions, '.js', '.jsx'];
 module.exports = {
   root: true,
-  env: { browser: true, es2020: true },
+  env: {browser: true, es2020: true},
   parserOptions: {
     ecmaVersion: 'latest',
     sourceType: 'module',
@@ -33,10 +33,11 @@ module.exports = {
       },
       alias: {
         map: [
-          ['@root', './'],
-          ['@common', './src'],
-          ['@admin', './admin'],
-          ['@home', './home'],
+          ['#admin', './admin'],
+          ['#home', './home'],
+          ['@basic', './src/basic'],
+          ['@admin', './src/admin'],
+          ['@home', './src/home'],
         ],
       },
     },
@@ -45,18 +46,18 @@ module.exports = {
   rules: {
     'react-refresh/only-export-components': [
       'warn',
-      { allowConstantExport: true },
+      {allowConstantExport: true},
     ],
     'quotes': ['error', 'single'],
     'semi': ['error', 'always'],
     'eol-last': ['error', 'always'],
-    'no-multiple-empty-lines': ['error', { max: 1, maxEOF: 1 }],
+    'no-multiple-empty-lines': ['error', {max: 1, maxEOF: 1}],
     'no-trailing-spaces': 'error',
     'no-irregular-whitespace': 'error',
     'no-multi-spaces': 'error',
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { argsIgnorePattern: '^_', varsIgnorePattern: '^_' },
+      {argsIgnorePattern: '^_', varsIgnorePattern: '^_'},
     ],
     'comma-dangle': ['error', 'always-multiline'],
     'import/order': [

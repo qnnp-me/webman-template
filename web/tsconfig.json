@@ -16,17 +16,19 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
     "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
     "paths": {
-      "@root/*": ["./*"],
-      "@common/*": ["./src/*"],
-      "@admin/*": ["./admin/*"],
-      "@home/*": ["./home/*"]
+      "#admin/*": ["./admin/*"],
+      "#home/*": ["./home/*"],
+      "@basic/*": ["./src/basic/*"],
+      "@admin/*": ["./src/admin/*"],
+      "@home/*": ["./src/home/*"]
     }
   },
   "include": [
     "src",
     "admin",
-    "home"
+    "home",
   ],
   "references": [{"path": "./tsconfig.node.json"}]
 }

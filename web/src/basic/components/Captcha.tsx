@@ -1,12 +1,12 @@
-import { DetailedHTMLProps, ImgHTMLAttributes, useEffect, useState } from 'react';
-
-import { SpaceProps } from 'antd/lib';
-import Space from 'antd/lib/space';
-import Spin from 'antd/lib/spin';
 
 import { ReloadOutlined } from '@ant-design/icons';
 import { AntdIconProps } from '@ant-design/icons/es/components/AntdIcon';
-import * as utils from '@common/basic/utils/utils.ts';
+import { SpaceProps } from 'antd/lib';
+import Space from 'antd/lib/space';
+import Spin from 'antd/lib/spin';
+import { DetailedHTMLProps, ImgHTMLAttributes, useEffect, useState } from 'react';
+
+import * as utils from '@basic/utils/utils.ts';
 
 export const Captcha = (props: {
   withFresh?: boolean

@@ -1,13 +1,13 @@
-import log from 'loglevel';
-import { useEffect } from 'react';
 
 import { Space } from 'antd';
 import Button from 'antd/es/button';
 import Result from 'antd/es/result';
+import log from 'loglevel';
+import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import * as utils from '@common/basic/utils/utils.ts';
+import { Icon } from '@basic/components/Icon/Icon.tsx';
+import * as utils from '@basic/utils/utils.ts';
 
 export const Page404 = ({ home }: { home?: string }) => {
   home = home || (location.pathname.startsWith('/admin') ? '/admin' : '/');

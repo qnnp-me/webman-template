@@ -1,19 +1,20 @@
-import { useEffect, useState } from 'react';
-
-import { App } from 'antd';
+import {LogoutOutlined} from '@ant-design/icons';
+import {MenuDataItem, ProLayout} from '@ant-design/pro-components';
+import {App} from 'antd';
 import Dropdown from 'antd/es/dropdown/dropdown';
 import Space from 'antd/lib/space';
-import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import {useEffect, useState} from 'react';
+import {Link, Outlet, useLocation, useNavigate} from 'react-router-dom';
 
-import styles from '@admin/pages/assets/styles/[layout].module.scss';
-import { LogoutOutlined } from '@ant-design/icons';
-import { MenuDataItem, ProLayout } from '@ant-design/pro-components';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-import { AntdIconType } from '@common/basic/types/antd';
+import styles from './assets/styles/[layout].module.scss';
+import {BasicConfig} from '../../src/basic.config.ts';
+import {AntdIconType} from '../../src/types/antd';
 
-const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
-  const { modal } = App.useApp();
+import {Icon} from '@basic/components/Icon/Icon.tsx';
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
+
+const LayoutAdminMain = ({loading}: { loading?: boolean }) => {
+  const {modal} = App.useApp();
   const navigate = useNavigate();
   const location = useLocation();
   const {
@@ -29,29 +30,16 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
   useEffect(handleRootTagClassChange, []);
   useEffect(() => {
     if (isAdminUserStorageReady && !isLogin && location.pathname != '/admin/login') {
-      navigate(`/admin/login?replaceTo=${location.pathname}`, { replace: true });
+      navigate(`/admin/login?replaceTo=${location.pathname}`, {replace: true});
       return;
     }
   }, [isLogin, location.pathname, isAdminUserStorageReady]);
   const [layoutMenus, setLayoutMenus] = useState<MenuDataItem[]>([]);
   useEffect(() => {
     const menus: AdminMenuItemType[] = [];
-    const webmanAdminMenu = [];
+    // const webmanAdminMenu = [];
     for (const menuItem of adminMenuList) {
-      const firstAvailableMenu = getFirstAvailableMenu([menuItem] as never);
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access,@typescript-eslint/no-unsafe-call
-      if (firstAvailableMenu?.href?.startsWith('/app/admin/')) {
-        webmanAdminMenu.push(menuItem);
-      } else {
-        menus.push(menuItem);
-      }
-    }
-    if (isSuperAdmin && window.location.host.match(/(^localhost|^127\.0\.0\.1)/)) {
-      menus.push({
-        name: 'WebmanAdmin',
-        href: splitMenus ? '/admin/iframe/app/admin/index/dashboard' : undefined,
-        children: webmanAdminMenu,
-      } as never);
+      menus.push(menuItem);
     }
     setLayoutMenus(prepareMenuData(menus, splitMenus));
   }, [isSuperAdmin, adminMenuList]);
@@ -114,7 +102,7 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
     }}
     layout={'mix'}
     splitMenus={splitMenus}
-    menuProps={{ className: `${styles.mainMenu} ${collapsed ? styles.mainMenuCollapsed : ''}` }}
+    menuProps={{className: `${styles.mainMenu} ${collapsed ? styles.mainMenuCollapsed : ''}`}}
     menuItemRender={(item) =>
       <Link
         onClick={e => {
@@ -164,7 +152,7 @@ const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
       },
     ]}
   >
-    {isAdminUserStorageReady && ((!isLogin && window.location.pathname.startsWith('/admin/login')) || isLogin) &&
+    {isAdminUserStorageReady && (!isLogin && window.location.pathname.startsWith(`/${BasicConfig.adminFolder}/login`) || isLogin) &&
       <Outlet/>}
   </ProLayout>;
 };
@@ -188,9 +176,10 @@ const prepareMenuData = (data: AdminMenuItemType[], splitMenus = false) =>
       const path = getFirstAvailableMenu(menu.children || [])?.path || '';
       menu.path = `${path}${path.match(/\?/g) ? '&_from=header' : '?_from=header'}`;
     }
-    if (item.icon) {
-      menu.icon = <Icon icon={item.icon as AntdIconType | LayuiIconType}/>;
-    }
+    menu.icon = <Icon
+      icon={item.icon as AntdIconType | LayuiIconType || 'MenuOutlined'}
+      style={{display: 'block'}}
+    />;
     menu.key = menu.path;
     return menu;
   });

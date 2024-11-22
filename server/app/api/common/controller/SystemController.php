@@ -2,11 +2,10 @@
 
 namespace app\api\common\controller;
 
-use app\common\ControllerBasic;
 use plugin\admin\app\model\Option;
 use support\Response;
 
-class SystemController extends ControllerBasic
+class SystemController
 {
 
   /**
@@ -37,15 +36,15 @@ class SystemController extends ControllerBasic
     $beian = $system_info['logo']['beian'];
     $footer_txt = $system_info['logo']['footer_txt'];
 
-    if (str_starts_with($logo,'/upload/logo/') && !file_exists(public_path($logo))){
+    if (str_starts_with($logo, '/upload/logo/') && !file_exists(public_path($logo))) {
       $logo = '/app/admin/admin/images/logo.png';
     }
 
     return json_success([
-      'title' => $title,
-      'logo' => $logo,
-      'icp' => $icp,
-      'beian' => $beian,
+      'title'      => $title,
+      'logo'       => $logo,
+      'icp'        => $icp,
+      'beian'      => $beian,
       'footer_txt' => $footer_txt,
     ]);
   }

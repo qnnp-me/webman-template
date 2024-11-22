@@ -1,0 +1,39 @@
+@font-face {
+    font-family: layui-icon;
+    src: url(/app/admin/component/layui/font/iconfont.eot?v=282);
+    src: url(/app/admin/component/layui/font/iconfont.eot?v=282#iefix) format('embedded-opentype'),
+    url(/app/admin/component/layui/font/iconfont.woff2?v=282) format('woff2'),
+    url(/app/admin/component/layui/font/iconfont.woff?v=282) format('woff'),
+    url(/app/admin/component/layui/font/iconfont.ttf?v=282) format('truetype'),
+    url(/app/admin/component/layui/font/iconfont.svg?v=282#layui-icon) format('svg')
+}
+.__page-loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+}
+
+.__page-loading img {
+    width: min(120px, 50%);
+    height: min(120px, 50%);
+    pointer-events: none;
+}
+
+.__page-loading-show.__page-loading {
+    opacity: 1;
+    z-index: 99999999;
+}
+
+.__page-loading-hide.__page-loading {
+    opacity: 0;
+    z-index: -1;
+    pointer-events: none;
+}

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 
-import * as utils from '@common/basic/utils/utils.ts';
+import * as utils from '@basic/utils/utils.ts';
 
 export const PageLoading = ({ loading = false, delay = 0, children = null }: {
   loading?: boolean;

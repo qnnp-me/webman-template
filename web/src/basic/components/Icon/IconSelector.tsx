@@ -1,14 +1,14 @@
-import { useEffect, useState } from 'react';
-
-import Input from 'antd/es/input/Input';
-import Popover from 'antd/es/popover';
-
 import * as Icons from '@ant-design/icons';
 import { ProCard } from '@ant-design/pro-components';
-import styles from '@common/basic/components/Icon/assets/styles/styles.module.scss';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import { layuiIcons } from '@common/basic/components/layuiIcons.ts';
-import { AntdIconType } from '@common/basic/types/antd';
+import Input from 'antd/es/input/Input';
+import Popover from 'antd/es/popover';
+import { useEffect, useState } from 'react';
+
+import {AntdIconType} from '../../../types/antd';
+
+import styles from '@basic/components/Icon/assets/styles/styles.module.scss';
+import { Icon } from '@basic/components/Icon/Icon.tsx';
+import { layuiIcons } from '@basic/components/layuiIcons.ts';
 
 const IconKeys: AntdIconType[] =
   Object.keys(Icons).filter(name => /^[A-Z]/.test(name)) as never;

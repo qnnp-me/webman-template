@@ -101,11 +101,11 @@
         },
         {
             "name": "cakephp/core",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/cakephp/core/5.1.1/cakephp-core-5.1.1.zip",
-                "reference": "2cf48ca0177fbf860f6295a0de08d6870a5a93af",
+                "url": "https://mirrors.tencent.com/repository/composer/cakephp/core/5.1.2/cakephp-core-5.1.2.zip",
+                "reference": "70f99f5df4dde8677ddcf6245654a8b937f7786b",
                 "shasum": ""
             },
             "require": {
@@ -147,15 +147,15 @@
                 "core",
                 "framework"
             ],
-            "time": "2024-09-24T13:09:59+00:00"
+            "time": "2024-10-31T06:55:29+00:00"
         },
         {
             "name": "cakephp/database",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/cakephp/database/5.1.1/cakephp-database-5.1.1.zip",
-                "reference": "077377de79298ce61b1e325a7be47bd65ebae0ba",
+                "url": "https://mirrors.tencent.com/repository/composer/cakephp/database/5.1.2/cakephp-database-5.1.2.zip",
+                "reference": "0266cba5968f089cbca8785dbae4450623a6f055",
                 "shasum": ""
             },
             "require": {
@@ -197,15 +197,15 @@
                 "database abstraction",
                 "pdo"
             ],
-            "time": "2024-10-03T07:25:02+00:00"
+            "time": "2024-11-02T13:34:55+00:00"
         },
         {
             "name": "cakephp/datasource",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/cakephp/datasource/5.1.1/cakephp-datasource-5.1.1.zip",
-                "reference": "19bdf9d5ba048a3adb1f803391409e1419454f2b",
+                "url": "https://mirrors.tencent.com/repository/composer/cakephp/datasource/5.1.2/cakephp-datasource-5.1.2.zip",
+                "reference": "9ffde854a988cadc740f419b602f9872260908a8",
                 "shasum": ""
             },
             "require": {
@@ -247,15 +247,15 @@
                 "entity",
                 "query"
             ],
-            "time": "2024-09-06T12:23:52+00:00"
+            "time": "2024-10-17T08:33:47+00:00"
         },
         {
             "name": "cakephp/utility",
-            "version": "5.1.1",
+            "version": "5.1.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/cakephp/utility/5.1.1/cakephp-utility-5.1.1.zip",
-                "reference": "e40c6ed007e3a9eb5873ca174c2f9160677b5570",
+                "url": "https://mirrors.tencent.com/repository/composer/cakephp/utility/5.1.2/cakephp-utility-5.1.2.zip",
+                "reference": "a1a503e9ef96761242eb260df0e04eb0e068e5cd",
                 "shasum": ""
             },
             "require": {
@@ -294,7 +294,7 @@
                 "string",
                 "utility"
             ],
-            "time": "2024-09-06T12:23:52+00:00"
+            "time": "2024-11-08T14:07:41+00:00"
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
@@ -1020,11 +1020,11 @@
         },
         {
             "name": "illuminate/bus",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/bus/v11.30.0/illuminate-bus-v11.30.0.zip",
-                "reference": "ed8d93dd49d57887ccf82dbd284b80934288cbba",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/bus/v11.33.2/illuminate-bus-v11.33.2.zip",
+                "reference": "5e867cbe663dc740fbb998eed5fa6771264c384d",
                 "shasum": ""
             },
             "require": {
@@ -1059,15 +1059,15 @@
             ],
             "description": "The Illuminate Bus package.",
             "homepage": "https://laravel.com",
-            "time": "2024-10-11T15:12:02+00:00"
+            "time": "2024-11-18T21:42:02+00:00"
         },
         {
             "name": "illuminate/collections",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/collections/v11.30.0/illuminate-collections-v11.30.0.zip",
-                "reference": "2d99ccbb19e34450508ff3ab2f62ba90aa2e9793",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/collections/v11.33.2/illuminate-collections-v11.33.2.zip",
+                "reference": "a01a9d0799700bf34ab3797988fdd5f420d42bfe",
                 "shasum": ""
             },
             "require": {
@@ -1104,14 +1104,14 @@
             ],
             "description": "The Illuminate Collections package.",
             "homepage": "https://laravel.com",
-            "time": "2024-10-10T19:23:07+00:00"
+            "time": "2024-11-15T15:43:48+00:00"
         },
         {
             "name": "illuminate/conditionable",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/conditionable/v11.30.0/illuminate-conditionable-v11.30.0.zip",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/conditionable/v11.33.2/illuminate-conditionable-v11.33.2.zip",
                 "reference": "362dd761b9920367bca1427a902158225e9e3a23",
                 "shasum": ""
             },
@@ -1144,11 +1144,11 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/container/v11.30.0/illuminate-container-v11.30.0.zip",
-                "reference": "06dfc614aff58384b28ba5ad191f6a02d6b192cb",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/container/v11.33.2/illuminate-container-v11.33.2.zip",
+                "reference": "6e31eb49e9c9e68356a55cd8f18fb8830b8158cd",
                 "shasum": ""
             },
             "require": {
@@ -1181,15 +1181,15 @@
             ],
             "description": "The Illuminate Container package.",
             "homepage": "https://laravel.com",
-            "time": "2024-10-11T15:30:11+00:00"
+            "time": "2024-11-14T15:31:35+00:00"
         },
         {
             "name": "illuminate/contracts",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/contracts/v11.30.0/illuminate-contracts-v11.30.0.zip",
-                "reference": "56312862af937bd6da8e6dc8bbd88188dfb478f8",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/contracts/v11.33.2/illuminate-contracts-v11.33.2.zip",
+                "reference": "44c15aec6ea0d997e0885aa5b04876fe8a141433",
                 "shasum": ""
             },
             "require": {
@@ -1219,15 +1219,15 @@
             ],
             "description": "The Illuminate Contracts package.",
             "homepage": "https://laravel.com",
-            "time": "2024-09-22T15:08:08+00:00"
+            "time": "2024-11-15T15:40:33+00:00"
         },
         {
             "name": "illuminate/database",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/database/v11.30.0/illuminate-database-v11.30.0.zip",
-                "reference": "29500e97a251419a6e42aeebe4c07ccb174af5b3",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/database/v11.33.2/illuminate-database-v11.33.2.zip",
+                "reference": "47519c03c74290ad6b6565a758b4c1e22a43a061",
                 "shasum": ""
             },
             "require": {
@@ -1278,15 +1278,15 @@
                 "orm",
                 "sql"
             ],
-            "time": "2024-10-29T20:30:27+00:00"
+            "time": "2024-11-19T22:28:18+00:00"
         },
         {
             "name": "illuminate/events",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/events/v11.30.0/illuminate-events-v11.30.0.zip",
-                "reference": "cfd8a636234cc5b5f736f2987f33b0d471d974b3",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/events/v11.33.2/illuminate-events-v11.33.2.zip",
+                "reference": "af826028f0a4e65a331ceb9bebfa6a71467ba72c",
                 "shasum": ""
             },
             "require": {
@@ -1323,14 +1323,14 @@
             ],
             "description": "The Illuminate Events package.",
             "homepage": "https://laravel.com",
-            "time": "2024-08-07T14:43:54+00:00"
+            "time": "2024-10-31T17:34:51+00:00"
         },
         {
             "name": "illuminate/macroable",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/macroable/v11.30.0/illuminate-macroable-v11.30.0.zip",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/macroable/v11.33.2/illuminate-macroable-v11.33.2.zip",
                 "reference": "e1cb9e51b9ed5d3c9bc1ab431d0a52fe42a990ed",
                 "shasum": ""
             },
@@ -1363,11 +1363,11 @@
         },
         {
             "name": "illuminate/pagination",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/pagination/v11.30.0/illuminate-pagination-v11.30.0.zip",
-                "reference": "930e3a41636b6ff4fa3d3cd47fb4bc24359c8691",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/pagination/v11.33.2/illuminate-pagination-v11.33.2.zip",
+                "reference": "50dbf0de508975291ab26e221df09a5ae7b243d1",
                 "shasum": ""
             },
             "require": {
@@ -1399,14 +1399,14 @@
             ],
             "description": "The Illuminate Pagination package.",
             "homepage": "https://laravel.com",
-            "time": "2024-06-28T20:10:30+00:00"
+            "time": "2024-11-18T21:42:02+00:00"
         },
         {
             "name": "illuminate/pipeline",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/pipeline/v11.30.0/illuminate-pipeline-v11.30.0.zip",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/pipeline/v11.33.2/illuminate-pipeline-v11.33.2.zip",
                 "reference": "b359be74adc3ba4a637ca01c3645a26724a4c8a0",
                 "shasum": ""
             },
@@ -1441,10 +1441,10 @@
         },
         {
             "name": "illuminate/redis",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/redis/v11.30.0/illuminate-redis-v11.30.0.zip",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/redis/v11.33.2/illuminate-redis-v11.33.2.zip",
                 "reference": "5874956f8845529ea9d4f8bbf046ac7f6eafc075",
                 "shasum": ""
             },
@@ -1485,11 +1485,11 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v11.30.0",
+            "version": "v11.33.2",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/illuminate/support/v11.30.0/illuminate-support-v11.30.0.zip",
-                "reference": "69453485fa4c76589b5a1a98ebef0e8fee749220",
+                "url": "https://mirrors.tencent.com/repository/composer/illuminate/support/v11.33.2/illuminate-support-v11.33.2.zip",
+                "reference": "3e248061e77b67cdf868411e68cf17de524e3d1d",
                 "shasum": ""
             },
             "require": {
@@ -1547,7 +1547,7 @@
             ],
             "description": "The Illuminate Support package.",
             "homepage": "https://laravel.com",
-            "time": "2024-10-29T20:21:52+00:00"
+            "time": "2024-11-19T19:46:19+00:00"
         },
         {
             "name": "intervention/image",
@@ -1615,11 +1615,11 @@
         },
         {
             "name": "laravel/serializable-closure",
-            "version": "v1.3.5",
+            "version": "v1.3.7",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/laravel/serializable-closure/v1.3.5/laravel-serializable-closure-v1.3.5.zip",
-                "reference": "1dc4a3dbfa2b7628a3114e43e32120cce7cdda9c",
+                "url": "https://mirrors.tencent.com/repository/composer/laravel/serializable-closure/v1.3.7/laravel-serializable-closure-v1.3.7.zip",
+                "reference": "4f48ade902b94323ca3be7646db16209ec76be3d",
                 "shasum": ""
             },
             "require": {
@@ -1662,15 +1662,15 @@
                 "laravel",
                 "serializable"
             ],
-            "time": "2024-09-23T13:33:08+00:00"
+            "time": "2024-11-14T18:34:49+00:00"
         },
         {
             "name": "league/container",
-            "version": "4.2.3",
+            "version": "4.2.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/league/container/4.2.3/league-container-4.2.3.zip",
-                "reference": "72f9bebe7bd623007782a40f5ec305661ab706d8",
+                "url": "https://mirrors.tencent.com/repository/composer/league/container/4.2.4/league-container-4.2.4.zip",
+                "reference": "7ea728b013b9a156c409c6f0fc3624071b742dec",
                 "shasum": ""
             },
             "require": {
@@ -1728,7 +1728,7 @@
                 "provider",
                 "service"
             ],
-            "time": "2024-10-23T12:06:58+00:00"
+            "time": "2024-11-10T12:42:13+00:00"
         },
         {
             "name": "league/flysystem",
@@ -1881,11 +1881,11 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "2.9.3",
+            "version": "2.10.0",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/monolog/monolog/2.9.3/monolog-monolog-2.9.3.zip",
-                "reference": "a30bfe2e142720dfa990d0a7e573997f5d884215",
+                "url": "https://mirrors.tencent.com/repository/composer/monolog/monolog/2.10.0/monolog-monolog-2.10.0.zip",
+                "reference": "5cf826f2991858b54d5c3809bee745560a1042a7",
                 "shasum": ""
             },
             "require": {
@@ -1959,7 +1959,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2024-04-12T20:52:51+00:00"
+            "time": "2024-11-12T12:43:37+00:00"
         },
         {
             "name": "nesbot/carbon",
@@ -2847,11 +2847,11 @@
         },
         {
             "name": "spatie/db-dumper",
-            "version": "3.7.0",
+            "version": "3.7.1",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/spatie/db-dumper/3.7.0/spatie-db-dumper-3.7.0.zip",
-                "reference": "22553ab8c34a9bb70645cb9bc2d9f236f3135705",
+                "url": "https://mirrors.tencent.com/repository/composer/spatie/db-dumper/3.7.1/spatie-db-dumper-3.7.1.zip",
+                "reference": "55d4d6710e1ab18c1e7ce2b22b8ad4bea2a30016",
                 "shasum": ""
             },
             "require": {
@@ -2887,7 +2887,7 @@
                 "mysqldump",
                 "spatie"
             ],
-            "time": "2024-09-23T08:58:35+00:00"
+            "time": "2024-11-18T14:54:31+00:00"
         },
         {
             "name": "spatie/laravel-db-snapshots",
@@ -2946,11 +2946,11 @@
         },
         {
             "name": "spatie/laravel-package-tools",
-            "version": "1.16.5",
+            "version": "1.16.6",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/spatie/laravel-package-tools/1.16.5/spatie-laravel-package-tools-1.16.5.zip",
-                "reference": "c7413972cf22ffdff97b68499c22baa04eddb6a2",
+                "url": "https://mirrors.tencent.com/repository/composer/spatie/laravel-package-tools/1.16.6/spatie-laravel-package-tools-1.16.6.zip",
+                "reference": "1f26942dc1e5c49eacfced34fdbc29ed234bd7b3",
                 "shasum": ""
             },
             "require": {
@@ -2986,7 +2986,7 @@
                 "laravel-package-tools",
                 "spatie"
             ],
-            "time": "2024-08-27T18:56:10+00:00"
+            "time": "2024-11-18T15:02:02+00:00"
         },
         {
             "name": "spatie/temporary-directory",
@@ -3261,11 +3261,11 @@
         },
         {
             "name": "symfony/console",
-            "version": "v7.1.7",
+            "version": "v7.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/console/v7.1.7/symfony-console-v7.1.7.zip",
-                "reference": "3284aafcac338b6e86fd955ee4d794cbe434151a",
+                "url": "https://mirrors.tencent.com/repository/composer/symfony/console/v7.1.8/symfony-console-v7.1.8.zip",
+                "reference": "ff04e5b5ba043d2badfb308197b9e6b42883fcd5",
                 "shasum": ""
             },
             "require": {
@@ -3327,7 +3327,7 @@
                 "console",
                 "terminal"
             ],
-            "time": "2024-11-05T15:34:55+00:00"
+            "time": "2024-11-06T14:23:19+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -3795,11 +3795,11 @@
         },
         {
             "name": "symfony/process",
-            "version": "v7.1.7",
+            "version": "v7.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/process/v7.1.7/symfony-process-v7.1.7.zip",
-                "reference": "9b8a40b7289767aa7117e957573c2a535efe6585",
+                "url": "https://mirrors.tencent.com/repository/composer/symfony/process/v7.1.8/symfony-process-v7.1.8.zip",
+                "reference": "42783370fda6e538771f7c7a36e9fa2ee3a84892",
                 "shasum": ""
             },
             "require": {
@@ -3829,7 +3829,7 @@
             ],
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
-            "time": "2024-11-06T09:25:12+00:00"
+            "time": "2024-11-06T14:23:19+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -3893,11 +3893,11 @@
         },
         {
             "name": "symfony/string",
-            "version": "v7.1.6",
+            "version": "v7.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/string/v7.1.6/symfony-string-v7.1.6.zip",
-                "reference": "61b72d66bf96c360a727ae6232df5ac83c71f626",
+                "url": "https://mirrors.tencent.com/repository/composer/symfony/string/v7.1.8/symfony-string-v7.1.8.zip",
+                "reference": "591ebd41565f356fcd8b090fe64dbb5878f50281",
                 "shasum": ""
             },
             "require": {
@@ -3953,7 +3953,7 @@
                 "utf-8",
                 "utf8"
             ],
-            "time": "2024-09-25T14:20:29+00:00"
+            "time": "2024-11-13T13:31:21+00:00"
         },
         {
             "name": "symfony/translation",
@@ -4083,11 +4083,11 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v7.1.7",
+            "version": "v7.1.8",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/symfony/var-dumper/v7.1.7/symfony-var-dumper-v7.1.7.zip",
-                "reference": "f6ea51f669760cacd7464bf7eaa0be87b8072db1",
+                "url": "https://mirrors.tencent.com/repository/composer/symfony/var-dumper/v7.1.8/symfony-var-dumper-v7.1.8.zip",
+                "reference": "7bb01a47b1b00428d32b5e7b4d3b2d1aa58d3db8",
                 "shasum": ""
             },
             "require": {
@@ -4139,7 +4139,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2024-11-05T15:34:55+00:00"
+            "time": "2024-11-08T15:46:42+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -4233,11 +4233,11 @@
         },
         {
             "name": "topthink/think-helper",
-            "version": "v3.1.9",
+            "version": "v3.1.10",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-helper/v3.1.9/topthink-think-helper-v3.1.9.zip",
-                "reference": "d554a0a62e4c7034abc7343ee866005c3f399ae2",
+                "url": "https://mirrors.tencent.com/repository/composer/topthink/think-helper/v3.1.10/topthink-think-helper-v3.1.10.zip",
+                "reference": "ac66cc0859a12cd5d73258f50f338aadc95e9b46",
                 "shasum": ""
             },
             "require": {
@@ -4265,7 +4265,7 @@
                 }
             ],
             "description": "The ThinkPHP6 Helper Package",
-            "time": "2024-10-15T02:24:05+00:00"
+            "time": "2024-11-21T01:47:51+00:00"
         },
         {
             "name": "topthink/think-orm",
@@ -4381,11 +4381,11 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "2.0.1",
+            "version": "2.0.3",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/voku/portable-ascii/2.0.1/voku-portable-ascii-2.0.1.zip",
-                "reference": "b56450eed252f6801410d810c8e1727224ae0743",
+                "url": "https://mirrors.tencent.com/repository/composer/voku/portable-ascii/2.0.3/voku-portable-ascii-2.0.3.zip",
+                "reference": "b1d923f88091c6bf09699efcd7c8a1b1bfd7351d",
                 "shasum": ""
             },
             "require": {
@@ -4409,7 +4409,7 @@
             "authors": [
                 {
                     "name": "Lars Moelleken",
-                    "homepage": "http://www.moelleken.org/"
+                    "homepage": "https://www.moelleken.org/"
                 }
             ],
             "description": "Portable ASCII library - performance optimized (ascii) string functions for php.",
@@ -4419,18 +4419,19 @@
                 "clean",
                 "php"
             ],
-            "time": "2022-03-08T17:03:00+00:00"
+            "time": "2024-11-21T01:49:47+00:00"
         },
         {
             "name": "webman/admin",
-            "version": "v0.6.31",
+            "version": "v0.6.33",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/webman/admin/v0.6.31/webman-admin-v0.6.31.zip",
-                "reference": "9cb7b1aa12be5968a5f796856e3928e0e04231a3",
+                "url": "https://mirrors.tencent.com/repository/composer/webman/admin/v0.6.33/webman-admin-v0.6.33.zip",
+                "reference": "0d57e423afd419403a772b55fbe0a3b1ba3b5333",
                 "shasum": ""
             },
             "require": {
+                "ext-json": "*",
                 "guzzlehttp/guzzle": "^7.5",
                 "illuminate/database": ">=7.30",
                 "illuminate/events": ">=7.30",
@@ -4451,7 +4452,7 @@
                 "MIT"
             ],
             "description": "Webman Admin",
-            "time": "2024-09-12T12:50:06+00:00"
+            "time": "2024-11-14T03:11:05+00:00"
         },
         {
             "name": "webman/captcha",
@@ -4699,19 +4700,19 @@
         },
         {
             "name": "workerman/webman-framework",
-            "version": "v1.5.24",
+            "version": "v1.6.4",
             "dist": {
                 "type": "zip",
-                "url": "https://mirrors.tencent.com/repository/composer/workerman/webman-framework/v1.5.24/workerman-webman-framework-v1.5.24.zip",
-                "reference": "be1a0425e3fcbd9e8ffaec94e35ed5452480356f",
+                "url": "https://mirrors.tencent.com/repository/composer/workerman/webman-framework/v1.6.4/workerman-webman-framework-v1.6.4.zip",
+                "reference": "b0db16acf942322d0eb2ad2803300775b19111b5",
                 "shasum": ""
             },
             "require": {
                 "ext-json": "*",
                 "nikic/fast-route": "^1.3",
-                "php": ">=7.2",
+                "php": ">=8.0",
                 "psr/container": ">=1.0",
-                "workerman/workerman": "^4.0.4 || ^5.0.0"
+                "workerman/workerman": "^4.0.4 || ^5.0.0 || dev-master"
             },
             "suggest": {
                 "ext-event": "For better performance. "
@@ -4744,7 +4745,7 @@
                 "High Performance",
                 "http service"
             ],
-            "time": "2024-09-15T13:03:20+00:00"
+            "time": "2024-11-19T02:16:55+00:00"
         },
         {
             "name": "workerman/workerman",

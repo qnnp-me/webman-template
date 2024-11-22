@@ -1,11 +1,11 @@
-import { useEffect, useState } from 'react';
-
+import { ProCard } from '@ant-design/pro-components';
 import Button from 'antd/es/button';
 import Space from 'antd/lib/space';
+import { useEffect, useState } from 'react';
 
-import { ApiGetManageDashboardStatus } from '@admin/pages/_index/utils/ApiManageDashboard.ts';
-import { ProCard } from '@ant-design/pro-components';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
+import { ApiGetManageDashboardStatus } from '#admin/pages/_index/utils/ApiManageDashboard.ts';
+
+import { Icon } from '@basic/components/Icon/Icon.tsx';
 
 export const SystemStatus = () => {
   const [status, setStatus] = useState<string>();

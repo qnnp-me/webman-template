@@ -1,17 +1,16 @@
-import axios from 'axios';
-import log from 'loglevel';
-import { useEffect, useRef, useState } from 'react';
-
+import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
 import { App, Divider, Modal, notification } from 'antd';
 import Alert from 'antd/es/alert/Alert';
 import Space from 'antd/lib/space';
+import axios from 'axios';
+import log from 'loglevel';
 import { Rule } from 'rc-field-form/es/interface';
+import { useEffect, useRef, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 
-import { LoginFormPage, ProFormText } from '@ant-design/pro-components';
-import { Captcha, refreshCaptcha } from '@common/basic/components/Captcha.tsx';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
+import { Captcha, refreshCaptcha } from '@basic/components/Captcha.tsx';
+import { Icon } from '@basic/components/Icon/Icon.tsx';
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
 type loginData = {
   username: string;

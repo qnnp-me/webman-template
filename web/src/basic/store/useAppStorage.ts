@@ -2,7 +2,7 @@ import log from 'loglevel';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import * as utils from '@common/basic/utils/utils.ts';
+import * as utils from '@basic/utils/utils.ts';
 
 type AppStoreDataType = {
   loglevel: log.LogLevel[keyof typeof log.levels];

@@ -1,84 +1,76 @@
+
 import react from '@vitejs/plugin-react-swc';
-import { resolve } from 'path';
-import { visualizer } from 'rollup-plugin-visualizer';
-import { defineConfig } from 'vite';
-import { chunkSplitPlugin } from 'vite-plugin-chunk-split';
+import {resolve} from 'path';
+import {visualizer} from 'rollup-plugin-visualizer';
+import {defineConfig} from 'vite';
+import {chunkSplitPlugin} from 'vite-plugin-chunk-split';
+
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-ignore
+import {BasicConfig} from './src/basic.config';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     react(),
-    chunkSplitPlugin({
-      strategy: 'unbundle',
-      useEntryName: true,
-    }),
+    {
+      name: 'rewrite-dev-server',
+      configureServer: (server) => {
+        server.middlewares.use((req, res, next) => {
+          if (
+            req.url?.startsWith(`/${BasicConfig.adminFolder}/`)
+            && !/\.(.*)$/.test(req.url)
+          ) {
+            req.url = '/admin.html?';
+          }
+          next();
+        });
+      },
+    },
     visualizer({
       gzipSize: true,
       brotliSize: true,
       emitFile: false,
-      filename: 'test.html', //分析图生成的文件名
+      filename: 'report.html', //分析图生成的文件名
       open: true, //如果存在本地服务端口，将在打包后自动展示
+    }),
+    chunkSplitPlugin({
+      strategy: 'single-vendor',
+      useEntryName: true,
     }),
   ],
   build: {
     emptyOutDir: true,
     outDir: '../server/public',
     rollupOptions: {
-      output: {
-        manualChunks: (id, meta) => {
-          // if (id.includes('home/pages')) {
-          //   const key = id.replace(/.*home\/pages\/([^/]+).*/, '$1');
-          //   return `home-pages-${key}`;
-          // }
-          // if (id.includes('antd/es/result/')) {
-          //   const info = meta.getModuleInfo(id);
-          //   console.log(info);
-          //   console.log(info?.isIncluded);
-          // }
-          // if (id.includes('dayjs')){
-          //   return 'dayjs';
-          // }
-          // if (id.includes('lodash')){
-          //   return 'lodash';
-          // }
-          // if (/@ant-design\/icons-svg\/es\/asn\/[A-Z][a-zA-Z0-9]+/.test(id)) {
-          //   return 'antd-icon';
-          //   // const key = id.replace(/.*@ant-design\/icons-svg\/es\/asn\/([A-Z][a-zA-Z0-9]+).*/, '$1');
-          //   // return `antd-icon-${key}`;
-          // }
-          // if (/@ant-design\/[^/]+/.test(id)){
-          //   return 'ant-design';
-          //   // const key = id.replace(/.*@ant-design\/([^/]+).*/, '$1');
-          //   // return `antd-pro-${key}`;
-          // }
-          // console.log(id);
-          // if (id.includes('node_modules')) {
-          //   return 'vendor';
-          // }
-        },
+      input: {
+        main: resolve(__dirname, 'index.html'),
+        admin: resolve(__dirname, 'admin.html'),
       },
+      output: {},
     },
   },
   server: {
     host: '0.0.0.0',
     proxy: {
       '/api': {
-        target: 'http://localhost:8787',
+        target: 'http://127.0.0.1:8787',
       },
       '/app': {
-        target: 'http://localhost:8787',
+        target: 'http://127.0.0.1:8787',
       },
       '/upload': {
-        target: 'http://localhost:8787',
+        target: 'http://127.0.0.1:8787',
       },
     },
   },
   resolve: {
     alias: {
-      '@root': resolve(__dirname),
-      '@common': resolve(__dirname, 'src'),
-      '@admin': resolve(__dirname, 'admin'),
-      '@home': resolve(__dirname, 'home'),
+      '#admin': resolve(__dirname, 'admin'),
+      '#home': resolve(__dirname, 'home'),
+      '@basic': resolve(__dirname, 'src/basic'),
+      '@admin': resolve(__dirname, 'src/admin'),
+      '@home': resolve(__dirname, 'src/home'),
     },
     extensions: ['.tsx', '.ts', '.jsx', '.js', '.json'],
   },

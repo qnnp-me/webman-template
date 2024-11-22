@@ -6,21 +6,23 @@ import {
   ProFormText,
   ProFormTreeSelect,
 } from '@ant-design/pro-components';
-import { App, Form, InputRef } from 'antd';
-import { cloneDeep } from 'lodash';
-import { useEffect, useRef, useState } from 'react';
+import {App, Form, InputRef} from 'antd';
+import {cloneDeep} from 'lodash';
+import {ReactNode, useEffect, useRef, useState} from 'react';
 
 import {
   APiAddAdminRule,
   ApiGetAdminRuleFolderTree,
   ApiGetAdminRuleMenuTree,
   ApiUpdateAdminRule,
-} from '@admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
-import { Icon } from '@common/basic/components/Icon/Icon.tsx';
-import { IconSelector } from '@common/basic/components/Icon/IconSelector.tsx';
-import { ModalEditForm } from '@common/basic/components/ModalEditForm.tsx';
-import useAdminUserStorage from '@common/basic/store/useAdminUserStorage.ts';
-import { AntdIconType } from '@common/basic/types/antd';
+} from '#admin/pages/system/rule/_index/utils/ApiAppAdminRule.ts';
+
+import {AntdIconType} from '../../../../../../src/types/antd';
+
+import {Icon} from '@basic/components/Icon/Icon.tsx';
+import {IconSelector} from '@basic/components/Icon/IconSelector.tsx';
+import {ModalEditForm} from '@basic/components/ModalEditForm.tsx';
+import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
 let resetTimer: NodeJS.Timeout | undefined;
 const pidLabel: {
@@ -38,15 +40,14 @@ const readTree = <T = unknown, N extends { id: number, title: string, children?:
     }
   }
 };
-export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAdmin = false }: {
-  withWebmanAdmin?: boolean
+export const AdminSystemRuleForm = ({editData, onFinish, onCancel}: {
   editData: AdminMenuItemType | undefined
   onFinish: () => void
   onCancel: () => void
 }) => {
   const [open, setOpen] = useState<boolean>(false);
-  const { updateAdminUserInfo } = useAdminUserStorage();
-  const { message } = App.useApp();
+  const {updateAdminUserInfo} = useAdminUserStorage();
+  const {message} = App.useApp();
   const [form] = Form.useForm();
   const [data, setData] = useState<AdminMenuItemType | undefined>(editData);
   const [type, setType] = useState<number | undefined>(editData?.type);
@@ -76,9 +77,9 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
     requestAnimationFrame(async () => {
       let result = [] as never;
       if (type === 2) {
-        result = await ApiGetAdminRuleMenuTree(withWebmanAdmin) as never;
+        result = await ApiGetAdminRuleMenuTree() as never;
       } else {
-        result = await ApiGetAdminRuleFolderTree(withWebmanAdmin) as never;
+        result = await ApiGetAdminRuleFolderTree() as never;
       }
       readTree(result);
       setPidTree(result);
@@ -115,7 +116,7 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
       onCancel={() => {
         setOpen(false);
       }}
-      labelCol={{ style: { width: '100px' } }}
+      labelCol={{style: {width: '100px'}}}
       layout={'horizontal'}
       width={'min(500px, 96vw)'}
       onValuesChange={() => {
@@ -130,18 +131,18 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
         }
       }}
     >
-      <ProFormText hidden name={'id'} />
+      <ProFormText hidden name={'id'}/>
       <ProFormRadio.Group
         name={'type'}
         label={'类型'}
         radioType={'button'}
         hidden={(!!data?.id || editData?.type !== undefined)}
         options={[
-          { label: '目录', value: 0 },
-          { label: '菜单', value: 1 },
-          { label: '权限', value: 2 },
+          {label: '目录', value: 0},
+          {label: '菜单', value: 1},
+          {label: '权限', value: 2},
         ]}
-        rules={[{ required: true, message: '请选择类型' }]}
+        rules={[{required: true, message: '请选择类型'}]}
         fieldProps={{
           onChange(e) {
             // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
@@ -150,16 +151,16 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
           },
         }}
       />
-      <ProFormText name={'title'} label={'标题'} rules={[{ required: true, message: '请输入标题' }]} />
+      <ProFormText name={'title'} label={'标题'} rules={[{required: true, message: '请输入标题'}]}/>
       <ProFormDependency
         name={['type']}
       >
-        {({ type }) =>
+        {({type}) =>
           <ProFormText
             hidden={type < 2}
             name={'key'}
             label={'唯一标识'}
-            rules={[{ required: true, message: '请输入唯一标识' }]}
+            rules={[{required: true, message: '请输入唯一标识'}]}
             fieldProps={{
               ref: keyRef as never,
             }}
@@ -168,7 +169,7 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
       <ProFormDependency
         name={['type']}
       >
-        {({ type }) => type == 1 &&
+        {({type}) => type == 1 &&
           <ProFormText
             name={'href'}
             label={`${['目录', '菜单', '权限'][type as never]}链接`}
@@ -181,12 +182,11 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
           />}
       </ProFormDependency>
       <ProFormDependency name={['type']}>
-        {({ type }) => type < 2 && <ProForm.Item name={'icon'} label={'图标'}>
-          <IconSelector />
+        {({type}) => type < 2 && <ProForm.Item name={'icon'} label={'图标'}>
+          <IconSelector/>
         </ProForm.Item>}
       </ProFormDependency>
       <ProFormTreeSelect
-        // hidden={hiddeFields && !!editData?.pid}
         fieldProps={{
           treeData: pidTree,
           popupMatchSelectWidth: false,
@@ -197,18 +197,18 @@ export const AdminSystemRuleForm = ({ editData, onFinish, onCancel, withWebmanAd
             children: 'children',
           },
           treeIcon: true,
-          treeTitleRender: (node: AdminMenuItemType & { icon: string | Element, selectable: boolean }) => {
+          treeTitleRender: (node) => {
             if (typeof node.icon === 'string') {
-              node.icon = <Icon icon={node.icon as AntdIconType} /> as unknown as string;
+              node.icon = <Icon icon={node.icon as AntdIconType}/> as unknown as string;
             }
             node.selectable = !(type == 2 && !!node.children?.length);
-            return node.title;
+            return node.title as ReactNode;
           },
         }}
         name={'pid'}
         label={'父级标识'}
       />
-      <ProFormDigit fieldProps={{ step: 1, min: 0, changeOnWheel: true }} name={'weight'} label={'排序'} />
+      <ProFormDigit fieldProps={{step: 1, min: 0, changeOnWheel: true}} name={'weight'} label={'排序'}/>
     </ModalEditForm>
   );
 };

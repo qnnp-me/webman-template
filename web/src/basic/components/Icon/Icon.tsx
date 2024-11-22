@@ -1,8 +1,9 @@
 import * as Icons from '@ant-design/icons';
-import { IconProps } from '@ant-design/icons/es/components/IconBase';
+import {IconProps} from '@ant-design/icons/es/components/IconBase';
 
-import '@common/basic/components/Icon/assets/styles/layui-icon.css';
-import { AntdIconType } from '@common/basic/types/antd';
+import {AntdIconType} from '../../../types/antd';
+
+import '@basic/components/Icon/assets/styles/layui-icon.css';
 
 export const Icon = <T extends (AntdIconType | LayuiIconType)>(
   {
@@ -18,7 +19,7 @@ export const Icon = <T extends (AntdIconType | LayuiIconType)>(
     return <i
       {...props}
       className={`layui-icon ${icon}`}
-      style={{ cursor: onClick ? 'pointer' : undefined, ...props.style } as never}
+      style={{cursor: onClick ? 'pointer' : undefined, ...props.style} as never}
       onClick={onClick}
     />;
   }
@@ -27,7 +28,7 @@ export const Icon = <T extends (AntdIconType | LayuiIconType)>(
   return <>
     {Icon ? <Icon
       {...props}
-      style={{ cursor: onClick ? 'pointer' : undefined, ...props.style }}
+      style={{cursor: onClick ? 'pointer' : undefined, ...props.style}}
       onClick={onClick}
     /> : null}
   </>;
