@@ -25,11 +25,23 @@ class AppSetup extends Command
     $this->addArgument(
       'r',
       InputArgument::OPTIONAL,
-      '是否重新生成证书，默认否'
+      '是否重新生成 jwt 证书，默认否'
     );
   }
 
   protected function execute(InputInterface $input, OutputInterface $output): int
+  {
+    $command_helper = new CommandHelper();
+    $command_helper->notice('初始化项目');
+    $command_helper->notice('安装 webman-admin');
+    $webman_admin_install = new WebmanAdminInstall();
+    $webman_admin_install->execute($input, $output);
+    $command_helper->notice('生成 jwt 证书');
+    $this->generateJwtCertificate($input);
+    return self::SUCCESS;
+  }
+
+  protected function generateJwtCertificate(InputInterface $input): void
   {
     $generated = false;
     $regenerate = $input->getArgument('r');
@@ -45,13 +57,13 @@ class AppSetup extends Command
     $jwt_refresh_private_key_pub_path = runtime_path('jwt_key/refresh_private_key.key.pub');
 
     if ($regenerate || !file_exists($jwt_access_secret_key_path)) {
-      $command_helper->info('生成 access 秘钥');
+      $command_helper->info('生成 jwt access 秘钥');
       $access_secret_key = openssl_random_pseudo_bytes(32);
       $access_secret_key = base64_encode($access_secret_key);
       file_put_contents($jwt_access_secret_key_path, $access_secret_key);
       $generated = true;
     } else {
-      $command_helper->notice('access 秘钥已存在，跳过生成');
+      $command_helper->notice('jwt access 秘钥已存在，跳过生成');
     }
     if ($regenerate || !file_exists($jwt_access_private_key_path)) {
       $command_helper->info('生成 access 私钥');
@@ -65,19 +77,19 @@ class AppSetup extends Command
       file_put_contents($jwt_access_private_key_pub_path, $access_public_key);
       $generated = true;
     } else {
-      $command_helper->notice('access 私钥已存在，跳过生成');
+      $command_helper->notice('jwt access 私钥已存在，跳过生成');
     }
     if ($regenerate || !file_exists($jwt_refresh_secret_key_path)) {
-      $command_helper->info('生成 refresh 秘钥');
+      $command_helper->info('生成 jwt refresh 秘钥');
       $refresh_secret_key = openssl_random_pseudo_bytes(32);
       $refresh_secret_key = base64_encode($refresh_secret_key);
       file_put_contents($jwt_refresh_secret_key_path, $refresh_secret_key);
       $generated = true;
     } else {
-      $command_helper->notice('refresh 秘钥已存在，跳过生成');
+      $command_helper->notice('jwt refresh 秘钥已存在，跳过生成');
     }
     if ($regenerate || !file_exists($jwt_refresh_private_key_path)) {
-      $command_helper->info('生成 refresh 私钥');
+      $command_helper->info('生成 jwt refresh 私钥');
       $refresh_private_key = openssl_pkey_new([
         'digest_alg'       => 'sha512',
         'private_key_bits' => 4096,
@@ -88,13 +100,12 @@ class AppSetup extends Command
       file_put_contents($jwt_refresh_private_key_pub_path, $refresh_public_key);
       $generated = true;
     } else {
-      $command_helper->notice('refresh 私钥已存在，跳过生成');
+      $command_helper->notice('jwt refresh 私钥已存在，跳过生成');
     }
     if ($generated) {
-      $command_helper->success('证书生成成功');
+      $command_helper->success('jwt 证书生成成功');
     } else {
-      $command_helper->notice('证书已存在，无需生成');
+      $command_helper->notice('jwt 证书已存在，无需生成');
     }
-    return self::SUCCESS;
   }
 }

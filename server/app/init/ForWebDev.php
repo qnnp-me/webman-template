@@ -2,19 +2,18 @@
 
 namespace app\init;
 
-use Attribute;
 use plugin\admin\app\common\Util;
 use plugin\admin\app\model\Rule;
 use ReflectionClass;
 use ReflectionException;
+use support\abstract\InitAbstract;
 
-class ForWeb
+class ForWebDev extends InitAbstract
 {
   protected static string $base_path;
   protected static string $web_folder = 'web';
 
-  #[Action]
-  static function generate_types(): void
+  static function init_generate_types(): void
   {
     $keys = Rule::select(['key'])->pluck('key');
     $date = date('Y-m-d H:i:s');
@@ -44,8 +43,7 @@ TS;
         if (!$method->isStatic()) {
           continue;
         }
-        $attrs = $method->getAttributes(Action::class);
-        if (count($attrs) > 0) {
+        if (str_starts_with($method->name, 'init_')) {
           try {
             $method->invoke(null);
           } catch (ReflectionException $e) {
@@ -55,10 +53,4 @@ TS;
       }
     }
   }
-}
-
-// 用于定义可执行的方法, 仅限本文件使用
-#[Attribute(Attribute::TARGET_METHOD)]
-class Action
-{
 }

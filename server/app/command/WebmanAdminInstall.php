@@ -16,19 +16,7 @@ class WebmanAdminInstall extends Command
   protected Client $client;
   protected ?CommandHelper $helper = null;
 
-  /**
-   * @return void
-   */
-  protected function configure(): void
-  {
-  }
-
-  /**
-   * @param InputInterface $input
-   * @param OutputInterface $output
-   * @return int
-   */
-  protected function execute(InputInterface $input, OutputInterface $output): int
+  function execute(InputInterface $input, OutputInterface $output): int
   {
     $this->helper = new CommandHelper();
     $server_address = config('server.listen');
@@ -213,47 +201,27 @@ class WebmanAdminInstall extends Command
     return self::SUCCESS;
   }
 
-  protected function executeStep2(string $username, string $password)
+  protected function isServerRunning(): bool
   {
-    return json_decode($this->client->post('step2', [
-      'json' => [
-        'username'         => $username,
-        'password'         => $password,
-        'password_confirm' => $password
-      ]
-    ])->getBody()->getContents());
+    $pid = $this->getServerPid();
+    if ($pid) {
+      if (posix_getpgid($pid)) {
+        return true;
+      }
+    }
+    return false;
   }
 
-  protected function writeConfigDatabasePhp($group = 'ADMIN_MYSQL'): bool
+  protected function getServerPid(): ?int
   {
-    $file = base_path('plugin/admin/config/database.php');
-    $config = $this->generateConfigDatabasePhp($group);
-    return !!file_put_contents($file, $config);
-  }
-
-  protected function generateConfigDatabasePhp($group = 'ADMIN_MYSQL'): string
-  {
-    return <<<PHP
-<?php
-return [
-    'default'     => 'mysql',
-    'connections' => [
-        'mysql' => [
-            'driver'    => 'mysql',
-            'host'      => env('{$group}_HOST'),
-            'port'      => env('{$group}_PORT', '3306'),
-            'database'  => env('{$group}_DBNAME'),
-            'username'  => env('{$group}_USER'),
-            'password'  => env('{$group}_PASSWORD'),
-            'charset'   => 'utf8mb4',
-            'collation' => 'utf8mb4_general_ci',
-            'prefix'    => '',
-            'strict'    => true,
-            'engine'    => null,
-        ],
-    ],
-];
-PHP;
+    $pid_file = config('server.pid_file');
+    if (file_exists($pid_file)) {
+      $pid = file_get_contents($pid_file);
+      if (posix_getpgid($pid)) {
+        return (int)$pid;
+      }
+    }
+    return null;
   }
 
   protected function executeStep1(
@@ -274,29 +242,6 @@ PHP;
       'overwrite' => $overwrite ? '1' : '',
     ];
     return json_decode($this->client->post('step1', ['json' => $data])->getBody()->getContents());
-  }
-
-  protected function getServerPid(): ?int
-  {
-    $pid_file = config('server.pid_file');
-    if (file_exists($pid_file)) {
-      $pid = file_get_contents($pid_file);
-      if (posix_getpgid($pid)) {
-        return (int)$pid;
-      }
-    }
-    return null;
-  }
-
-  protected function isServerRunning(): bool
-  {
-    $pid = $this->getServerPid();
-    if ($pid) {
-      if (posix_getpgid($pid)) {
-        return true;
-      }
-    }
-    return false;
   }
 
   protected function saveEnv(
@@ -345,6 +290,56 @@ PHP;
     }
 
     return file_put_contents($file, $content);
+  }
+
+  protected function writeConfigDatabasePhp($group = 'ADMIN_MYSQL'): bool
+  {
+    $file = base_path('plugin/admin/config/database.php');
+    $config = $this->generateConfigDatabasePhp($group);
+    return !!file_put_contents($file, $config);
+  }
+
+  protected function generateConfigDatabasePhp($group = 'ADMIN_MYSQL'): string
+  {
+    return <<<PHP
+<?php
+return [
+    'default'     => 'mysql',
+    'connections' => [
+        'mysql' => [
+            'driver'    => 'mysql',
+            'host'      => env('{$group}_HOST'),
+            'port'      => env('{$group}_PORT', '3306'),
+            'database'  => env('{$group}_DBNAME'),
+            'username'  => env('{$group}_USER'),
+            'password'  => env('{$group}_PASSWORD'),
+            'charset'   => 'utf8mb4',
+            'collation' => 'utf8mb4_general_ci',
+            'prefix'    => '',
+            'strict'    => true,
+            'engine'    => null,
+        ],
+    ],
+];
+PHP;
+  }
+
+  protected function executeStep2(string $username, string $password)
+  {
+    return json_decode($this->client->post('step2', [
+      'json' => [
+        'username'         => $username,
+        'password'         => $password,
+        'password_confirm' => $password
+      ]
+    ])->getBody()->getContents());
+  }
+
+  /**
+   * @return void
+   */
+  protected function configure(): void
+  {
   }
 
 }
