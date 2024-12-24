@@ -1,7 +1,6 @@
-// 此文件由脚本生成，请勿手动修改 2024-11-23 14:32:19
+// 此文件由脚本生成，请勿手动修改 2024-12-24 17:18:25
 declare type AdminPermission =
   '*'
-  | 'app.admin.table'
   | 'app.admin.admin'
   | 'app.admin.role'
   | 'app.admin.rule'

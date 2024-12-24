@@ -16,6 +16,7 @@ class TestController
     ob_end_clean();
     return response($info);
   }
+
   function request(Request $request): Response
   {
     $client = new Client();
