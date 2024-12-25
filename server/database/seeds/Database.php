@@ -18,12 +18,7 @@ class Database extends AbstractSeed
       if (file_exists($log_path)) {
         $log = json_decode(file_get_contents($log_path), true) ?: [];
       }
-      $structure_path = is_phar()
-        ? runtime_path('/phinx/database/sql/structure-dump.sql')
-        : base_path('/database/sql/structure-dump.sql');
-      if (file_exists($structure_path) && !$this->table('wa_admins')->exists()) {
-        $this->query(file_get_contents($structure_path));
-      }
+      //////////[ Rules/Roles ]//////////
       $rules_roles_path = is_phar()
         ? runtime_path('/phinx/database/sql/rules-roles-dump.sql')
         : base_path('/database/sql/rules-roles-dump.sql');
@@ -31,6 +26,7 @@ class Database extends AbstractSeed
         $this->query(file_get_contents($rules_roles_path));
         $log['rules_roles'] = $last_mtime;
       }
+      //////////[ End ]//////////
       file_put_contents($log_path, json_encode($log, JSON_PRETTY_PRINT));
     }
   }
