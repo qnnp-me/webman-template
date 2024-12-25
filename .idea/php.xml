@@ -37,7 +37,6 @@
       <path value="$PROJECT_DIR$/server/vendor/illuminate/contracts" />
       <path value="$PROJECT_DIR$/server/vendor/webman/captcha" />
       <path value="$PROJECT_DIR$/server/vendor/illuminate/redis" />
-      <path value="$PROJECT_DIR$/server/vendor/workerman/webman-framework" />
       <path value="$PROJECT_DIR$/server/vendor/workerman/redis-queue" />
       <path value="$PROJECT_DIR$/server/vendor/workerman/workerman" />
       <path value="$PROJECT_DIR$/server/vendor/illuminate/conditionable" />
@@ -115,6 +114,8 @@
       <path value="$PROJECT_DIR$/server/vendor/webman/admin" />
       <path value="$PROJECT_DIR$/server/vendor/intervention/image" />
       <path value="$PROJECT_DIR$/server/vendor/webman/log" />
+      <path value="$PROJECT_DIR$/server/vendor/workerman/webman-framework" />
+      <path value="$PROJECT_DIR$/server/vendor/webman/rate-limiter" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.2" />

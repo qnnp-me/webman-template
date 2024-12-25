@@ -11,7 +11,7 @@
     <a href="https://www.workerman.net/webman" target="__blank">主页 / Home page</a>
   </li>
   <li>
-    <a href="https://www.workerman.net/doc/webman" target="__blank">文档 / Document</a>
+    <a href="https://webman.workerman.net" target="__blank">文档 / Document</a>
   </li>
   <li>
     <a href="https://www.workerman.net/doc/webman/install.html" target="__blank">安装 / Install</a>
@@ -43,7 +43,18 @@
   <a href="https://www.fadetask.com/?from=workerman" target="__blank"><img src="https://www.workerman.net/img/sponsors/1/20230719084316.png" width="200"></a>
   <a href="https://www.yilianyun.net/?from=workerman" target="__blank" style="margin-left:20px;"><img src="https://www.workerman.net/img/sponsors/6218/20230720114049.png" width="200"></a>
 
-  <h4>金牌赞助</h4>
+
+</div>
+
+
+<div style="float:left;padding-bottom:30px;clear:both">
+
+  <h1>请作者喝咖啡</h1>
+
+<img src="https://www.workerman.net/img/wx_donate.png" width="200">
+<img src="https://www.workerman.net/img/ali_donate.png" width="200">
+<br>
+<b>如果您觉得webman对您有所帮助，欢迎捐赠。</b>
 
 
 </div>

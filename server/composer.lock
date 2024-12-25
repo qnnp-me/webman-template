@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b4d307c8f35e5f495e939da70a525f2",
+    "content-hash": "24f5b7cc49d73162accd2f671332b697",
     "packages": [
         {
             "name": "brick/math",
@@ -5916,16 +5916,16 @@
         },
         {
             "name": "webman/console",
-            "version": "v1.3.13",
+            "version": "v1.3.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/webman-php/console.git",
-                "reference": "bbafccc7464d77f1f7d81ddbbae2e477e6636528"
+                "reference": "6b6ca14e92840e491301f44f801af6d87baee671"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webman-php/console/zipball/bbafccc7464d77f1f7d81ddbbae2e477e6636528",
-                "reference": "bbafccc7464d77f1f7d81ddbbae2e477e6636528",
+                "url": "https://api.github.com/repos/webman-php/console/zipball/6b6ca14e92840e491301f44f801af6d87baee671",
+                "reference": "6b6ca14e92840e491301f44f801af6d87baee671",
                 "shasum": ""
             },
             "require": {
@@ -5965,7 +5965,7 @@
                 "source": "https://github.com/webman-php/console",
                 "wiki": "http://www.workerman.net/doc/webman"
             },
-            "time": "2024-12-10T04:39:39+00:00"
+            "time": "2024-12-25T03:25:19+00:00"
         },
         {
             "name": "webman/event",
@@ -6031,6 +6031,41 @@
                 "source": "https://github.com/webman-php/log/tree/v1.2.0"
             },
             "time": "2024-10-25T02:23:03+00:00"
+        },
+        {
+            "name": "webman/rate-limiter",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/webman-php/rate-limiter.git",
+                "reference": "3f6496cf58f9ba46b295de36c3d82c7b69d23f88"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/webman-php/rate-limiter/zipball/3f6496cf58f9ba46b295de36c3d82c7b69d23f88",
+                "reference": "3f6496cf58f9ba46b295de36c3d82c7b69d23f88",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0",
+                "workerman/webman-framework": ">=1.5.15"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Webman\\RateLimiter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Webman plugin webman/rate-limiter",
+            "support": {
+                "issues": "https://github.com/webman-php/rate-limiter/issues",
+                "source": "https://github.com/webman-php/rate-limiter/tree/v1.1.2"
+            },
+            "time": "2024-12-20T09:48:33+00:00"
         },
         {
             "name": "webman/redis-queue",
@@ -6316,9 +6351,9 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
+    "minimum-stability": "dev",
     "stability-flags": {},
-    "prefer-stable": false,
+    "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": ">=8.2",
