@@ -12,7 +12,6 @@
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
-use app\process\Http;
 use support\Log;
 use support\Request;
 
@@ -20,7 +19,7 @@ global $argv;
 
 return [
   'webman'  => [
-    'handler'     => Http::class,
+    'handler'     => app\process\Http::class,
     'listen'      => 'http://[::]:' . env('SERVER_PORT', 8787),
     'count'       => env('CPU_COUNT', cpu_count() * 4),
     'user'        => '',
@@ -37,7 +36,7 @@ return [
   ],
   // File update detection and automatic reload
   'monitor' => [
-    'handler'     => process\Monitor::class,
+    'handler'     => app\process\Monitor::class,
     'reloadable'  => false,
     'constructor' => [
       // Monitor these directories
@@ -63,10 +62,10 @@ return [
     ],
   ],
   'crontab' => [
-    'handler' => process\Cron::class,
+    'handler' => app\process\Cron::class,
   ],
   'init'    => [
-    'handler'     => process\Init::class,
+    'handler'     => app\process\Init::class,
     'reloadable'  => false,
     'constructor' => [],
   ],

@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "24f5b7cc49d73162accd2f671332b697",
+    "content-hash": "7bb68a17c58f687feb862e479cc6a23a",
     "packages": [
         {
             "name": "brick/math",
@@ -6222,16 +6222,16 @@
         },
         {
             "name": "workerman/webman-framework",
-            "version": "v1.6.9",
+            "version": "v1.6.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/walkor/webman-framework.git",
-                "reference": "c328d94f3aa50a06a59689656a24a580a7b51dc1"
+                "reference": "a18c3a551cb0e18265a222291c1eddb8f92363e7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/c328d94f3aa50a06a59689656a24a580a7b51dc1",
-                "reference": "c328d94f3aa50a06a59689656a24a580a7b51dc1",
+                "url": "https://api.github.com/repos/walkor/webman-framework/zipball/a18c3a551cb0e18265a222291c1eddb8f92363e7",
+                "reference": "a18c3a551cb0e18265a222291c1eddb8f92363e7",
                 "shasum": ""
             },
             "require": {
@@ -6283,7 +6283,7 @@
                 "source": "https://github.com/walkor/webman-framework",
                 "wiki": "https://doc.workerman.net/"
             },
-            "time": "2024-12-11T12:41:18+00:00"
+            "time": "2024-12-26T03:38:08+00:00"
         },
         {
             "name": "workerman/workerman",

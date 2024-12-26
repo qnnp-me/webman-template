@@ -82,6 +82,10 @@
       <excludeFolder url="file://$MODULE_DIR$/server/vendor/workerman/redis-queue" />
       <excludeFolder url="file://$MODULE_DIR$/server/vendor/workerman/workerman" />
       <excludeFolder url="file://$MODULE_DIR$/tmp" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/server/plugin/admin/api" />
+      <excludeFolder url="file://$MODULE_DIR$/server/plugin/admin/app" />
+      <excludeFolder url="file://$MODULE_DIR$/server/plugin/admin/public" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

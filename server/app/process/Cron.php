@@ -1,6 +1,6 @@
 <?php
 
-namespace process;
+namespace app\process;
 
 use Exception;
 use ReflectionClass;

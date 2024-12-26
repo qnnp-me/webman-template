@@ -2,13 +2,14 @@
 
 namespace app\controller;
 
+use support\annotation\DisableDefaultRoute;
 use support\Request;
 use support\Response;
 use Webman\RateLimiter\Annotation\RateLimiter;
 
 class InfoController
 {
-  #[RateLimiter(limit: 1, ttl: 5, message: "请求次数过多")]
+  #[RateLimiter(limit: 1, ttl: 1, message: "请求次数过多")]
   function index(Request $request): Response
   {
     ob_start();

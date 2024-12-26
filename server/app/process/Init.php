@@ -1,6 +1,6 @@
 <?php
 
-namespace process;
+namespace app\process;
 
 use ReflectionClass;
 use support\helper\CommandHelper;

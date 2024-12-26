@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
+use app\process\Init;
 use Phinx\Migration\AbstractMigration;
 use support\helper\CommandHelper;
-use process\Init;
 
 final class CreateUsers extends AbstractMigration
 {
