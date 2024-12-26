@@ -76,8 +76,11 @@ const useAdminUserStorage = create(persist<AdminUserStorageType>(
           } as SysConfigType;
         }
         setState({
+          sysConfig,
+          adminPermissionList,
+          adminMenuList,
+          adminUserInfo,
           isLogin: !!adminUserInfo.id,
-          sysConfig, adminPermissionList, adminMenuList, adminUserInfo,
           isSuperAdmin: adminPermissionList.includes('*'),
           isAdminUserStorageReady: true,
         });

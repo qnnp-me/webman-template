@@ -1,20 +1,20 @@
-import {LogoutOutlined} from '@ant-design/icons';
-import {MenuDataItem, ProLayout} from '@ant-design/pro-components';
-import {App} from 'antd';
+import { LogoutOutlined } from '@ant-design/icons';
+import { MenuDataItem, ProLayout } from '@ant-design/pro-components';
+import { App } from 'antd';
 import Dropdown from 'antd/es/dropdown/dropdown';
 import Space from 'antd/lib/space';
-import {useEffect, useState} from 'react';
-import {Link, Outlet, useLocation, useNavigate} from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { Link, Outlet, useLocation, useNavigate } from 'react-router-dom';
 
 import styles from './assets/styles/[layout].module.scss';
-import {BasicConfig} from '../../src/basic.config.ts';
-import {AntdIconType} from '../../src/types/antd';
+import { BasicConfig } from '../../src/basic.config.ts';
+import { AntdIconType } from '../../src/types/antd';
 
-import {Icon} from '@basic/components/Icon/Icon.tsx';
+import { Icon } from '@basic/components/Icon/Icon.tsx';
 import useAdminUserStorage from '@basic/store/useAdminUserStorage.ts';
 
-const LayoutAdminMain = ({loading}: { loading?: boolean }) => {
-  const {modal} = App.useApp();
+const LayoutAdminMain = ({ loading }: { loading?: boolean }) => {
+  const { modal } = App.useApp();
   const navigate = useNavigate();
   const location = useLocation();
   const {
@@ -30,7 +30,7 @@ const LayoutAdminMain = ({loading}: { loading?: boolean }) => {
   useEffect(handleRootTagClassChange, []);
   useEffect(() => {
     if (isAdminUserStorageReady && !isLogin && location.pathname != '/admin/login') {
-      navigate(`/admin/login?replaceTo=${location.pathname}`, {replace: true});
+      navigate(`/admin/login?replaceTo=${location.pathname}`, { replace: true });
       return;
     }
   }, [isLogin, location.pathname, isAdminUserStorageReady]);
@@ -102,7 +102,7 @@ const LayoutAdminMain = ({loading}: { loading?: boolean }) => {
     }}
     layout={'mix'}
     splitMenus={splitMenus}
-    menuProps={{className: `${styles.mainMenu} ${collapsed ? styles.mainMenuCollapsed : ''}`}}
+    menuProps={{ className: `${styles.mainMenu} ${collapsed ? styles.mainMenuCollapsed : ''}` }}
     menuItemRender={(item) =>
       <Link
         onClick={e => {
@@ -178,7 +178,7 @@ const prepareMenuData = (data: AdminMenuItemType[], splitMenus = false) =>
     }
     menu.icon = <Icon
       icon={item.icon as AntdIconType | LayuiIconType || 'MenuOutlined'}
-      style={{display: 'block'}}
+      style={{ display: 'block' }}
     />;
     menu.key = menu.path;
     return menu;
